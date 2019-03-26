@@ -1,0 +1,1762 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Sesión 4: <br/> Mapas y <br/>localización - LPP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#sesion-4-mapas-y-localizacion" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="LPP" class="md-header-nav__button md-logo">
+          
+            <img src="../imagenes/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                LPP
+              </span>
+              <span class="md-header-nav__topic">
+                Sesión 4: <br/> Mapas y <br/>localización
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="LPP" class="md-nav__button md-logo">
+      
+        <img src="../imagenes/logo.png" width="48" height="48">
+      
+    </a>
+    LPP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sesion00/sesion00-introduccion.html" title="Introducción" class="md-nav__link">
+      Introducción
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sesion01/sesion01-firma-aprovisionamiento.html" title="Firma, aprovisionamiento y distribución de apps" class="md-nav__link">
+      Firma, aprovisionamiento y distribución de apps
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sesion02/sesion02-notificaciones.html" title="Notificaciones Push" class="md-nav__link">
+      Notificaciones Push
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-mapkit" title="Aspectos básicos de MapKit" class="md-nav__link">
+    Aspectos básicos de MapKit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspectos-basicos-de-mapkit_1" title="Aspectos básicos de MapKit" class="md-nav__link">
+    Aspectos básicos de MapKit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometria-de-los-mapas" title="Geometría de los mapas" class="md-nav__link">
+    Geometría de los mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-puntos" title="Otros puntos" class="md-nav__link">
+    Otros puntos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permisos-para-activar-los-mapas-en-nuestra-app" title="Permisos para activar los mapas en nuestra app" class="md-nav__link">
+    Permisos para activar los mapas en nuestra app
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-un-mapa-en-nuestra-app" title="Añadir un mapa en nuestra app" class="md-nav__link">
+    Añadir un mapa en nuestra app
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-anadir-un-mapa-mediante-programa" title="Ejemplo: añadir un mapa mediante programa" class="md-nav__link">
+    Ejemplo: añadir un mapa mediante programa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado" title="Resultado" class="md-nav__link">
+    Resultado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicializacion-del-mapa" title="Inicialización del mapa" class="md-nav__link">
+    Inicialización del mapa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centrado-del-mapa" title="Centrado del mapa" class="md-nav__link">
+    Centrado del mapa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-mapas" title="Tipos de mapas" class="md-nav__link">
+    Tipos de mapas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-seleccion-del-tipo-de-mapa-con-un-segmentedcontrol" title="Ejemplo de selección del tipo de mapa con un SegmentedControl" class="md-nav__link">
+    Ejemplo de selección del tipo de mapa con un SegmentedControl
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-del-delegado" title="Uso del delegado" class="md-nav__link">
+    Uso del delegado
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anotaciones" title="Anotaciones" class="md-nav__link">
+    Anotaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clases-relacionadas" title="Clases relacionadas" class="md-nav__link">
+    Clases relacionadas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-protocolo-mkannotation" title="El protocolo MKAnnotation" class="md-nav__link">
+    El protocolo MKAnnotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-objeto-annotation" title="El objeto annotation" class="md-nav__link">
+    El objeto annotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkannotationview" title="MKAnnotationView" class="md-nav__link">
+    MKAnnotationView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-la-anotacion" title="Creación de la anotación" class="md-nav__link">
+    Creación de la anotación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-ejemplo-de-vista-de-anotacion" title="Un ejemplo de vista de anotación" class="md-nav__link">
+    Un ejemplo de vista de anotación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadir-anotaciones-en-el-mapa" title="Añadir anotaciones en el mapa" class="md-nav__link">
+    Añadir anotaciones en el mapa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-en-el-callout" title="Elementos en el callout" class="md-nav__link">
+    Elementos en el callout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagenes-en-las-anotaciones" title="Imágenes en las anotaciones" class="md-nav__link">
+    Imágenes en las anotaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-del-callout" title="Actualización del callout" class="md-nav__link">
+    Actualización del callout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overlays" title="Overlays" class="md-nav__link">
+    Overlays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrar-un-overlay" title="Mostrar un overlay" class="md-nav__link">
+    Mostrar un overlay
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-1" title="Ejemplo de código (1)" class="md-nav__link">
+    Ejemplo de código (1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-2" title="Ejemplo de código (2)" class="md-nav__link">
+    Ejemplo de código (2)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anadido-y-dibujado-del-overlay" title="Añadido y dibujado del overlay" class="md-nav__link">
+    Añadido y dibujado del overlay
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-caracteristicas-busquedas" title="Otras características: búsquedas" class="md-nav__link">
+    Otras características: búsquedas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-caracteristicas-rutas" title="Otras características: rutas" class="md-nav__link">
+    Otras características: rutas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-caracteristicas-3d" title="Otras características: 3D" class="md-nav__link">
+    Otras características: 3D
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localizacion" title="Localización" class="md-nav__link">
+    Localización
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#localizacion_1" title="Localización" class="md-nav__link">
+    Localización
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-de-los-servicios-de-localizacion" title="Activación de los servicios de localización" class="md-nav__link">
+    Activación de los servicios de localización
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solicitar-informacion-al-usuario" title="Solicitar información al usuario" class="md-nav__link">
+    Solicitar información al usuario
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-cllocationmanager" title="Clase CLLocationManager" class="md-nav__link">
+    Clase CLLocationManager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-activar-la-localizacion" title="Para activar la localización" class="md-nav__link">
+    Para activar la localización
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo" title="Código" class="md-nav__link">
+    Código
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitorizacion-de-la-localizacion" title="Monitorización de la localización" class="md-nav__link">
+    Monitorización de la localización
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-cllocation" title="Clase CLLocation" class="md-nav__link">
+    Clase CLLocation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activacion-de-la-localizacion-en-el-mapa" title="Activación de la localización en el mapa" class="md-nav__link">
+    Activación de la localización en el mapa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prueba-de-la-localizacion-en-el-simulador" title="Prueba de la localización en el simulador" class="md-nav__link">
+    Prueba de la localización en el simulador
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas-1" title="Práctica: Mapas (1)" class="md-nav__link">
+    Práctica: Mapas (1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas-2" title="Práctica: Mapas (2)" class="md-nav__link">
+    Práctica: Mapas (2)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas-3" title="Práctica: Mapas (3)" class="md-nav__link">
+    Práctica: Mapas (3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas-opcional-25-puntos" title="Práctica: Mapas (opcional - 2,5 puntos)" class="md-nav__link">
+    Práctica: Mapas (opcional - 2,5 puntos)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas" title="Práctica: Mapas" class="md-nav__link">
+    Práctica: Mapas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas_1" title="Práctica: Mapas" class="md-nav__link">
+    Práctica: Mapas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-mapas-localizacion-opcional-25-puntos" title="Práctica: Mapas (Localización - opcional 2,5 puntos)" class="md-nav__link">
+    Práctica: Mapas (Localización - opcional 2,5 puntos)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencias" title="Referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="sesion-4-mapas-y-localizacion">Sesión 4: <br/> Mapas y <br/>localización<a class="headerlink" href="#sesion-4-mapas-y-localizacion" title="Permanent link">&para;</a></h1>
+<h4>Servicios de las plataformas móviles - iOS</h4>
+<p><small>Domingo Gallardo - domingo.gallardo@ua.es<br />
+Departamento Ciencia de la Computación e Inteligencia Artificial<br />
+Master Programación de Dispositivos Móviles  <br />
+2017-18</small></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="aspectos-basicos-de-mapkit">Aspectos básicos de MapKit<a class="headerlink" href="#aspectos-basicos-de-mapkit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MapKit_Framework_Reference/">Map Kit</a>
+  es el framework de Apple para trabajar con mapas.</li>
+<li>Permite muchas funcionalidades: pan y zoom, anotaciones,
+  localización, overlays, búsquedas, rutas, direcciones, ...</li>
+<li>Junto con los servicios de localización proporciona la forma de
+  incluir datos geográficos en nuestras apps.</li>
+</ul>
+<p><img src="imagenes/location-and-maps-intro.png" width="200px"/> <img style="margin-left: 60px;" src="imagenes/map-tracking-position.png" width="200px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="aspectos-basicos-de-mapkit_1">Aspectos básicos de MapKit<a class="headerlink" href="#aspectos-basicos-de-mapkit_1" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/map-3d.png" width="300px"/></p>
+<ul>
+<li>Los mapas permiten a los usuarios a visualizar datos geográficos de
+  una forma fácil de entender.</li>
+<li>Por ejemplo, un mapa puede mostrar datos de satélite de un área, o
+  una visualización tridimensional de una perspectiva de la zona.</li>
+<li>El framework Map Kit permite embeber en tu app un map completamente
+  funcional, que soporta funcionalidades similares a la de la app
+  <code>Mapas</code>.</li>
+<li>Con Map Kit puedes incorporar en tu app vistas de un punto
+  geográfico concreto.</li>
+<li>Además, el framework te permite añadir capas de información sobre el
+  mapa, moverlo, o tomar instantáneas de un mapa para imprimir.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="geometria-de-los-mapas">Geometría de los mapas<a class="headerlink" href="#geometria-de-los-mapas" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/sphere-to-cylinder.jpg" width="300px"/></p>
+<ul>
+<li>Map Kit usa una proyección Mercator, que es un tipo específico de
+  proyección cilíndrica.</li>
+<li>Una coordenada se define por una <strong>latitud</strong> y una <strong>longitud</strong>.</li>
+<li>La <strong>latitud</strong> es la distancia angular (en grados: de -90.0 a
+    90.0) desde el punto de la superficie hasta el ecuador. Las
+    latitudes positivas definen puntos por encima del ecuador y las
+    negativas por debajo.</li>
+<li>La <strong>longitud</strong> es la distancia angular (en grados: de -180.0 a
+    180.0) desde el punto de la superficie hasta el meridiano 0
+    (meridianto de Greenwich). Las longitudes positivas definen puntos
+    al este del meridiano y las negativas al oeste.</li>
+<li>La estructura
+  <a href="https://developer.apple.com/reference/corelocation/cllocationcoordinate2d"><code>CLLocationCoordinate2D</code></a>
+  representa esta estructura. Por ejemplo, para crear una localización
+  situada en Alicante:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">alicanteLocation</span> <span class="p">=</span> <span class="n">CLLocationCoordinate2D</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="mf">38.3453</span><span class="p">,</span> 
+                                              <span class="n">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.4831</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="otros-puntos">Otros puntos<a class="headerlink" href="#otros-puntos" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/map-overlay.png" width="300px"/></p>
+<ul>
+<li>Un <em>punto en el mapa</em> se define por los valores <code>x</code> e <code>y</code> en la
+  proyección de Mercator. Se define utilizando la estructura
+  <a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MapKitDataTypesReference/index.html#//apple_ref/c/tdef/MKMapPoint"><code>MKMapPoint</code></a>. Se
+  utiliza para especificar la posición y forma de los <em>overlays</em> que
+  podemos pintar sobre el mapa.</li>
+<li>Un <em>punto</em> es una unidad gráfica asociada con el sistema de
+  coordenadas de una vista. Los puntos en el mapa y las coordenadas
+  deben convertirse en puntos antes de dibujar contenido en una
+  vista. Los puntos individuales se definen usando la estructura
+  <code>CGPoint</code> y las áreas usando <code>CGSize</code> y <code>CGRect</code>. Consultar las
+  funciones del API de geometría y los tipos de datos en
+  <a href="https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CGGeometry/index.html">este enlace</a>.</li>
+<li>Para almacenar los datos en ficheros es preferible usar coordenadas
+  de mapas.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="permisos-para-activar-los-mapas-en-nuestra-app">Permisos para activar los mapas en nuestra app<a class="headerlink" href="#permisos-para-activar-los-mapas-en-nuestra-app" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/map-entitlements.png" width="400px"></p>
+<ul>
+<li>Para poder distribuir apps que trabajen con el servicio de mapas es
+  necesario activar en la app el <em>entitlement</em> correspondiente,
+  activando los servicios que necesitamos.</li>
+<li>Debemos tener un perfil de aprovisionamiento aprobado con un App ID
+  que soporte estos servicios.</li>
+<li>No es necesario para el desarrollo y las pruebas.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="anadir-un-mapa-en-nuestra-app">Añadir un mapa en nuestra app<a class="headerlink" href="#anadir-un-mapa-en-nuestra-app" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La clase
+  <a href="https://developer.apple.com/reference/mapkit/mkmapview"><code>MKMapView</code></a>
+  es una interfaz autocontenida para presentar los mapas en tu
+  app. Proporciona todo el soporte para mostrar los datos del mapa,
+  gestionar las interacciones del usuario y hospedar el contenido
+  proporcionado por tu app. Debes importar <code>MapKit</code>.</li>
+<li>No debes hacer una subclase de <code>MKMapView</code> sino embeberla tal cual
+  en la jerarquía de vistas de tu app:<ul>
+<li>Usando el <em>Interface Builder</em> puedes arrastrar un objeto <em>Map
+  view</em> a la vista o ventana apropiada.</li>
+<li>Para añadir un mapa por programa, crea una instancia de la clase
+  <code>MKMapView</code>, inicialízala con el método
+  <a href="https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/index.html#//apple_ref/occ/instm/UIView/initWithFrame:"><code>initWithFrame:</code></a>
+  y añádela como una subvista a tu ventana o a tu vista.</li>
+</ul>
+</li>
+<li>Por último debes actualizar el delegado con un objeto que implemente
+  el protocolo
+  <a href="https://developer.apple.com/reference/mapkit/mkmapviewdelegate"><code>MKMapViewDelegate</code></a>.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="ejemplo-anadir-un-mapa-mediante-programa">Ejemplo: añadir un mapa mediante programa<a class="headerlink" href="#ejemplo-anadir-un-mapa-mediante-programa" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">UIKit</span>
+<span class="kd">import</span> <span class="nc">MapKit</span>
+
+<span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span><span class="p">,</span> <span class="bp">MKMapViewDelegate</span> <span class="p">{</span>
+
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+        <span class="kd">let</span> <span class="nv">map</span> <span class="p">=</span> <span class="bp">MKMapView</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span>
+            <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">))</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="bp">map</span><span class="p">)</span>
+        <span class="bp">map</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+    <span class="p">}</span>
+
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">didReceiveMemoryWarning</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="resultado">Resultado<a class="headerlink" href="#resultado" title="Permanent link">&para;</a></h3>
+<p><img style="border: 1px solid black;" src="imagenes/map-programatic.png" width="325px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="inicializacion-del-mapa">Inicialización del mapa<a class="headerlink" href="#inicializacion-del-mapa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Podemos también inicializar el mapa cuando se crea usando el
+  <em>Interface Builder</em>, usando un <code>didSet</code> en el <em>outlet</em> <code>mapView</code> que
+  definimos arrastrando desde el <em>storyboard</em>:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">!</span> <span class="p">{</span>
+    <span class="kr">didSet</span> <span class="p">{</span>
+        <span class="n">mapView</span><span class="p">.</span><span class="n">mapType</span> <span class="p">=</span> <span class="p">.</span><span class="n">standard</span>
+        <span class="n">mapView</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+        <span class="kd">let</span> <span class="nv">alicanteLocation</span> <span class="p">=</span> 
+            <span class="n">CLLocationCoordinate2D</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="mf">38.3453</span><span class="p">,</span> 
+                                   <span class="n">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.4831</span><span class="p">)</span>
+        <span class="kd">let</span> <span class="nv">initialLocation</span> <span class="p">=</span> 
+            <span class="bp">CLLocation</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="n">alicanteLocation</span><span class="p">.</span><span class="n">latitude</span><span class="p">,</span>
+                       <span class="n">longitude</span><span class="p">:</span> <span class="n">alicanteLocation</span><span class="p">.</span><span class="n">longitude</span><span class="p">)</span>
+        <span class="n">centerMapOnLocation</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="n">initialLocation</span><span class="p">)</span>
+        <span class="c1">// definida en la siguiente diapositiva</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Para que los controles del mapa funcionen correctamente es necesario
+  asignar el delegado.</li>
+<li>Lo más sencillo es definir el propio <code>View Controller</code> como el delegado.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="centrado-del-mapa">Centrado del mapa<a class="headerlink" href="#centrado-del-mapa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La propiedad <code>region</code> del mapa controla el área del mapa mostrada.</li>
+<li>Contiene al mismo tiempo el punto de longitud y latitud en el que el
+  mapa está centrado y la zona visible, determinando de forma
+  implícita el zoom del mapa.</li>
+<li>Por ejemplo, la siguiente función centra el mapa en una localización
+  y muestra una zona de 4 km. de alto y ancho:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">centerMapOnLocation</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="bp">CLLocation</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">regionRadius</span><span class="p">:</span> <span class="n">CLLocationDistance</span> <span class="p">=</span> <span class="mi">1000</span>
+    <span class="kd">let</span> <span class="nv">coordinateRegion</span> <span class="p">=</span> 
+        <span class="n">MKCoordinateRegionMakeWithDistance</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="n">coordinate</span><span class="p">,</span>
+                       <span class="n">regionRadius</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n">regionRadius</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">)</span>
+    <span class="n">mapView</span><span class="p">.</span><span class="n">setRegion</span><span class="p">(</span><span class="n">coordinateRegion</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="tipos-de-mapas">Tipos de mapas<a class="headerlink" href="#tipos-de-mapas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La definición del tipo de mapa se controla con la propiedad
+  <code>mapType</code> del mapa.</li>
+<li>Puede tener los valores:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">enum</span> <span class="nc">MKMapType</span> <span class="p">:</span> <span class="nb">UInt</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">standard</span>
+    <span class="k">case</span> <span class="n">satellite</span>
+    <span class="k">case</span> <span class="n">hybrid</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="ejemplo-de-seleccion-del-tipo-de-mapa-con-un-segmentedcontrol">Ejemplo de selección del tipo de mapa con un <code>SegmentedControl</code><a class="headerlink" href="#ejemplo-de-seleccion-del-tipo-de-mapa-con-un-segmentedcontrol" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Supongamos un <code>SegmentedControl</code> con los valores <code>Mapa</code> y
+  <code>Satélite</code>.</li>
+<li>Podemos cambiar la visualización del mapa en la acción definida en
+  el <em>View Controller</em> que contiene el <code>mapView</code>:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">enum</span> <span class="nc">TipoMapa</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">mapa</span> <span class="p">=</span> <span class="mi">0</span>
+    <span class="k">case</span> <span class="n">satelite</span>
+<span class="p">}</span>
+
+<span class="p">...</span>
+
+<span class="c1">// En el ViewController</span>
+
+<span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">seleccion</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="bp">UISegmentedControl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">tipoMapa</span> <span class="p">=</span> <span class="n">TipoMapa</span><span class="p">(</span><span class="n">rawValue</span><span class="p">:</span> <span class="n">sender</span><span class="p">.</span><span class="n">selectedSegmentIndex</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">tipoMapa</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="p">.</span><span class="n">mapa</span><span class="p">:</span>
+            <span class="n">mapView</span><span class="p">.</span><span class="n">mapType</span> <span class="p">=</span> <span class="n">MKMapType</span><span class="p">.</span><span class="n">standard</span>
+        <span class="k">case</span> <span class="p">.</span><span class="n">satelite</span><span class="p">:</span>
+            <span class="n">mapView</span><span class="p">.</span><span class="n">mapType</span> <span class="p">=</span> <span class="n">MKMapType</span><span class="p">.</span><span class="n">satellite</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="uso-del-delegado">Uso del delegado<a class="headerlink" href="#uso-del-delegado" title="Permanent link">&para;</a></h3>
+<ul>
+<li>El objeto delegado puede implementar las funciones del protocolo
+  <a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MKMapViewDelegate_Protocol/index.html#//apple_ref/occ/intf/MKMapViewDelegate"><code>MKMapViewDelegate</code></a>
+  donde recibe los eventos relacionados con el mapa:</li>
+<li>Cambios en la región visible del mapa.</li>
+<li>La carga de zonas del mapa de la red.</li>
+<li>Cambios en la localización del usuario.</li>
+<li>Cambios asociados con anotaciones y overlys.</li>
+<li>Lo más sencillo es definir como delegado el <em>view controller</em> en el
+  que se incluye el mapa.</li>
+<li>Ejemplo:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">regionDidChangeAnimated</span> <span class="n">animated</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Cambiada la posición del mapa: </span><span class="si">\(</span><span class="n">mapView</span><span class="p">.</span><span class="n">centerCoordinate</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="anotaciones">Anotaciones<a class="headerlink" href="#anotaciones" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/bullseye-view.png" width="300px"/></p>
+<ul>
+<li>Las anotaciones permite resaltar coordenadas específicas del mapa y
+  proporcionar información adicional sobre ellas.</li>
+<li>Puedes usar anotaciones para resaltar direcciones, puntos de interés
+  y otros tipos de destinos.</li>
+<li>Cuando se muestran en el mapa, las anotaciones tienen algún tipo de
+  imagen para identificar su localización y también pueden tener un
+  bocadillo (<em>callout</em>) que proporciona información y enlaces hacia
+  más contenido.</li>
+<li>En la imagen se muestra una vista estándar en forma de chincheta
+  para marcar un lugar y un <em>callout</em> que muestra más información.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="clases-relacionadas">Clases relacionadas<a class="headerlink" href="#clases-relacionadas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para mostrar una anotación en un mapa necesitamos dos objetos:</li>
+<li>Un <strong>objeto <code>annotation</code></strong>, que es un objeto que cumple el
+    protocolo
+    <a href="https://developer.apple.com/reference/mapkit/mkannotation"><code>MKAnnotation</code></a>
+    y que gestiona los datos de la anotación.</li>
+<li>Una <strong>vista</strong> de la anotación, que es una vista (derivada de la
+    clase
+    <a href="https://developer.apple.com/reference/mapkit/mkannotationview"><code>MKAnnotationView</code></a>)
+    usada para dibujar la representación visual de la anotación sobre
+    la superficie del mapa.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="el-protocolo-mkannotation">El protocolo <code>MKAnnotation</code><a class="headerlink" href="#el-protocolo-mkannotation" title="Permanent link">&para;</a></h3>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
+<span class="kd">var</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
+<span class="kd">var</span> <span class="nv">subtitle</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+- <code>coordinate</code>: coordenadas de la anotación
+- <code>title</code>: cadena mostrada en el <em>callout</em>
+- <code>subtitle</code>: cadena subtítulo mostrada en el <em>callout</em></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="el-objeto-annotation">El objeto <code>annotation</code><a class="headerlink" href="#el-objeto-annotation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Los objetos <code>annotation</code> son objetos que conforman el protocolo <code>MKAnnotation</code></li>
+<li>Un ejemplo sencillo:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">Pin</span><span class="p">:</span>  <span class="bp">NSObject</span><span class="p">,</span> <span class="bp">MKAnnotation</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span>
+    <span class="kd">var</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span>
+    <span class="kd">var</span> <span class="nv">subtitle</span><span class="p">:</span> <span class="nb">String</span><span class="p">?</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">coordinate</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="s">&quot;Pin </span><span class="si">\(</span><span class="n">num</span><span class="si">)</span><span class="s">&quot;</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">subtitle</span> <span class="p">=</span> <span class="s">&quot;Un bonito lugar&quot;</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">coordinate</span> <span class="p">=</span> <span class="n">coordinate</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="mkannotationview"><code>MKAnnotationView</code><a class="headerlink" href="#mkannotationview" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La clase
+  <a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MKAnnotationView_Class/index.html#//apple_ref/swift/cl/MKAnnotationView"><code>MKAnnotationView</code></a>
+  permite bastante flexibilidad para definir las distintas
+  características de las vistas de las anotaciones.</li>
+<li>Permite definir la imagen de la anotación, con su propiedad <code>image</code>.</li>
+<li>Permite definir las características del <em>callout</em> que aparecerá
+  cuando el usuario pinche sobre la imagen, así como mantener el
+  estado del mismo. Cuando la anotación está seleccionada, el
+  <em>callaout</em> está activo.</li>
+<li>La subclase
+  <a href="https://developer.apple.com/reference/mapkit/mkpinannotationview"><code>MKPinAnnotationView</code></a>
+  proporciona unos valores por defecto que podemos usar (por ejemplo,
+  la imagen de la chincheta).</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="creacion-de-la-anotacion">Creación de la anotación<a class="headerlink" href="#creacion-de-la-anotacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para crear una anotación (o, más precisamente, una vista de una
+  anotación), debemos usar la función
+  <a href="https://developer.apple.com/reference/mapkit/mkmapviewdelegate/1452045-mapview"><code>mapView(_:viewFor:)</code></a>
+  en el objeto delegado del mapa. </li>
+<li>Esta función proporciona una vista cuando las coordenadas de la
+  anotación están la región visible y el mapa la solicita. </li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="n">annotation</span><span class="p">:</span> <span class="bp">MKAnnotation</span><span class="p">)</span> 
+                          <span class="p">-&gt;</span> <span class="bp">MKAnnotationView</span><span class="p">?</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>En la implementación de esta función debemos construir una vista
+  asociada a la anotación que nos pasan y devolverla para que el
+  <em>mapView</em> la gestione o devolver <code>nil</code> si queremos que se muestre la
+  vista estándar.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="un-ejemplo-de-vista-de-anotacion">Un ejemplo de vista de anotación<a class="headerlink" href="#un-ejemplo-de-vista-de-anotacion" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="n">annotation</span><span class="p">:</span> <span class="bp">MKAnnotation</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">MKAnnotationView</span><span class="p">?</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Devolviendo vista para anotación: </span><span class="si">\(</span><span class="n">annotation</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">view</span> <span class="p">=</span> <span class="bp">MKPinAnnotationView</span><span class="p">(</span><span class="n">annotation</span><span class="p">:</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">reuseIdentifier</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">pinTintColor</span> <span class="p">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">red</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">animatesDrop</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">canShowCallout</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="k">return</span> <span class="n">view</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="anadir-anotaciones-en-el-mapa">Añadir anotaciones en el mapa<a class="headerlink" href="#anadir-anotaciones-en-el-mapa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para añadir una anotación al mapa hay que usar el método <code>addAnnotation</code> del <code>viewMap</code>.</li>
+<li>Por ejemplo, podemos crear una anotación en el centro del mapa creando una instancia de <code>Pin</code> (la clase definida anteriormente, que cumple el protocolo <code>MKAnnotation</code>) que inicializamos con un número (variable definida en el <code>viewController</code> que vamos incrementado):</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">pin</span> <span class="p">=</span> <span class="n">Pin</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="n">numPin</span><span class="p">,</span> <span class="n">coordinate</span><span class="p">:</span> <span class="n">mapView</span><span class="p">.</span><span class="n">centerCoordinate</span><span class="p">)</span>
+<span class="n">mapView</span><span class="p">.</span><span class="n">addAnnotation</span><span class="p">(</span><span class="n">pin</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="elementos-en-el-callout">Elementos en el <em>callout</em><a class="headerlink" href="#elementos-en-el-callout" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/modified-callout.png" width="300px"/></p>
+<ul>
+<li>Es posible definir en el <em>callout</em> una imagen en su parte izquierda
+  y un botón en la parte derecha.</li>
+<li>Hay que actualizar las propiedades de la vista
+  <code>leftCalloutAccessoryView</code> y <code>rightCalloutAccessoryView</code> con objetos
+  <code>UIView</code>.</li>
+<li>En la parte derecha es común usar un objeto <code>UIButton</code> con tipo
+  <code>UIButtonTypeDetailDisclosure</code>.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="imagenes-en-las-anotaciones">Imágenes en las anotaciones<a class="headerlink" href="#imagenes-en-las-anotaciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Vamos a mostrar imágenes en la parte izquierda del <em>callout</em>, por
+  ejemplo, <em>thumbnails</em> con la foto del sitio en el que está situada
+  la anotación.</li>
+<li>Lo más apropiado es guardar las imágenes en el objeto <em>annotation</em>.</li>
+<li>Por simplificar, guardamos dos imágenes predefinidas según el número
+  del pin sea par o impar:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">Pin</span><span class="p">:</span>  <span class="bp">NSObject</span><span class="p">,</span> <span class="bp">MKAnnotation</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span>
+    <span class="kd">var</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">subtitle</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">thumbImage</span><span class="p">:</span> <span class="bp">UIImage</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">num</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">coordinate</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="s">&quot;Pin </span><span class="si">\(</span><span class="n">num</span><span class="si">)</span><span class="s">&quot;</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">subtitle</span> <span class="p">=</span> <span class="s">&quot;Un bonito lugar&quot;</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">coordinate</span> <span class="p">=</span> <span class="n">coordinate</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="p">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">thumbImage</span> <span class="p">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;alicante1_thumb.png&quot;</span><span class="p">)</span><span class="o">!</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">thumbImage</span> <span class="p">=</span> <span class="bp">UIImage</span><span class="p">(</span><span class="n">named</span><span class="p">:</span> <span class="s">&quot;alicante2_thumb.png&quot;</span><span class="p">)</span><span class="o">!</span>
+        <span class="p">}</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="actualizacion-del-callout">Actualización del <em>callout</em><a class="headerlink" href="#actualizacion-del-callout" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La actualización del <em>callout</em> se hace en el mismo método
+  <code>mapView(_:viewFor</code>) que devuelve la vista de una anotación:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="n">annotation</span><span class="p">:</span> <span class="bp">MKAnnotation</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">MKAnnotationView</span><span class="p">?</span> <span class="p">{</span>
+    <span class="c1">//</span>
+    <span class="c1">// el mismo código que antes</span>
+    <span class="c1">//</span>
+    <span class="kd">let</span> <span class="nv">pin</span> <span class="p">=</span> <span class="n">annotation</span> <span class="k">as</span><span class="p">!</span> <span class="n">Pin</span>
+    <span class="kd">let</span> <span class="nv">thumbnailImageView</span> <span class="p">=</span> <span class="bp">UIImageView</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">59</span><span class="p">))</span>
+    <span class="n">thumbnailImageView</span><span class="p">.</span><span class="n">image</span> <span class="p">=</span> <span class="n">pin</span><span class="p">.</span><span class="n">thumbImage</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">leftCalloutAccessoryView</span> <span class="p">=</span> <span class="n">thumbnailImageView</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">rightCalloutAccessoryView</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">(</span><span class="n">type</span><span class="p">:</span><span class="n">UIButtonType</span><span class="p">.</span><span class="n">detailDisclosure</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">view</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="overlays">Overlays<a class="headerlink" href="#overlays" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/overlays.png" width="300px"/></p>
+<ul>
+<li>Los overlays permiten definir capas de contenido sobre una región
+  arbitraria del mapa.</li>
+<li>Están definidos por coordenadas en las que es posible definir
+  conjuntos de líneas, rectángulos y otras formas.</li>
+<li>Por ejemplo, se podría usar usar overlays para añadir información de
+  tráfico sobre carreteras, o marcar los límites de un parque o de una
+  región. </li>
+<li>Puedes ver una demostración del uso de overlays en la app
+  <a href="http://domingogallardo.github.io/apuntes-mastermoviles/apps/ParkView.zip">ParkView</a>
+  del tutorial de <a href="https://www.raywenderlich.com/166182/mapkit-tutorial-overlay-views">raywenderlich.com</a>.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="mostrar-un-overlay">Mostrar un overlay<a class="headerlink" href="#mostrar-un-overlay" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Para mostrar un overlay sobre un mapa se deben proporcionar dos
+objetos:</li>
+<li>Un <strong>objeto overlay</strong>, que es un objeto que cumple el protocolo
+    <a href="https://developer.apple.com/documentation/mapkit/mkoverlay">MKOverlay</a>
+    y gestiona los puntos de datos del overlay.</li>
+<li>Un <strong>renderizador del overlay</strong>, que es una clase derivada de
+    <a href="https://developer.apple.com/documentation/mapkit/mkoverlayrenderer">MKOverlayRenderer</a>
+    y que debe usarse para dibujar la representación visual del
+    overlay sobre la superficie del mapa.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="ejemplo-de-codigo-1">Ejemplo de código (1)<a class="headerlink" href="#ejemplo-de-codigo-1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ejemplo de código de la aplicación demo <code>Park View</code></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">ParkMapOverlay</span><span class="p">:</span> <span class="bp">NSObject</span><span class="p">,</span> <span class="bp">MKOverlay</span> <span class="p">{</span>
+
+  <span class="kd">var</span> <span class="nv">coordinate</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span>
+  <span class="kd">var</span> <span class="nv">boundingMapRect</span><span class="p">:</span> <span class="n">MKMapRect</span>
+
+  <span class="kd">init</span><span class="p">(</span><span class="n">park</span><span class="p">:</span> <span class="n">Park</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">boundingMapRect</span> <span class="p">=</span> <span class="n">park</span><span class="p">.</span><span class="n">overlayBoundingMapRect</span>
+    <span class="n">coordinate</span> <span class="p">=</span> <span class="n">park</span><span class="p">.</span><span class="n">midCoordinate</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="ejemplo-de-codigo-2">Ejemplo de código (2)<a class="headerlink" href="#ejemplo-de-codigo-2" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">ParkMapOverlayView</span><span class="p">:</span> <span class="bp">MKOverlayRenderer</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nv">overlayImage</span><span class="p">:</span> <span class="bp">UIImage</span>
+
+  <span class="kd">init</span><span class="p">(</span><span class="n">overlay</span><span class="p">:</span><span class="bp">MKOverlay</span><span class="p">,</span> <span class="n">overlayImage</span><span class="p">:</span><span class="bp">UIImage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">overlayImage</span> <span class="p">=</span> <span class="n">overlayImage</span>
+    <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">overlay</span><span class="p">:</span> <span class="n">overlay</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="kr">override</span> <span class="kd">func</span> <span class="nf">draw</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapRect</span><span class="p">:</span> <span class="n">MKMapRect</span><span class="p">,</span> <span class="n">zoomScale</span><span class="p">:</span> <span class="n">MKZoomScale</span><span class="p">,</span> <span class="k">in</span> <span class="n">context</span><span class="p">:</span> <span class="bp">CGContext</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">imageReference</span> <span class="p">=</span> <span class="n">overlayImage</span><span class="p">.</span><span class="n">cgImage</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nv">rect</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">rect</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">overlay</span><span class="p">.</span><span class="n">boundingMapRect</span><span class="p">)</span>
+    <span class="n">context</span><span class="p">.</span><span class="n">scaleBy</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">context</span><span class="p">.</span><span class="n">translateBy</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="n">rect</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">height</span><span class="p">)</span>
+    <span class="n">context</span><span class="p">.</span><span class="n">draw</span><span class="p">(</span><span class="n">imageReference</span><span class="p">,</span> <span class="k">in</span><span class="p">:</span> <span class="n">rect</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="anadido-y-dibujado-del-overlay">Añadido y dibujado del overlay<a class="headerlink" href="#anadido-y-dibujado-del-overlay" title="Permanent link">&para;</a></h3>
+<ul>
+<li>El overlay debe añadirse al <code>mapView</code></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">overlay</span> <span class="p">=</span> <span class="n">ParkMapOverlay</span><span class="p">(</span><span class="n">park</span><span class="p">:</span> <span class="n">park</span><span class="p">)</span>
+<span class="n">mapView</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Para su visualización debemos implementar el método
+  <code>mapView:rendererForOverlay:</code> en el <code>mapView</code> delegado. En el
+  siguiente código se dibujan distintos tipos de overlays:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">rendererFor</span> <span class="n">overlay</span><span class="p">:</span> <span class="bp">MKOverlay</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">MKOverlayRenderer</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">overlay</span> <span class="k">is</span> <span class="n">ParkMapOverlay</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">ParkMapOverlayView</span><span class="p">(</span><span class="n">overlay</span><span class="p">:</span> <span class="n">overlay</span><span class="p">,</span> <span class="n">overlayImage</span><span class="p">:</span> <span class="p">#</span><span class="n">imageLiteral</span><span class="p">(</span><span class="n">resourceName</span><span class="p">:</span> <span class="s">&quot;overlay_park&quot;</span><span class="p">))</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="n">overlay</span> <span class="k">is</span> <span class="bp">MKPolyline</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nv">lineView</span> <span class="p">=</span> <span class="bp">MKPolylineRenderer</span><span class="p">(</span><span class="n">overlay</span><span class="p">:</span> <span class="n">overlay</span><span class="p">)</span>
+      <span class="n">lineView</span><span class="p">.</span><span class="n">strokeColor</span> <span class="p">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">green</span>
+      <span class="k">return</span> <span class="n">lineView</span>
+      <span class="k">else</span> <span class="k">if</span> <span class="p">...</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="bp">MKOverlayRenderer</span><span class="p">()</span>
+  <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="otras-caracteristicas-busquedas">Otras características: búsquedas<a class="headerlink" href="#otras-caracteristicas-busquedas" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/busquedas.png" width="300px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="otras-caracteristicas-rutas">Otras características: rutas<a class="headerlink" href="#otras-caracteristicas-rutas" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/rutas.png" width="300px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="otras-caracteristicas-3d">Otras características: 3D<a class="headerlink" href="#otras-caracteristicas-3d" title="Permanent link">&para;</a></h3>
+<p><img style="vertical-align: middle" src="imagenes/map-3d.png" width="300px"/> <img style="vertical-align: middle; margin-left:50px" src="imagenes/mapa-3d-2.png" width="300px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h2 id="localizacion">Localización<a class="headerlink" href="#localizacion" title="Permanent link">&para;</a></h2>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="localizacion_1">Localización<a class="headerlink" href="#localizacion_1" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<p><img style="margin-left:50px" src="imagenes/localizacion.png" width="300px"/></p>
+<ul>
+<li>Las apps usan datos de localización del dispositivo para múltiples
+  propósitos, desde redes sociales hasta servicios de navegación.</li>
+<li>Los datos de localización se obtienen mediante el framework
+  <a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/"><code>Core Location</code></a>. La
+  clase principal es
+  <a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html"><code>CLLocationManager</code></a>.</li>
+<li>Este framework proporciona bastantes servicios que puedes usar para
+  obtener y monitorizar la localización actual del dispositivo:</li>
+<li>El servicio de localización de cambios-significativos proporciona
+    una forma de bajo consumo de obtener la localización actual y ser
+    notificado cuando ha ocurrido un cambio significativo.</li>
+<li>El servicio de localización estándar ofrece una forma altamente
+    configurable de obtener la localización actual y de hacer un
+    seguimiento de los cambios.</li>
+<li>La monitorización de regiones te permite monitorizar regiones
+    geográficas y regiones definidas por <em>beacons</em> de Bluetooth de
+    baja energía.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="activacion-de-los-servicios-de-localizacion">Activación de los servicios de localización<a class="headerlink" href="#activacion-de-los-servicios-de-localizacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Si la app requiere servicios de localización para funcionar
+  correctamente, debes incluir la clave <code>UIRequiredDeviceCapabilities</code>
+  en el fichero <code>Info.plist</code> de la app. La App Store usa la
+  información en esta clava para prevenir la descarga de la app a
+  dispositivos que no contienen estos servicios. Puedes no añadir esta
+  clave si quieres permitir descargar la app aunque no esté disponible
+  el servicio.</li>
+<li>El valor de la clave es un array de cadenas indicando las
+  características que requiere la app. En el caso de los servicios de
+  localización son relevantes las cadenas <code>location-services</code> y
+  <code>gps</code>. La primera si se requieren servicios de localización en
+  general y la segundo si se requiere la precisión ofrecida por el
+  GPS.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="solicitar-informacion-al-usuario">Solicitar información al usuario<a class="headerlink" href="#solicitar-informacion-al-usuario" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/autorizacion.png" width="700px"/></p>
+<ul>
+<li>Es necesario añadir también en <code>Info.plist</code> una cadena asociada a la
+  clave <code>NSLocationWhenInUseUsageDescription</code>. Esta clave tiene la
+  descripción en Xcode <code>Privacy - Location When in Use Usage
+  Description</code>.</li>
+<li>Se solicita autorización al usuario llamando al método
+  <code>request​When​In​Use​Authorization()</code> o <code>requestAlwaysAuthorization()</code> del objeto <code>CLLocationManager</code>.</li>
+<li>La cadena se mostrará como subtítulo en el diálogo en el que se
+  solicita al usuario la autorización.</li>
+</ul>
+<p><img src="imagenes/dialogo-autorizacion.png" width="250px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="clase-cllocationmanager">Clase <code>CLLocationManager</code><a class="headerlink" href="#clase-cllocationmanager" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se debe crear una instancia de la clase <a href="https://developer.apple.com/reference/corelocation/cllocationmanager"><code>CLLocation​Manager</code></a> y
+  guardar una referencia fuerte a ella en la app.</li>
+<li>Se necesita mantener una referencia fuerte al objeto <em>location
+  manager</em> hasta que han terminado todas las tareas en las que
+  participa.</li>
+<li>Debido a que las tareas de gestión de localización se ejecutan
+  asíncronamente, es insuficiente almacenar una referencia al
+  <em>location manager</em> en una variable local.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="para-activar-la-localizacion">Para activar la localización<a class="headerlink" href="#para-activar-la-localizacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La clase <code>AppDelegate</code> también puede funcionar como
+  <a href="https://developer.apple.com/reference/corelocation/cllocationmanagerdelegate"><code>CLLocationManagerDelegate</code></a>. Inicializamos
+  ahí el <code>CLLocationManager</code>.</li>
+<li>En el método <code>didFinishLaunchingWithOptions</code> podemos actualizar el
+  gestor de localización:</li>
+<li>Inicializamos el delegado del gestor de localización.</li>
+<li>Solicitamos permiso al usuario de que la app va a usar los
+    servicios de localización invocando al método
+    <code>requestWhenInUseAuthorization()</code></li>
+<li>Se debe configurar la precisión de la localización, actualizando
+    la propiedad <code>desiredAccuracy</code> del gestor de localización,
+    asignándole el valor en metros de la precisión deseada. Cuanto
+    mayor sea la precisión deseada, mayor será el consumo de batería
+    del dispositivo.</li>
+<li>Después se debe llamar al método <code>startUpdatingLocation()</code>.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="codigo">Código<a class="headerlink" href="#codigo" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">import</span> <span class="nc">UIKit</span>
+<span class="kd">import</span> <span class="nc">CoreLocation</span>
+
+<span class="kr">@UIApplicationMain</span>
+<span class="kd">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="bp">UIResponder</span><span class="p">,</span> <span class="bp">UIApplicationDelegate</span><span class="p">,</span> <span class="bp">CLLocationManagerDelegate</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nv">window</span><span class="p">:</span> <span class="bp">UIWindow</span><span class="p">?</span>
+    <span class="kd">let</span> <span class="nv">locationManager</span> <span class="p">=</span> <span class="bp">CLLocationManager</span><span class="p">()</span>
+
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="bp">NSObject</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+        <span class="c1">// Override point for customization after application launch.</span>
+        <span class="n">locationManager</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+        <span class="n">locationManager</span><span class="p">.</span><span class="n">requestWhenInUseAuthorization</span><span class="p">()</span>
+        <span class="n">locationManager</span><span class="p">.</span><span class="n">desiredAccuracy</span> <span class="p">=</span> <span class="n">kCLLocationAccuracyNearestTenMeters</span>
+        <span class="n">locationManager</span><span class="p">.</span><span class="n">startUpdatingLocation</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="p">...</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="monitorizacion-de-la-localizacion">Monitorización de la localización<a class="headerlink" href="#monitorizacion-de-la-localizacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cuando suceda un cambio en localización se notificará al delegado llamando a su método <code>didUpdateLocations</code> pasándole un array de localizaciones (objetos <code>CLLocation</code>):</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">locationManager</span><span class="p">(</span><span class="kc">_</span> <span class="n">manager</span><span class="p">:</span> <span class="bp">CLLocationManager</span><span class="p">,</span> <span class="n">didUpdateLocations</span> <span class="n">locations</span><span class="p">:</span> <span class="p">[</span><span class="bp">CLLocation</span><span class="p">])</span> <span class="p">{</span>
+   <span class="c1">// Código para gestionar las localizaciones</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="clase-cllocation">Clase <code>CLLocation</code><a class="headerlink" href="#clase-cllocation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>La clase <a href="https://developer.apple.com/documentation/corelocation/cllocation"><code>CLLocation</code></a> permite representar una posición <em>outdoor</em> o <em>indoor</em> y el instante de tiempo asociado a ella.</li>
+<li>Atributos:</li>
+<li><code>coordinate</code></li>
+<li><code>altitude</code></li>
+<li><code>floor</code></li>
+<li><code>horizontalAccuracy</code></li>
+<li><code>verticalAccuracy</code></li>
+<li><code>speed</code></li>
+<li><code>course</code></li>
+<li><code>timestamp</code></li>
+<li><code>description</code></li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="activacion-de-la-localizacion-en-el-mapa">Activación de la localización en el mapa<a class="headerlink" href="#activacion-de-la-localizacion-en-el-mapa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Una vez activado el servicio de localización se puede activar la localización en el mapa obteniendo el <code>MKUserTrackingBarButtonItem</code> y añadiéndolo a la barra de navegación.</li>
+<li>No hace falta llamar a <code>startUpdatingLocation()</code>.</li>
+<li>Se puede hacer en el <code>ViewController</code> que contiene el mapa:</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+    <span class="kd">let</span> <span class="nv">userTrackingButton</span> <span class="p">=</span> <span class="bp">MKUserTrackingBarButtonItem</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">)</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">navigationItem</span><span class="p">.</span><span class="n">leftBarButtonItem</span> <span class="p">=</span> <span class="n">userTrackingButton</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="prueba-de-la-localizacion-en-el-simulador">Prueba de la localización en el simulador<a class="headerlink" href="#prueba-de-la-localizacion-en-el-simulador" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Es posible probar los servicios de localización desde el simulador</li>
+<li>Seleccionar la simulación del movimiento y localización del dispositivo en <em>Debug &gt; Location</em></li>
+<li>Opciones:</li>
+<li>Ninguna</li>
+<li>Custom</li>
+<li>Apple</li>
+<li>City Bicycle Ride</li>
+<li>City Run</li>
+<li>Freeway Ride</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas-1">Práctica: Mapas (1)<a class="headerlink" href="#practica-mapas-1" title="Permanent link">&para;</a></h3>
+<p><!-- .slide: class="image-right"-->
+<!-- .slide: data-background="#cbe0fc"--></p>
+<p><img style="margin-left:50px" src="imagenes/practica-1.png" width="300px"/></p>
+<ul>
+<li>Debes crear la app <code>es.ua.mastermoviles.Mapas</code>.</li>
+<li>Empieza por definir un <em>View Controller</em> en el que debes incluir un
+  mapa centrado inicialmente en Alicante.</li>
+<li>Incluye el <em>View Controller</em> en un <em>Navigation Controller</em> con la
+  opción <em>Editor &gt; Embed In &gt; Navigation Controller</em>.</li>
+<li>Añade en el centro de la barra del <em>Navigation Controller</em> un
+  <em>Segmented Control</em> con los valores <code>Mapa</code> y <code>Satélite</code>, conéctalos
+  con el <em>ViewController</em> y haz que el mapa cambie de tipo cuando se
+  pulse en el control.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas-2">Práctica: Mapas (2)<a class="headerlink" href="#practica-mapas-2" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<!-- .slide: data-background="#cbe0fc"-->
+
+<p><img style="margin-left:50px" src="imagenes/practica-2.png" width="300px"/></p>
+<ul>
+<li>En el <em>Storyboard</em> añade un <code>Bar Button Item</code> en la parte derecha de
+  la barra de navegación.</li>
+<li>Llámalo <code>Pin</code> y enlázalo con una acción en el <code>ViewController</code> que
+  añada una anotación en el mapa.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas-3">Práctica: Mapas (3)<a class="headerlink" href="#practica-mapas-3" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<!-- .slide: data-background="#cbe0fc"-->
+
+<p><img style="margin-left:50px" src="imagenes/practica-3.png" width="300px"/></p>
+<ul>
+<li>Añade en los <em>callouts</em> imágenes <em>thumbnails</em> predefinidas,
+  dependiendo de si el número de pin es par o impar.</li>
+<li>Añade en los <em>callouts</em> el botón de información.</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas-opcional-25-puntos">Práctica: Mapas (opcional - 2,5 puntos)<a class="headerlink" href="#practica-mapas-opcional-25-puntos" title="Permanent link">&para;</a></h3>
+<!-- .slide: data-background="#cbe0fc"-->
+
+<ul>
+<li>Implementa un <em>segue</em> que haga aparecer otra vista con un detalle de
+  la foto.</li>
+</ul>
+<p><img src="imagenes/storyboard.png" width="500px"/> <img style="margin-left:50px" src="imagenes/practica-4.png" width="200px"/></p>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas">Práctica: Mapas<a class="headerlink" href="#practica-mapas" title="Permanent link">&para;</a></h3>
+<!-- .slide: data-background="#cbe0fc"-->
+
+<ul>
+<li>Pista 1 (Segue):</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">annotationView</span> <span class="n">view</span><span class="p">:</span> <span class="bp">MKAnnotationView</span><span class="p">,</span> <span class="n">calloutAccessoryControlTapped</span> <span class="n">control</span><span class="p">:</span> <span class="bp">UIControl</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">performSegue</span><span class="p">(</span><span class="n">withIdentifier</span><span class="p">:</span> <span class="s">&quot;DetalleImagen&quot;</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">view</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kr">override</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">for</span> <span class="n">segue</span><span class="p">:</span> <span class="bp">UIStoryboardSegue</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">segue</span><span class="p">.</span><span class="n">identifier</span> <span class="p">==</span> <span class="s">&quot;DetalleImagen&quot;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">pin</span> <span class="p">=</span> <span class="p">(</span><span class="n">sender</span> <span class="k">as</span><span class="p">?</span> <span class="bp">MKAnnotationView</span><span class="p">)?.</span><span class="n">annotation</span> <span class="k">as</span><span class="p">?</span> <span class="n">Pin</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="kd">let</span> <span class="nv">vc</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">destination</span> <span class="k">as</span><span class="p">?</span> <span class="n">MiImageViewController</span> <span class="p">{</span>
+                <span class="n">vc</span><span class="p">.</span><span class="n">imageDetail</span> <span class="p">=</span> <span class="n">pin</span><span class="p">.</span><span class="n">thumbImage</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas_1">Práctica: Mapas<a class="headerlink" href="#practica-mapas_1" title="Permanent link">&para;</a></h3>
+<!-- .slide: data-background="#cbe0fc"-->
+
+<ul>
+<li>Pista 2 (<code>ViewController</code> de la vista detalle):</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">ImageDetailViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
+
+    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="bp">UIImageView</span><span class="p">!</span>
+    <span class="kd">var</span> <span class="nv">imageDetail</span><span class="p">:</span> <span class="bp">UIImage</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
+
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">imageDetail</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="n">imageView</span><span class="p">.</span><span class="n">image</span> <span class="p">=</span> <span class="n">imageDetail</span><span class="p">!</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="practica-mapas-localizacion-opcional-25-puntos">Práctica: Mapas (Localización - opcional 2,5 puntos)<a class="headerlink" href="#practica-mapas-localizacion-opcional-25-puntos" title="Permanent link">&para;</a></h3>
+<!-- .slide: class="image-right"-->
+
+<!-- .slide: data-background="#cbe0fc"-->
+
+<p><img style="margin-left:50px" src="imagenes/practica-5.png" width="300px"/></p>
+<ul>
+<li>Añade el tracking de localización a la aplicación, imprimiendo la
+  localización en la salida estándar cada 10 metros. Comprueba el
+  funcionamiento activando la localización en el simulador.</li>
+<li>Añade la localización al mapa, haciendo que aparezca en la parte
+  izquierda de la barra de navegación el botón de navegación.</li>
+<li>Cuando pulses el botón de navegación se debe mostrar la posición
+  actual del dispositivo.</li>
+<li>Deberás modificar la función que muestra la vista de una anotación
+  (<a href="https://developer.apple.com/reference/mapkit/mkmapviewdelegate/1452045-mapview"><code>mapView(_:viewFor:)</code></a>
+  porque se utiliza también para mostrar la vista de la posición
+  actual del dispositivo (que también es una anotación).</li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h3 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://developer.apple.com/maps/">Recursos sobre mapas y localización</a></li>
+<li><a href="https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009497">Location and maps programming guide</a></li>
+<li>APIs:</li>
+<li><a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MapKit_Framework_Reference/">Map Kit Framework Reference</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/">Core Location Framework Reference</a></li>
+<li><a href="https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_when_in_use_authorization">Artículo - pedir autorización en uso</a></li>
+<li><a href="https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization">Artículo - pedir autorización siempre</a></li>
+</ul>
+<!-- Tres líneas en blanco para la siguiente transparencia -->
+
+<h1 id="master-programacion-de-dispositivos-moviles">Master Programación <br/> de Dispositivos Móviles<a class="headerlink" href="#master-programacion-de-dispositivos-moviles" title="Permanent link">&para;</a></h1>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
