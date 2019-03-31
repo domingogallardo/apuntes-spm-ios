@@ -1638,28 +1638,7 @@
               
                 
                 
-                <!--
-
-Instalación de app de prueba mediante Fabric:
-
-Para que tu aplicación pueda lanzarse en un dispositivo, éste debe
-estar registrado en tu perfil de aprovisionamiento.
-
-Para desplegar una app iOS en un dispositivo, el perfil de
-aprovisionamiento usado debe contener el UDID de dicho dispositivo. Si 
-no lo está, en lugar de recibir un enlace para instalar la app, el 
-tester recibirá un enlace para la aplicación web Beta, que se usa 
-para recoger su UDID y enviarle una alerta cuando una nueva 
-versión de la app esté disponible. 
-
-Una vez el tester instala la app web, recibirás una notificación 
-conteniendo un adjunto con su UDID. Los UDIDs también se mostrarán 
-en la aplicación de Fabric para OS X cuando se cree una 
-distribución que incluya testers con UDIDs desconocidos.
-
--->
-
-<h1 id="sesion-1-firma-aprovisionamiento-y-distribucion-de-apps">Sesión 1: <br/> Firma, aprovisionamiento y <br/> distribución de apps<a class="headerlink" href="#sesion-1-firma-aprovisionamiento-y-distribucion-de-apps" title="Permanent link">&para;</a></h1>
+                <h1 id="sesion-1-firma-aprovisionamiento-y-distribucion-de-apps">Sesión 1: <br/> Firma, aprovisionamiento y <br/> distribución de apps<a class="headerlink" href="#sesion-1-firma-aprovisionamiento-y-distribucion-de-apps" title="Permanent link">&para;</a></h1>
 <h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
 <p>En la sesión de hoy estudiaremos los elementos que proporciona la
 plataforma iOS para:</p>
@@ -1974,23 +1953,6 @@ deshabilita. </p>
 </div>
 <hr />
 <h2 id="despliegue-de-apps-en-dispositivos-de-prueba">Despliegue de apps en dispositivos de prueba<a class="headerlink" href="#despliegue-de-apps-en-dispositivos-de-prueba" title="Permanent link">&para;</a></h2>
-<!--
-
-Perfiles de aprovisionamiento
-
-- Instalar un perfil de aprovisionamiento en el móvil que incluya
-  la clave pública del certificado con el que se firma la app.
-
-Podemos hacer ambas cosas usando Xcode y la identidad de firma
-obtenida con el Apple ID.
-
-
-Vamos a demostrar y probar las dos primeras opciones, utilizando el Programa
-de Desarrollo de la Universidad. Haremos también una demostración de la
-distribución de versiones beta de apps usando un Programa de
-Desarrollador de pago.
--->
-
 <h3 id="capacidades-de-las-apps">Capacidades de las apps<a class="headerlink" href="#capacidades-de-las-apps" title="Permanent link">&para;</a></h3>
 <p><img src="imagenes/app-distribution.png" height="200px"/></p>
 <p>Para poder utilizar servicios avanzados proporcionados por Apple en
@@ -2673,8 +2635,8 @@ dispositivos conectados a Xcode).</p>
 <li>Incluye tu nombre en alguna parte de la interfaz de usuario.</li>
 <li>Fírmala con tu cuenta gratuita de desarrollador Apple (no la del
 equipo de la UA). </li>
-<li>Instálala en el dispositivo del profesor usándolo como dispositivo de
-desarrollo de Xcode y prueba que funciona correctamente. </li>
+<li>Instálala en un dispositivo de desarrollo conectado a Xcode y
+   prueba que funciona correctamente.</li>
 <li>Haz una foto y guárdala como documentación.</li>
 </ol>
 <h3 id="configuracion-de-la-cuenta-de-desarrollador">Configuración de la cuenta de desarrollador<a class="headerlink" href="#configuracion-de-la-cuenta-de-desarrollador" title="Permanent link">&para;</a></h3>
@@ -2718,9 +2680,9 @@ realizar en Moodle.</p>
    (o usa una app tuya que hayas desarrollado) y fírmala con tu cuenta
    gratuita de desarrollador Apple (no la del equipo de la
    UA). Modifica la app para que aparezca tu nombre en la interfaz de
-   usuario. Instálala en el dispositivo del profesor usándolo como
-   dispositivo de desarrollo de Xcode y prueba que funciona
-   correctamente. Haz una foto y guárdala como documentación.</li>
+   usuario. Instálala en un dispositivo de desarrollo de Xcode y
+   prueba que funciona correctamente. Haz una foto y guárdala como
+   documentación.</li>
 <li>Firma la app con tu cuenta del equipo de la UA, activa
    el servicio de <em>Game Center</em> e instálala en otro dispositivo del
    profesor que esté dado de alta en el perfil de aprovisionamiento,
