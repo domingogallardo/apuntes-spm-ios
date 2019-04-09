@@ -36,7 +36,7 @@
     
     
       
-        <title>Sesión 2: Notificaciones - SPM-iOS</title>
+        <title>Notificaciones - SPM-iOS</title>
       
     
     
@@ -108,7 +108,7 @@
               SPM-iOS
             </span>
             <span class="md-header-nav__topic">
-              Sesión 2: Notificaciones
+              Notificaciones
             </span>
           
         </div>
@@ -191,6 +191,481 @@
     <a href="../sesion01/sesion01-firma-aprovisionamiento.html" title="Firma, aprovisionamiento y distribución de apps" class="md-nav__link">
       Firma, aprovisionamiento y distribución de apps
     </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Notificaciones
+      </label>
+    
+    <a href="sesion02-notificaciones.html" title="Notificaciones" class="md-nav__link md-nav__link--active">
+      Notificaciones
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" title="Introducción" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apariencia-de-las-notificaciones" title="Apariencia de las notificaciones" class="md-nav__link">
+    Apariencia de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-aparecen-las-notificaciones" title="Dónde aparecen las notificaciones" class="md-nav__link">
+    Dónde aparecen las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccion-en-las-notificaciones" title="Interacción en las notificaciones" class="md-nav__link">
+    Interacción en las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones-locales" title="Notificaciones locales" class="md-nav__link">
+    Notificaciones locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones-remotas" title="Notificaciones remotas" class="md-nav__link">
+    Notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-se-usan-las-notificaciones" title="Para qué se usan las notificaciones" class="md-nav__link">
+    Para qué se usan las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-service-app-extensions" title="Notification service app extensions" class="md-nav__link">
+    Notification service app extensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-la-app" title="Ciclo de vida de la app" class="md-nav__link">
+    Ciclo de vida de la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-de-notificaciones" title="API de notificaciones" class="md-nav__link">
+    API de notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusernotificationcenter" title="UNUserNotificationCenter" class="md-nav__link">
+    UNUserNotificationCenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications-ui-framework" title="Notifications UI Framework" class="md-nav__link">
+    Notifications UI Framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparacion-de-las-notificaciones" title="Preparación de las notificaciones" class="md-nav__link">
+    Preparación de las notificaciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-los-tipos-de-notificacion" title="Registro de los tipos de notificación" class="md-nav__link">
+    Registro de los tipos de notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-los-ajustes-definidos-por-el-usuario" title="Obtener los ajustes definidos por el usuario" class="md-nav__link">
+    Obtener los ajustes definidos por el usuario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificaciones-locales_1" title="Notificaciones locales" class="md-nav__link">
+    Notificaciones locales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-notificaciones" title="Creación de notificaciones" class="md-nav__link">
+    Creación de notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-la-notificacion" title="Contenido de la notificación" class="md-nav__link">
+    Contenido de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-attachments" title="Media attachments" class="md-nav__link">
+    Media attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condiciones-de-disparo-de-la-notificacion" title="Condiciones de disparo de la notificación" class="md-nav__link">
+    Condiciones de disparo de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-la-notificacion-local" title="Creación de la notificación local" class="md-nav__link">
+    Creación de la notificación local
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" title="Demo" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app-notificaciones" title="Ejemplo de app: Notificaciones" class="md-nav__link">
+    Ejemplo de app: Notificaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acciones" title="Acciones" class="md-nav__link">
+    Acciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-de-creacion-de-una-accion" title="Ejemplo de código de creación de una acción" class="md-nav__link">
+    Ejemplo de código de creación de una acción
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-notificaciones" title="Manejo de notificaciones" class="md-nav__link">
+    Manejo de notificaciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-en-segundo-plano" title="App en segundo plano" class="md-nav__link">
+    App en segundo plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-en-primer-plano" title="App en primer plano" class="md-nav__link">
+    App en primer plano
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_1" title="Demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificaciones-remotas-push" title="Notificaciones remotas (push)" class="md-nav__link">
+    Notificaciones remotas (push)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-de-las-notificaciones-remotas" title="Objetivos de las notificaciones remotas" class="md-nav__link">
+    Objetivos de las notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-las-notificaciones-remotas" title="Arquitectura de las notificaciones remotas" class="md-nav__link">
+    Arquitectura de las notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-seguridad" title="Arquitectura de seguridad" class="md-nav__link">
+    Arquitectura de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-de-registro-del-dispositivo" title="Secuencia de registro del dispositivo" class="md-nav__link">
+    Secuencia de registro del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-del-dispositivo" title="Token del dispositivo" class="md-nav__link">
+    Token del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envio-de-notificacion-remota-usando-el-token" title="Envío de notificación remota usando el token" class="md-nav__link">
+    Envío de notificación remota usando el token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-la-notificacion_1" title="Contenido de la notificación" class="md-nav__link">
+    Contenido de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidores-proveedores" title="Servidores proveedores" class="md-nav__link">
+    Servidores proveedores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-las-notificaciones-remotas-en-la-app" title="Gestión de las notificaciones remotas en la app" class="md-nav__link">
+    Gestión de las notificaciones remotas en la app
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capacidad-de-notificacion-remota" title="Capacidad de notificación remota" class="md-nav__link">
+    Capacidad de notificación remota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-las-notificaciones" title="Registro de las notificaciones" class="md-nav__link">
+    Registro de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recepcion-de-las-notificaciones-en-la-app" title="Recepción de las notificaciones en la app" class="md-nav__link">
+    Recepción de las notificaciones en la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app" title="Ejemplo de app" class="md-nav__link">
+    Ejemplo de app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_2" title="Demo" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasos-necesarios-para-la-demo" title="Pasos necesarios para la demo" class="md-nav__link">
+    Pasos necesarios para la demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevo-app-id-en-el-member-center" title="Nuevo App ID en el member center" class="md-nav__link">
+    Nuevo App ID en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-certificado-ssl-en-el-member-center" title="Creación del certificado SSL en el member center" class="md-nav__link">
+    Creación del certificado SSL en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-del-fichero-pem" title="Generación del fichero .pem" class="md-nav__link">
+    Generación del fichero .pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-perfil-de-aprovisionamiento" title="Creación del perfil de aprovisionamiento" class="md-nav__link">
+    Creación del perfil de aprovisionamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-del-token-del-dispositivo" title="Obtención del token del dispositivo" class="md-nav__link">
+    Obtención del token del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probamos-la-app-notificacionespush" title="Probamos la app NotificacionesPush" class="md-nav__link">
+    Probamos la app NotificacionesPush
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" title="Probamos a enviar notificaciones remotas al dispositivo" class="md-nav__link">
+    Probamos a enviar notificaciones remotas al dispositivo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practica" title="Práctica" class="md-nav__link">
+    Práctica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" title="Bibliografía" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -462,8 +937,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#objetivo-de-las-notificaciones-remotas" title="Objetivo de las notificaciones remotas" class="md-nav__link">
-    Objetivo de las notificaciones remotas
+  <a href="#objetivos-de-las-notificaciones-remotas" title="Objetivos de las notificaciones remotas" class="md-nav__link">
+    Objetivos de las notificaciones remotas
   </a>
   
 </li>
@@ -511,15 +986,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#otros-ejemplos-de-payload" title="Otros ejemplos de payload" class="md-nav__link">
-    Otros ejemplos de payload
+  <a href="#servidores-proveedores" title="Servidores proveedores" class="md-nav__link">
+    Servidores proveedores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-las-notificaciones-remotas-en-la-app" title="Gestión de las notificaciones remotas en la app" class="md-nav__link">
+    Gestión de las notificaciones remotas en la app
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capacidad-de-notificacion-remota" title="Capacidad de notificación remota" class="md-nav__link">
+    Capacidad de notificación remota
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#servidores-proveedores" title="Servidores proveedores" class="md-nav__link">
-    Servidores proveedores
+  <a href="#registro-de-las-notificaciones" title="Registro de las notificaciones" class="md-nav__link">
+    Registro de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recepcion-de-las-notificaciones-en-la-app" title="Recepción de las notificaciones en la app" class="md-nav__link">
+    Recepción de las notificaciones en la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app" title="Ejemplo de app" class="md-nav__link">
+    Ejemplo de app
   </a>
   
 </li>
@@ -552,15 +1061,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-del-certificado-ssl-en-el-member-center-1" title="Creación del certificado SSL en el member center (1)" class="md-nav__link">
-    Creación del certificado SSL en el member center (1)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creacion-del-perfil-de-aprovisionamiento" title="Creación del perfil de aprovisionamiento" class="md-nav__link">
-    Creación del perfil de aprovisionamiento
+  <a href="#creacion-del-certificado-ssl-en-el-member-center" title="Creación del certificado SSL en el member center" class="md-nav__link">
+    Creación del certificado SSL en el member center
   </a>
   
 </li>
@@ -573,21 +1075,14 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#creacion-del-perfil-de-aprovisionamiento" title="Creación del perfil de aprovisionamiento" class="md-nav__link">
+    Creación del perfil de aprovisionamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#obtencion-del-token-del-dispositivo" title="Obtención del token del dispositivo" class="md-nav__link">
-    Obtención del token del dispositivo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#registro-de-las-notificaciones" title="Registro de las notificaciones" class="md-nav__link">
-    Registro de las notificaciones
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#obtencion-del-token-del-dispositivo_1" title="Obtención del token del dispositivo" class="md-nav__link">
     Obtención del token del dispositivo
   </a>
   
@@ -601,64 +1096,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejecucion-de-notificacionespush-en-un-dispositivo" title="Ejecución de NotificacionesPush en un dispositivo" class="md-nav__link">
-    Ejecución de NotificacionesPush en un dispositivo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" title="Probamos a enviar notificaciones remotas al dispositivo" class="md-nav__link">
     Probamos a enviar notificaciones remotas al dispositivo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recepcion-de-las-notificaciones-en-la-app" title="Recepción de las notificaciones en la app" class="md-nav__link">
-    Recepción de las notificaciones en la app
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#registro-de-la-app-para-notificaciones-remotas" title="Registro de la app para notificaciones remotas" class="md-nav__link">
-    Registro de la app para notificaciones remotas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recepcion-del-token-de-dispositivo" title="Recepción del token de dispositivo" class="md-nav__link">
-    Recepción del token de dispositivo
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-en-background" title="App en background" class="md-nav__link">
-    App en background
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#acciones-del-usuario-sobre-la-notificacion" title="Acciones del usuario sobre la notificación" class="md-nav__link">
-    Acciones del usuario sobre la notificación
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#app-en-primer-plano_1" title="App en primer plano" class="md-nav__link">
-    App en primer plano
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#notificacion-pulsada-por-el-usuario" title="Notificación pulsada por el usuario" class="md-nav__link">
-    Notificación pulsada por el usuario
   </a>
   
 </li>
@@ -1511,46 +1950,42 @@ aparece por la salida estándar:</p>
 <p><img src="imagenes/salida-notificaciones.png" width="400px"/></p>
 <hr />
 <h2 id="notificaciones-remotas-push">Notificaciones remotas (<em>push</em>)<a class="headerlink" href="#notificaciones-remotas-push" title="Permanent link">&para;</a></h2>
-<h3 id="objetivo-de-las-notificaciones-remotas">Objetivo de las notificaciones remotas<a class="headerlink" href="#objetivo-de-las-notificaciones-remotas" title="Permanent link">&para;</a></h3>
+<h3 id="objetivos-de-las-notificaciones-remotas">Objetivos de las notificaciones remotas<a class="headerlink" href="#objetivos-de-las-notificaciones-remotas" title="Permanent link">&para;</a></h3>
+<p>La app tiene un componente <em>server-side</em> en el que se detecta que
+ha sucedido algo interesante para el usuario.</p>
+<p>La notificación remota permite enviar la información desde el
+servicio directamente al usuario.</p>
+<p>También es posible enviar una notificación invisible que llega a la
+app para que descargue nueva información en <em>background</em> y la
+muestre instantáneamente la siguiente vez que el usuario acceda a la
+app. </p>
+<p>El envío de notificaciones se hace a través del APNs (<em>Apple Push
+Notification service</em>).</p>
 <p><img src="imagenes/server-side-notification.png" width="230px"/>
 <img src="imagenes/server-side-silent-notification.png" width="215px"/></p>
-<ul>
-<li>La app tiene un componente <em>server-side</em> en el que se detecta que
-  ha sucedido algo interesante para el usuario.</li>
-<li>La notificación remota permite enviar la información desde el
-  servicio directamente al usuario.</li>
-<li>También es posible enviar una notificación invisible que llega a la
-  app para que descargue nueva información en <em>background</em> y la
-  muestre instantáneamente la siguiente vez que el usuario acceda a la
-  app. </li>
-<li>El envío de notificaciones se hace a través del APNs (<em>Apple Push
-  Notification service</em>).</li>
-</ul>
 <h3 id="arquitectura-de-las-notificaciones-remotas">Arquitectura de las notificaciones remotas<a class="headerlink" href="#arquitectura-de-las-notificaciones-remotas" title="Permanent link">&para;</a></h3>
-<p><img src="imagenes/remote-notif-simple.png" width="700px"/></p>
-<ul>
-<li>Apple Push Notification service (APNs) es la pieza central de las
-  notificaciones remotas. Es un servicio robusto y altamente eficiente
-  para propagar información a dispositivos iOS y OS X.</li>
-<li>Cada dispositivo establece una conexión acreditada y encriptada con
-  el servicio y recibe notificaciones sobre esta conexión persistente.</li>
-<li>Si llega una notificación para una app cuando el dispositivo está
-  fuera de cobertura, el APNs guarda la notificación hasta que el
-  dispositivo vuelve a estar disponible.</li>
-<li>Las notificaciones se originan en servidores (<em>proveedores</em>) propios
-  del desarrollador. Los proveedores se conectan con el APNs y reciben
-  datos de sus apps clientes. Cuando llegan nuevos datos para un app,
-  los proveedores preparan y envían notificaciones a través de los
-  canales al APNs, que se encarga de enviarlas a los dispositivos.</li>
-</ul>
+<p>El servicio Apple Push Notification service (APNs) es la pieza central
+de las notificaciones remotas. Es un servicio robusto y altamente
+eficiente para propagar información a dispositivos iOS y OS X.</p>
+<p><img src="imagenes/apns-server.png" width="700px"/></p>
+<p>Cada dispositivo establece una conexión acreditada y encriptada con
+el servicio y recibe notificaciones sobre esta conexión persistente.</p>
+<p>Si llega una notificación para una app cuando el dispositivo está
+fuera de cobertura, el APNs guarda la notificación hasta que el
+dispositivo vuelve a estar disponible.</p>
+<p>Las notificaciones se originan en servidores (<em>proveedores</em>) propios
+del desarrollador. Los proveedores se conectan con el APNs y reciben
+datos de sus apps clientes. Cuando llegan nuevos datos para un app,
+los proveedores preparan y envían notificaciones a través de los
+canales al APNs, que se encarga de enviarlas a los dispositivos.</p>
 <h3 id="arquitectura-de-seguridad">Arquitectura de seguridad<a class="headerlink" href="#arquitectura-de-seguridad" title="Permanent link">&para;</a></h3>
+<p>No queremos que nuestras notificaciones (con datos personales)
+puedan aparecer en otros dispositivos.</p>
 <p><img src="imagenes/remote-notif-multiple.png" width="400px"/></p>
+<p>El servicio de notificaciones remota de Apple (APNs) define unas
+condiciones de seguridad bastante estrictas tanto entre dispositivo
+y servicio como entre proveedor y el servicio.</p>
 <ul>
-<li>No queremos que nuestras notificaciones (con datos personales)
-  puedan aparecer en otros dispositivos.</li>
-<li>El servicio de notificaciones remota de Apple (APNs) define unas
-  condiciones de seguridad bastante estrictas tanto entre dispositivo
-  y servicio como entre proveedor y el servicio.</li>
 <li>Seguridad en la <strong>conexión Proveedor-APNs</strong><ul>
 <li>Basada en JWT (JSON web tokens) o basada en un certificado.</li>
 <li>Utilizaremos la seguridad basada en un certificado, obteniéndolo
@@ -1567,14 +2002,12 @@ aparece por la salida estándar:</p>
 </li>
 </ul>
 <h3 id="secuencia-de-registro-del-dispositivo">Secuencia de registro del dispositivo<a class="headerlink" href="#secuencia-de-registro-del-dispositivo" title="Permanent link">&para;</a></h3>
+<p>Sin considerar aspectos de seguridad y codificación, los pasos que
+se siguen al registrarse un dispositivo con el método de la clase
+<code>Application</code>
+<a href="https://developer.apple.com/reference/uikit/uiapplication/1623078-registerforremotenotifications">registerForRemoteNotifications()</a>
+son los siguientes:</p>
 <p><img src="imagenes/registration-sequence.png" width="500px"/></p>
-<ul>
-<li>Sin considerar aspectos de seguridad y codificación, los pasos que
-  se siguen al registrarse un dispositivo con el método de la clase
-  <code>Application</code>
-  <a href="https://developer.apple.com/reference/uikit/uiapplication/1623078-registerforremotenotifications">registerForRemoteNotifications()</a>
-  son los siguientes:</li>
-</ul>
 <ol>
 <li>El dispositivo establece una conexión SSL con el APNs.</li>
 <li>El APNs le envía un <em>token</em> único asociado con el dispositivo.</li>
@@ -1584,47 +2017,41 @@ aparece por la salida estándar:</p>
    realizada al APNs.</li>
 </ol>
 <h3 id="token-del-dispositivo">Token del dispositivo<a class="headerlink" href="#token-del-dispositivo" title="Permanent link">&para;</a></h3>
+<p>Cada dispositivo iOS tiene un certificado y una clave privada
+criptográfica, proporcionada por el sistema operativo en la
+activación inicial y almacenada en el llavero del dispositivo.</p>
+<p>Este certificado sirve para establecer una conexión segura basada en
+TLS con el APNs. Con la conexión TLS activa, las apps en el dispositivo pueden
+registrarse con APNs para recibir un token específico para recibir
+notificaciones remotas.</p>
 <p><img src="imagenes/token-generation.png" width="400px"/></p>
-<ul>
-<li>Cada dispositivo iOS tiene un certificado y una clave privada
-  criptográfica, proporcionada por el sistema operativo en la
-  activación inicial y almacenada en el llavero del dispositivo.</li>
-<li>Este certificado sirve para establecer una conexión segura basada en
-  TLS con el APNs. Con la conexión TLS activa, las apps en el dispositivo pueden
-  registrarse con APNs para recibir un token específico para recibir
-  notificaciones remotas.</li>
-<li>El APNs genera el token, que contiene la información del dispositivo,
-  lo encripta utilizando una clave asociada al token y lo envía al
-  dispositivo. El sistema entrega el token encriptado a la app,
-  llamando al método del delegado
-  <code>application:didRegisterForRemoteNotificationsWithDeviceToken:</code>.</li>
-<li>Una vez recibido el token, el app debe enviarlo al proveedor (en
-  formato binario o hexadecimal) para que lo utilice para enviar
-  notificaciones al dispositivo.</li>
-</ul>
+<p>El APNs genera el token, que contiene la información del dispositivo,
+lo encripta utilizando una clave asociada al token y lo envía al
+dispositivo. El sistema entrega el token encriptado a la app,
+llamando al método del delegado
+<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622958-application"><code>application:didRegisterForRemoteNotificationsWithDeviceToken:</code></a>.</p>
+<p>Una vez recibido el token, el app debe enviarlo al proveedor (en
+formato binario o hexadecimal) para que lo utilice para enviar
+notificaciones al dispositivo.</p>
 <h3 id="envio-de-notificacion-remota-usando-el-token">Envío de notificación remota usando el token<a class="headerlink" href="#envio-de-notificacion-remota-usando-el-token" title="Permanent link">&para;</a></h3>
+<p>Cuando el servidor envía una petición de notificación al APNs,
+incluye el token del dispositivo.</p>
+<p>El APNs desencripta el token para asegurarse de la validez de la
+petición y determina el dispositivo de destino.</p>
+<p>Si el APNs determina que el emisor y el receptor son legítimos,
+envía la notificación al dispositivo identificado.</p>
 <p><img src="imagenes/token-trust.png" width="500px"/></p>
-<ul>
-<li>Cuando el servidor envía una petición de notificación al APNs,
-  incluye el token del dispositivo.</li>
-<li>El APNs desencripta el token para asegurarse de la validez de la
-  petición y determina el dispositivo de destino.</li>
-<li>Si el APNs determina que el emisor y el receptor son legítimos,
-  envía la notificación al dispositivo identificado.</li>
-</ul>
 <h3 id="contenido-de-la-notificacion_1">Contenido de la notificación<a class="headerlink" href="#contenido-de-la-notificacion_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Una vez definido el mecanismo de seguridad en el envío de las
-  notificaciones, veamos cómo se define el <strong>contenido</strong> de la
-  notificación.</li>
-<li>El mensaje enviado al APNs se denomina <em>payload</em> y debe cumplir unas
-  condiciones estrictas definidas en la
-  <a href="https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/PayloadKeyReference.html#//apple_ref/doc/uid/TP40008194-CH17-SW1">documentación de Apple</a></li>
-<li>Si se utiliza el API HTTP/2 el tamaño máximo está limitado a 4096
-  bytes.</li>
-<li>Debe tener el formato de un objeto JSON diccionario (parejas clave,
-  valor).</li>
-</ul>
+<p>Una vez definido el mecanismo de seguridad en el envío de las
+notificaciones, veamos cómo se define el <strong>contenido</strong> de la
+notificación.</p>
+<p>El mensaje enviado al APNs se denomina <em>payload</em> y debe cumplir unas
+condiciones estrictas definidas en la
+<a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification">documentación de
+Apple</a>. El
+tamaño máximo está limitado a 4096 bytes y debe tener el formato de un objeto JSON diccionario (parejas clave,
+valor).</p>
+<p>Un ejemplo en JSON:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1649,30 +2076,27 @@ aparece por la salida estándar:</p>
 </pre></div>
 </td></tr></table>
 
-<ul>
-<li>El diccionario debe contener otro diccionario identificado por la
-  clave <code>aps</code>. Este diccionario contiene una o más propiedades que
-  especifican los siguientes tipos de notificación:<ul>
-<li>Mensaje de alerta a mostrar al usuario</li>
-<li>Numero a añadir en el globo del icono de la app</li>
-<li>Sonido a tocar</li>
-</ul>
-</li>
-<li>El diccionario <code>aps</code> también puede tener la clave
-  <code>content-available</code> con un valor de 1. Eso significa que la
-  notificación será una notificación silenciosa que hará que el
-  sistema despierte la app y la ponga en <em>background</em> para que pueda
-  conectarse al servidor o hacer alguna tarea de background. El
-  usuario no recibirá ninguna notificación, pero verá el nuevo
-  contenido la siguiente vez que abra la app.</li>
-<li>El resto del diccionario contendrá parejas clave-valor con
-  información <em>custom</em>.</li>
-<li>La información JSON se convierte en un diccionario que se pasa como
-  parámetro <code>userInfor</code> en el método
-  <a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application"><code>didReceiveRemoteNotification</code></a>
-  del delegado del app.</li>
-</ul>
-<h3 id="otros-ejemplos-de-payload">Otros ejemplos de <em>payload</em><a class="headerlink" href="#otros-ejemplos-de-payload" title="Permanent link">&para;</a></h3>
+<p>El diccionario debe contener otro diccionario identificado por la
+clave <code>aps</code>. Este diccionario contiene una o más propiedades que
+especifican los siguientes tipos de notificación:
+    - Mensaje de alerta a mostrar al usuario
+    - Numero a añadir en el globo del icono de la app
+    - Sonido a tocar</p>
+<p>El diccionario <code>aps</code> también puede tener la clave
+<code>content-available</code> con un valor de 1. Eso significa que la
+notificación será una notificación silenciosa que hará que el
+sistema despierte la app y la ponga en <em>background</em> para que pueda
+conectarse al servidor o hacer alguna tarea de background. El
+usuario no recibirá ninguna notificación, pero verá el nuevo
+contenido la siguiente vez que abra la app.</p>
+<p>El resto del diccionario contendrá parejas clave-valor con
+información <em>custom</em>.</p>
+<p>La información JSON se convierte en un diccionario que se pasa como
+parámetro <code>userInfor</code> en el método
+<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application"><code>didReceiveRemoteNotification</code></a>
+del delegado del app.</p>
+<p>Otros ejemplos de <em>payload</em>.</p>
+<p>Número en el <em>badge</em> y <em>custom keys</em>:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
@@ -1693,6 +2117,7 @@ aparece por la salida estándar:</p>
 </pre></div>
 </td></tr></table>
 
+<p>Notificación con cadenas localizadas:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1715,6 +2140,7 @@ aparece por la salida estándar:</p>
 </pre></div>
 </td></tr></table>
 
+<p>Notificación con acciones:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1764,174 +2190,77 @@ aparece por la salida estándar:</p>
 </td></tr></table>
 
 <h3 id="servidores-proveedores">Servidores proveedores<a class="headerlink" href="#servidores-proveedores" title="Permanent link">&para;</a></h3>
+<p>Las notificaciones remotas se deben originar en un servidor
+proveedor nuestro que debe conectarse con el APNs usando la API
+definida por Apple basada en un protocolo HTTP/2 y TLS.</p>
+<p>Es posible montar un servidor propio usando librerías ya
+existentes. Por ejemplo, en Java existe la librería
+<a href="https://github.com/relayrides/pushy">Pushy</a>. Es recomendable
+consultar la documentación de Apple <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server">Setting Up a Remote Notification
+Server</a>
+y <a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns">Sending Notification Requests to APNs</a>.</p>
+<p>La mayoría de servicios PaaS proporcionan conexiones con el APNs y librerías que facilitan el envío de notificaciones:</p>
 <ul>
-<li>Las notificaciones remotas se deben originar en un servidor
-  proveedor nuestro que debe conectarse con el APNs usando la API
-  definida en la
-  <a href="https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html#//apple_ref/doc/uid/TP40008194-CH11-SW1">documentación de Apple</a>. Esta
-  API usa el protocolo HTTP/2 desde diciembre de 2015.</li>
-<li>La mayoría de servicios PaaS proporcionan conexiones con el APNs y
-  librerías que facilitan el envío de notificaciones:<ul>
 <li><a href="https://developers.google.com/cloud-messaging/ios/start?ver=swift">Firebase Cloud Messaging for iOS</a></li>
 <li><a href="http://docs.aws.amazon.com/sns/latest/dg/mobile-push-apns.html">Amazon Web Services</a></li>
 <li><a href="https://azure.microsoft.com/en-us/documentation/articles/notification-hubs-ios-get-started/">Microsoft Azure</a></li>
 </ul>
-</li>
-<li>Otras alternativas, como <a href="http://parseplatform.org">Parse</a>, que utilizamos
-  en algún curso pasado, han ido desapareciendo o han ido cambiando de
-  configuración.</li>
-<li>Una opción sencilla, que usaremos en la práctica, es usar un
-  <a href="https://gist.github.com/domingogallardo/b7946d8fe500187b426afb7ac8d8e470">script PHP</a>
-  desde el terminal.</li>
-</ul>
-<hr />
-<h2 id="demo_2">Demo<a class="headerlink" href="#demo_2" title="Permanent link">&para;</a></h2>
-<h3 id="pasos-necesarios-para-la-demo">Pasos necesarios para la demo<a class="headerlink" href="#pasos-necesarios-para-la-demo" title="Permanent link">&para;</a></h3>
+<p>Una opción sencilla, que usaremos en la práctica, es usar un
+<a href="https://gist.github.com/domingogallardo/b7946d8fe500187b426afb7ac8d8e470">script PHP</a>
+desde el terminal.</p>
+<p>En cualquier caso nuestro servidor deberá conectarse al APNs usando
+una técnica segura: o bien un certificado proporcionado por Apple (es
+lo que haremos en la demostración) o bien un token, usando JWT (JSON
+Web Token).</p>
 <ul>
-<li>En la demo vamos a mostrar cómo se envían y reciben notificaciones
-  remotas.</li>
-<li>Ejecutaremos una app que va a recibir las notificaciones
-  (NotificacionesPush) en un dispositivo real.</li>
-<li>Podremos enviar notificaciones a este dispositivo real
-  utilizando un script en PHP.</li>
-<li>Para configurar el script PHP necesitamos:<ul>
-<li>Certificado SSL autorizado por el APNs para enviar
-  notificaciones</li>
-<li>Token del dispositivo al que se envía la notificación.</li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_certificate-based_connection_to_apns">Establishing a Certificate-Based Connection to APNs</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/establishing_a_token-based_connection_to_apns">Establishing a Token-Based Connection to APNs</a></li>
 </ul>
-</li>
-<li>Para ello necesitaremos crear en el <em>member center</em> un <em>App ID</em> y
-configurar: <ul>
-<li><strong>Certificado SSL</strong> para autentificar el proveedor de
-  notificaciones frente al APNs.</li>
-<li><strong>Perfil de aprovisionamiento</strong> con la capacidad de notificación push.</li>
-</ul>
-</li>
-</ul>
-<h3 id="nuevo-app-id-en-el-member-center">Nuevo App ID en el <em>member center</em><a class="headerlink" href="#nuevo-app-id-en-el-member-center" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Un administrador del equipo UA debe crear una App ID con el nombre
-  explícito de la app que se va a poner en producción.</li>
-</ul>
-<p><img src="imagenes/app-id-notificaciones-1.png" width="600px"/></p>
-<ul>
-<li>Se debe añadir en el App ID la autorización de notificaciones push.</li>
-</ul>
-<p><img src="imagenes/app-id-notificaciones-2.png" width="600px"/></p>
-<h3 id="creacion-del-certificado-ssl-en-el-member-center-1">Creación del certificado SSL en el <em>member center</em> (1)<a class="headerlink" href="#creacion-del-certificado-ssl-en-el-member-center-1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Debemos obtener un certificado de una autoridad de certificación que
-  después subiremos al <em>member center</em>.</li>
-<li>Abrimos Acceso a Llaveros y seleccionamos <em>Acceso a Llaveros &gt;
-  Asistente de Certificados &gt; Solicitar un certificado de una
-  autoridad de certificación</em>.</li>
-<li>Salvamos el fichero <code>CertificateSigningRequest.certSigningRequest</code>.</li>
-</ul>
-<p><img src="imagenes/certificado-autoridad-certificadora.png"/ width="600px"/></p>
-<p><img src="imagenes/app-id-notificaciones-servicios.png" width="600px"/></p>
-<ul>
-<li>Para crear el certificado es necesario subir el fichero generado
-  previamente <code>CertificateSigningRequest.certSigningRequest</code></li>
-</ul>
-<p><img src="imagenes/crear-certificado-ssl.png" width="600px"/> </p>
-<p><img src="imagenes/generar-certificado-ssl.png" width="600px"/></p>
-<h3 id="creacion-del-perfil-de-aprovisionamiento">Creación del perfil de aprovisionamiento<a class="headerlink" href="#creacion-del-perfil-de-aprovisionamiento" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Creamos un nuevo perfil de aprovisionamiento que podrán usar todos
-  los miembros del equipo.</li>
-</ul>
-<p><img src="imagenes/perfil-aprovisionamiento-push.png" width="600px"/></p>
-<h3 id="generacion-del-fichero-pem">Generación del fichero <code>.pem</code><a class="headerlink" href="#generacion-del-fichero-pem" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Una vez creado el certificado en el <em>Member Center</em> lo descargamos y
-  lo instalamos en Acceso a llaveros, lo exportamos como fichero
-  <code>.p12</code> y después lo convertiremos en un fichero <code>.pem</code> con el que
-  nuestro servidor establecerá la conexión SSL con el APNs.</li>
-</ul>
-<p><img src="imagenes/exportar-fichero-p12.png" width="600px"/></p>
-<ul>
-<li>
-<p>Se guarda el certificado como <code>UADevelopmentPushCertificate.p12</code> con
-  una contraseña (mastermoviles18)</p>
-</li>
-<li>
-<p>Creamos el fichero <code>.pem</code> con el siguiente comando:</p>
-</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ openssl pkcs12 -in UADevelopmentPushCertificate.p12 <span class="se">\</span>
-   -out UADevelopmentPushCertificate.pem -nodes -clcerts
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>Nos pedirá la contraseña que hemos introducido antes y se generará
-  el certificado <code>UADevelopmentPushCertificate.pem</code>.</li>
-<li>Podremos usarlo para enviar la notificación push al APNs con un script PHP.</li>
-</ul>
-<h3 id="obtencion-del-token-del-dispositivo">Obtención del token del dispositivo<a class="headerlink" href="#obtencion-del-token-del-dispositivo" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Ya hemos obtenido el certificado SSL que utilizaremos en el script
-  PHP para enviar las notificaciones al APNs.</li>
-<li>Necesitamos obtener el token del dispositivo.</li>
-<li>Para ello hemos incluido en la app el código que imprime el token en
-  la consola una vez recibido del APNs.</li>
-<li>Repasemos el código y la configuración de la app <code>NotificacionesPush</code>.</li>
-</ul>
+<h2 id="gestion-de-las-notificaciones-remotas-en-la-app">Gestión de las notificaciones remotas en la app<a class="headerlink" href="#gestion-de-las-notificaciones-remotas-en-la-app" title="Permanent link">&para;</a></h2>
+<h3 id="capacidad-de-notificacion-remota">Capacidad de notificación remota<a class="headerlink" href="#capacidad-de-notificacion-remota" title="Permanent link">&para;</a></h3>
+<p>La app debe tener el permiso de usar las notificaciones remotas. Debe
+usar un perfil de aprovisionamiento con un App ID que otorgue ese
+permiso. </p>
+<p>Se puede hacer desde Xcode o desde el la web de desarrollador. En la
+demostración lo haremos desde la web del programa de desarrollo de la
+universidad. </p>
+<p><img src="imagenes/push-capability.png" width="700px"/></p>
 <h3 id="registro-de-las-notificaciones">Registro de las notificaciones<a class="headerlink" href="#registro-de-las-notificaciones" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Igual que con las notificaciones locales, en <code>application(application:didFinishLaunchingWithOptions)</code>
-  se realiza el registro de las notificaciones:</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
-                 <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="bp">NSObject</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-    <span class="c1">// ...</span>
-    <span class="kd">let</span> <span class="nv">notificationSettings</span> <span class="p">=</span> <span class="bp">UIUserNotificationSettings</span><span class="p">(</span>
-          <span class="n">types</span><span class="p">:</span> <span class="p">[.</span><span class="n">badge</span><span class="p">,</span> <span class="p">.</span><span class="n">sound</span><span class="p">,</span> <span class="p">.</span><span class="n">alert</span><span class="p">],</span>
-          <span class="n">categories</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
-    <span class="n">application</span><span class="p">.</span><span class="n">registerUserNotificationSettings</span><span class="p">(</span><span class="n">notificationSettings</span><span class="p">)</span>
-
-    <span class="c1">// ...</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="obtencion-del-token-del-dispositivo_1">Obtención del token del dispositivo<a class="headerlink" href="#obtencion-del-token-del-dispositivo_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li>El método <code>registerForRemoteNotifications</code> es el que se encarga de
-  establecer al conexión con el APNs y solicitar el token de
-  conexión. Se le invoca en el manejador
-  <code>didRegisterUserNotificationSettings</code> al que se llama cuando el
-  usuario ha aceptado recibir notificaciones.</li>
-</ul>
+<p>Para que una app trabaje con notificaciones remotas lo primero que
+debe hacerse, al igual que con las notificaciones locales, es pedir
+permiso al usuario. La forma de hacerlo es idéntica a las de las
+notificaciones locales, usando el método
+<a href="https://developer.apple.com/reference/usernotifications/unusernotificationcenter/1649527-requestauthorization"><code>requestAuthorization(options:completionHandler:)</code></a>. </p>
+<p>Una vez hecho esto, hay que conseguir el token asociado al dispositivo
+y la app registrándose en el Apple Push Notification service
+(APNs). Lo hace el método
+<a href="https://developer.apple.com/documentation/uikit/uiapplication/1623078-registerforremotenotifications"><code>registerForRemoteNotifications</code></a>
+del objeto application. </p>
+<p>Se trata de un método asíncrono. Si el registro en el servicio tiene
+éxito, la app llama al método
+<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622958-application"><code>application(_:didRegisterForRemoteNotificationsWithDeviceToken:)</code></a>
+del delegado de la aplicación pasando el token asignado que habrá que
+incluir en las notificaciones que enviemos al dispositivo.</p>
+<p>Ejemplo de código de registro de las notificaciones remotas:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
-                 <span class="n">didRegister</span> <span class="n">notificationSettings</span><span class="p">:</span> <span class="bp">UIUserNotificationSettings</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="n">notificationSettings</span><span class="p">.</span><span class="n">types</span> <span class="o">!=</span> <span class="p">.</span><span class="kr">none</span> <span class="p">{</span>
-        <span class="n">application</span><span class="p">.</span><span class="n">registerForRemoteNotifications</span><span class="p">()</span>
-    <span class="p">}</span>
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
+                 <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+    <span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">requestAuthorization</span><span class="p">(</span><span class="n">options</span><span class="p">:</span> <span class="p">[.</span><span class="n">alert</span><span class="p">,</span> <span class="p">.</span><span class="n">sound</span><span class="p">,</span> <span class="p">.</span><span class="n">badge</span><span class="p">])</span>
+    <span class="p">{</span> <span class="p">(</span><span class="n">granted</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span> <span class="bp">print</span><span class="p">(</span><span class="n">granted</span><span class="p">)}</span>
+    <span class="n">application</span><span class="p">.</span><span class="n">registerForRemoteNotifications</span><span class="p">()</span>
+    <span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
+    <span class="k">return</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
-<ul>
-<li>Cuando la app se registra en el APNs, éste envía un token (cadena
-  hexadecimal) que identifica el dispositivo. Se recibe en el
-  siguiente manejador, que lo imprime por la salida estándar.</li>
-</ul>
+<p>Ejemplo de obtención del token e impresión en la consola:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
@@ -1960,28 +2289,221 @@ configurar: <ul>
 </pre></div>
 </td></tr></table>
 
-<p><img src="imagenes/token.png" width="800px"/></p>
+<h3 id="recepcion-de-las-notificaciones-en-la-app">Recepción de las notificaciones en la app<a class="headerlink" href="#recepcion-de-las-notificaciones-en-la-app" title="Permanent link">&para;</a></h3>
+<p>La gestión de las notificaciones recibidas es idéntica a la ya vista en
+notificaciones locales, usándose exactamente los mismos manejadores,
+con la excepción de la posibilidad de gestionar notificaciones remotas
+cuando la app está en segundo plano.</p>
+<p>Recordemos los manejadores que ya vimos en las notificaciones locales:</p>
+<ul>
+<li>Si la app está en primer plano se llama al metodo
+  <code>userNotificationCenter(willPresent:withCompletionHandler:)</code> del
+  <code>UNUserNotificationCenterDelegate</code> cuando llega la notificación.</li>
+<li>Si la app está en segundo plano y el usuario pulsa en la
+  notificación o en una de sus acciones se llama a
+  <code>userNotificationCenter(_:didReceive:withCompletionHandler:)</code> del
+  <code>UNUserNotificationCenterDelegate</code>. </li>
+</ul>
+<p>La diferencia de las notificaciones remotas es la posibilidad de
+definir el manejador
+<a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application"><code>application(_:didReceiveRemoteNotification:fetchCompletionHandler:)</code></a>
+del delegado del app, que se activa cuando llega una notificación
+remota que contiene la clave <code>content-available</code> con el valor <code>1</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{
+   &quot;aps&quot; : {
+      &quot;content-available&quot; : 1
+   },
+   &quot;acme1&quot; : &quot;bar&quot;,
+   &quot;acme2&quot; : 42
+}
+</pre></div>
+</td></tr></table>
+
+<p>Para que se llame al método se debe activar la capability <code>Background Modes &gt;
+Remote Notifications</code> en Xcode.</p>
+<p><img src="imagenes/background-modes.png" width="700px"/></p>
+<p>El método se llama tanto si la app está en primer plano como si está
+en segundo plano. De hecho, es recomendable usarlo únicamente para
+gestionar <em>notificaciones silenciosas</em> que no se muestran al usuario
+sino que se usan para que la app pueda recuperar información del
+servidor que se mostrará la siguiente vez que el usuario lance la app.</p>
+<p>Por ello habría que enviar un <em>payload</em> como el que hemos visto
+anteriormente. Con <em>custom keys</em> pero en el que el diccionario <code>aps</code>
+no contenga ninguna clave que disparare una interacción con el
+usuario.</p>
+<h3 id="ejemplo-de-app">Ejemplo de app<a class="headerlink" href="#ejemplo-de-app" title="Permanent link">&para;</a></h3>
+<p>Ejemplo de app que usaremos para demostrar las notificaciones remotas:</p>
+<p><img src="imagenes/notificaciones-tab-controller.png" width="300px"/></p>
+<p>Código de gestión de la notificación cuando la <strong>app está en primer plano</strong>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> 
+                            <span class="n">willPresent</span> <span class="n">notification</span><span class="p">:</span> <span class="n">UNNotification</span><span class="p">,</span>
+                            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Recibida notificación primer plano&quot;</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">aps</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;aps&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">news</span> <span class="p">=</span> <span class="n">aps</span><span class="p">[</span><span class="s">&quot;alert&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">{</span>
+        <span class="n">createNewNewsItem</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="n">news</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="c1">// No mostramos la notificación</span>
+    <span class="n">completionHandler</span><span class="p">([])</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Código de gestión de la notificación cuando ha sido <strong>accionada por el usuario</strong>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> 
+                            <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> 
+                            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Usuario ha pulsado una notificación&quot;</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">aps</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;aps&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">news</span> <span class="p">=</span> <span class="n">aps</span><span class="p">[</span><span class="s">&quot;alert&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">String</span> <span class="p">{</span>
+        <span class="n">createNewNewsItem</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="n">news</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">completionHandler</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Código de gestión de una <strong>notificación silenciosa</strong>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
+                 <span class="n">didReceiveRemoteNotification</span> <span class="n">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">],</span> 
+                 <span class="n">fetchCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Recibida notificación remota en background&quot;</span><span class="p">)</span>
+    <span class="n">createNewNewsItem</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="s">&quot;Notificación silenciosa&quot;</span><span class="p">)</span>
+    <span class="n">completionHandler</span><span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">.</span><span class="n">newData</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="demo_2">Demo<a class="headerlink" href="#demo_2" title="Permanent link">&para;</a></h2>
+<h3 id="pasos-necesarios-para-la-demo">Pasos necesarios para la demo<a class="headerlink" href="#pasos-necesarios-para-la-demo" title="Permanent link">&para;</a></h3>
+<p>En la demo vamos a mostrar cómo se envían y reciben notificaciones
+remotas. Ejecutaremos una app que va a recibir las notificaciones
+(NotificacionesPush) en un dispositivo real.</p>
+<p>Podremos enviar notificaciones a este dispositivo real
+utilizando un script en PHP que tendremos que configurar con:</p>
+<ul>
+<li>
+<p>Certificado SSL autorizado por el APNs para enviar
+  notificaciones</p>
+</li>
+<li>
+<p>Token del dispositivo al que se envía la notificación.</p>
+</li>
+</ul>
+<p>Necesitaremos crear en el <em>member center</em> un <em>App ID</em> y
+configurar: </p>
+<ul>
+<li><strong>Certificado SSL</strong> para autentificar el proveedor de
+  notificaciones frente al APNs.</li>
+<li><strong>Perfil de aprovisionamiento</strong> con la capacidad de notificación push.</li>
+</ul>
+<h3 id="nuevo-app-id-en-el-member-center">Nuevo App ID en el <em>member center</em><a class="headerlink" href="#nuevo-app-id-en-el-member-center" title="Permanent link">&para;</a></h3>
+<p>Un administrador del equipo UA debe crear una App ID con el nombre
+explícito de la app que se va a poner en producción.</p>
+<p><img src="imagenes/app-id-notificaciones-1.png" width="600px"/></p>
+<p>Se debe añadir en el App ID la autorización de notificaciones push.</p>
+<p><img src="imagenes/app-id-notificaciones-2.png" width="600px"/></p>
+<h3 id="creacion-del-certificado-ssl-en-el-member-center">Creación del certificado SSL en el <em>member center</em><a class="headerlink" href="#creacion-del-certificado-ssl-en-el-member-center" title="Permanent link">&para;</a></h3>
+<p>Debemos obtener un certificado de una autoridad de certificación que
+después subiremos al <em>member center</em>.</p>
+<p>Abrimos Acceso a Llaveros y seleccionamos <em>Acceso a Llaveros &gt;
+Asistente de Certificados &gt; Solicitar un certificado de una
+autoridad de certificación</em>.</p>
+<p>Salvamos el fichero <code>CertificateSigningRequest.certSigningRequest</code>.</p>
+<p><img src="imagenes/certificado-autoridad-certificadora.png"/ width="600px"/></p>
+<p><img src="imagenes/app-id-notificaciones-servicios.png" width="600px"/></p>
+<p>Para crear el certificado es necesario subir el fichero generado
+previamente <code>CertificateSigningRequest.certSigningRequest</code></p>
+<p><img src="imagenes/crear-certificado-ssl.png" width="600px"/> </p>
+<p><img src="imagenes/generar-certificado-ssl.png" width="600px"/></p>
+<h3 id="generacion-del-fichero-pem">Generación del fichero <code>.pem</code><a class="headerlink" href="#generacion-del-fichero-pem" title="Permanent link">&para;</a></h3>
+<p>Una vez creado el certificado en el <em>Member Center</em> lo descargamos y
+lo instalamos en Acceso a llaveros.</p>
+<p><img src="imagenes/exportar-fichero-p12.png" width="600px"/></p>
+<p>Lo exportamos como fichero <code>.p12</code> y después lo convertiremos en un
+fichero <code>.pem</code> con el que nuestro servidor establecerá la conexión SSL
+con el APNs:</p>
+<ul>
+<li>
+<p>Se guarda el certificado como <code>UADevelopmentPushCertificate.p12</code> con
+  una contraseña (mastermoviles19)</p>
+</li>
+<li>
+<p>Creamos el fichero <code>.pem</code> con el siguiente comando:</p>
+</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ openssl pkcs12 -in UADevelopmentPushCertificate.p12 <span class="se">\</span>
+   -out UADevelopmentPushCertificate.pem -nodes -clcerts
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Nos pedirá la contraseña que hemos introducido antes y se generará
+  el certificado <code>UADevelopmentPushCertificate.pem</code>.</li>
+</ul>
+<p>Una vez hecho esto, ya tendremos listo el certificado para enviar la
+notificación push al APNs, usando el script PHP.</p>
+<h3 id="creacion-del-perfil-de-aprovisionamiento">Creación del perfil de aprovisionamiento<a class="headerlink" href="#creacion-del-perfil-de-aprovisionamiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creamos un nuevo perfil de aprovisionamiento que podrán usar todos
+  los miembros del equipo.</li>
+</ul>
+<p><img src="imagenes/perfil-aprovisionamiento-push.png" width="600px"/></p>
+<h3 id="obtencion-del-token-del-dispositivo">Obtención del token del dispositivo<a class="headerlink" href="#obtencion-del-token-del-dispositivo" title="Permanent link">&para;</a></h3>
+<p>Ya hemos obtenido el certificado SSL que utilizaremos en el script
+PHP para enviar las notificaciones al APNs.</p>
+<p>Necesitamos obtener el token del dispositivo y de la app que va a
+recibir la notificación. Para ello debemos ejecutar la app en un
+dispositivo físico (no funciona en el simulador).</p>
 <h3 id="probamos-la-app-notificacionespush">Probamos la app <code>NotificacionesPush</code><a class="headerlink" href="#probamos-la-app-notificacionespush" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Descargamos el proyecto NotificacionesPush desde
-  <a href="https://github.com/domingogallardo/apuntes-mastermoviles/blob/gh-pages/apps/NotificacionesPush.zip">este enlace</a>. Contiene la app y los scripts PHP para enviar las notificaciones al APNs.</li>
-</ul>
-<h3 id="ejecucion-de-notificacionespush-en-un-dispositivo">Ejecución de <code>NotificacionesPush</code> en un dispositivo<a class="headerlink" href="#ejecucion-de-notificacionespush-en-un-dispositivo" title="Permanent link">&para;</a></h3>
-<ul>
-<li>La app debe estar firmada con el perfil de aprovisionamiento creado
-  y deben estar configuradas las <em>capabilities</em> para activar las
-  notificaciones push:</li>
-</ul>
+<p>Descargamos el proyecto NotificacionesPush desde
+<a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/NotificacionesPush.zip">este enlace</a>. Contiene la app y los scripts PHP para enviar las notificaciones al APNs.</p>
+<p>La app debe estar firmada con el perfil de aprovisionamiento creado
+y deben estar configuradas las <em>capabilities</em> para activar las
+notificaciones push:</p>
 <p><img src="imagenes/push-notifications-capabilities-xcode.png" width="900px"/></p>
-<ul>
-<li>Ejecutamos el app en un dispositivo físico en el que recibiremos las
-  notificaciones remotas, ya que éstas no funcionan en el simulador.</li>
-</ul>
+<p>Ejecutamos el app en un dispositivo físico en el que recibiremos las
+notificaciones remotas, ya que éstas no funcionan en el simulador.</p>
+<p>Anotamos el token del dispositivo que aparece en la consola al
+ejecutar la app por primera vez.</p>
+<p><img src="imagenes/token.png" width="800px"/></p>
 <h3 id="probamos-a-enviar-notificaciones-remotas-al-dispositivo">Probamos a enviar notificaciones remotas al dispositivo<a class="headerlink" href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" title="Permanent link">&para;</a></h3>
-<p><img style="margin-left:20px" src="imagenes/notificacion-device.png" width="250px"/></p>
 <ol>
 <li>Descargamos
-  <a href="http://domingogallardo.github.io/apuntes-mastermoviles/UADevelopmentPushCertificate.pem">desde este enlace</a>
+  <a href="https://github.com/domingogallardo/apuntes-spm-ios/blob/master/UADevelopmentPushCertificate.pem">desde este enlace</a>
   el certificado SSL <code>UADevelopmentPushCertificatepem</code> que hemos generado
   y lo guardamos en el mismo directorio <code>Scripts</code> en el que se encuentra
   el script <code>apnspush.php</code>.</li>
@@ -2001,211 +2523,47 @@ Message successfully delivered
 </pre></div>
 </td></tr></table>
 
-<h3 id="recepcion-de-las-notificaciones-en-la-app">Recepción de las notificaciones en la app<a class="headerlink" href="#recepcion-de-las-notificaciones-en-la-app" title="Permanent link">&para;</a></h3>
-<p><img src="imagenes/notificaciones-tab-controller.png" width="300px"/></p>
-<ul>
-<li>Vamos a ver ahora cómo se reciben las notificaciones en la app.</li>
-<li>La programación es similar a la ya vista en notificaciones locales,
-  con algunas diferencias:<ul>
-<li>Registro de las notificaciones para solicitar permiso al usuario.</li>
-<li>Definición de manejadores que se lanzan cuando el usuario pulsa
-  en una notificación.</li>
-<li><strong>Nuevo</strong>: Registro de la app para notificaciones remotas.</li>
-<li><strong>Nuevo</strong>: Definición de manejador que se lanza cuando llega el
-  token del APNs.</li>
-<li><strong>Nuevo</strong>: Definición de manejador que se lanza cuando llega la
-  notificación remota.</li>
-</ul>
-</li>
-</ul>
-<h3 id="registro-de-la-app-para-notificaciones-remotas">Registro de la app para notificaciones remotas<a class="headerlink" href="#registro-de-la-app-para-notificaciones-remotas" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Se debe llamar al método <code>registerForRemoteNotifications()</code> en el
-  objeto compartido <code>application</code>:</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
-                 <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-    <span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">requestAuthorization</span><span class="p">(</span><span class="n">options</span><span class="p">:</span> <span class="p">[.</span><span class="n">alert</span><span class="p">,</span> <span class="p">.</span><span class="n">sound</span><span class="p">,</span> <span class="p">.</span><span class="n">badge</span><span class="p">])</span>
-    <span class="p">{</span> <span class="p">(</span><span class="n">granted</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span> <span class="bp">print</span><span class="p">(</span><span class="n">granted</span><span class="p">)}</span>
-    <span class="n">application</span><span class="p">.</span><span class="n">registerForRemoteNotifications</span><span class="p">()</span>
-    <span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
-    <span class="k">return</span> <span class="kc">true</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>La primera vez que la app llama a este método, contacta con el APNs
-  y solicita el token de dispositivo, que se utilizará como
-  identificador al que enviar las notificaciones remotas.</li>
-</ul>
-<h3 id="recepcion-del-token-de-dispositivo">Recepción del token de dispositivo<a class="headerlink" href="#recepcion-del-token-de-dispositivo" title="Permanent link">&para;</a></h3>
-<ul>
-<li>El sistema llama de forma asíncrona a uno de los dos métodos
-siguientes del delegado del app, dependiendo de si ha habido éxito o
-no en la obtención del token:<ul>
-<li>Si ha habido éxito en la generación del token el sistema llama
-  al método <code>application:didRegisterForRemoteNotificationsWithDeviceToken:</code>. En
-  este método se debe implementar el envío del token a nuestro
-  servicio de envío de notificaciones push.</li>
-</ul>
-</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didRegisterForRemoteNotificationsWithDeviceToken</span> <span class="n">deviceToken</span><span class="p">:</span> <span class="n">Data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nv">token</span> <span class="p">=</span> <span class="s">&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="n">deviceToken</span><span class="p">.</span><span class="bp">count</span> <span class="p">{</span>
-        <span class="n">token</span> <span class="p">=</span> <span class="n">token</span> <span class="o">+</span> <span class="nb">String</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&quot;%02.2hhx&quot;</span><span class="p">,</span> <span class="n">arguments</span><span class="p">:</span> <span class="p">[</span><span class="n">deviceToken</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
-    <span class="p">}</span>
-    <span class="bp">print</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>Si ha habido error, el sistema llama al método <code>application:didFailToRegisterForRemoteNotificationsWithError:</code>.</li>
-</ul>
-<h3 id="app-en-background">App en background<a class="headerlink" href="#app-en-background" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Cuando llega una notificación remota que contiene la clave
-  <code>content-available</code> con el valor <code>1</code> el sistema llama al método
-  <code>application(_:didReceiveRemoteNotification:fetchCompletionHandler:)</code>
-  del delegado del app.</li>
-<li>El método se ejecuta estando la app en segundo plano y se utiliza
-  para recuperar información del servidor (puede ir en la notificación
-  o puede la app conectarse al servicio):</li>
-</ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
-                 <span class="n">didReceiveRemoteNotification</span> <span class="n">userInfo</span><span class="p">:</span> <span class="p">[</span><span class="n">AnyHashable</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">],</span> 
-                 <span class="n">fetchCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Recibida notificación remota en background&quot;</span><span class="p">)</span>
-    <span class="c1">// Obtenemos la información de la notifiación y actualizamos la app</span>
-    <span class="kd">let</span> <span class="nv">aps</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;aps&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span>
-    <span class="n">createNewNewsItem</span><span class="p">(</span><span class="n">aps</span><span class="p">)</span>
-    <span class="n">completionHandler</span><span class="p">(</span><span class="n">UIBackgroundFetchResult</span><span class="p">.</span><span class="n">newData</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<ul>
-<li>Para que se llame al método se debe activar la capability <code>Background Modes &gt;
-  Remote Notifications</code></li>
-</ul>
-<h3 id="acciones-del-usuario-sobre-la-notificacion">Acciones del usuario sobre la notificación<a class="headerlink" href="#acciones-del-usuario-sobre-la-notificacion" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Una vez recibida, la notificación funciona igual que una
-  notificación local:</li>
-<li>Si la app está en primer plano se llama al metodo
-     <code>userNotificationCenter(willPresent:withCompletionHandler:)</code> del
-     <code>UNUserNotificationCenterDelegate</code>.</li>
-<li>Si la app está en segundo plano y el usuario pulsa en la
-     notificación o en una de sus acciones se llama a
-     <code>userNotificationCenter(_:didReceive:withCompletionHandler:)</code> del
-     <code>UNUserNotificationCenterDelegate</code>. </li>
-</ul>
-<h3 id="app-en-primer-plano_1">App en primer plano<a class="headerlink" href="#app-en-primer-plano_1" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> 
-                            <span class="n">willPresent</span> <span class="n">notification</span><span class="p">:</span> <span class="n">UNNotification</span><span class="p">,</span>
-                            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Recibida notificación primer plano&quot;</span><span class="p">)</span>
-    <span class="kd">let</span> <span class="nv">aps</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;aps&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span>
-    <span class="n">createNewNewsItem</span><span class="p">(</span><span class="n">aps</span><span class="p">)</span>
-    <span class="c1">// No mostramos la notificación</span>
-    <span class="n">completionHandler</span><span class="p">([])</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="notificacion-pulsada-por-el-usuario">Notificación pulsada por el usuario<a class="headerlink" href="#notificacion-pulsada-por-el-usuario" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> 
-                            <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> 
-                            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Usuario ha pulsado una notificación&quot;</span><span class="p">)</span>
-    <span class="kd">let</span> <span class="nv">aps</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;aps&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">AnyObject</span><span class="p">]</span>
-    <span class="k">if</span> <span class="kd">let</span> <span class="nv">contentAvailable</span> <span class="p">=</span> <span class="n">aps</span><span class="p">[</span><span class="s">&quot;content-available&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">?</span> <span class="nb">Int</span> <span class="p">,</span> <span class="n">contentAvailable</span> <span class="p">==</span> <span class="mi">1</span> <span class="p">{</span>
-        <span class="bp">print</span> <span class="p">(</span><span class="s">&quot;Ya se ha actualizado la noticia al ser un background update&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-        <span class="n">createNewNewsItem</span><span class="p">(</span><span class="n">aps</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="n">completionHandler</span><span class="p">()</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
+<p><img style="margin-left:20px" src="imagenes/notificacion-device.png" width="250px"/></p>
 <h2 id="practica">Práctica<a class="headerlink" href="#practica" title="Permanent link">&para;</a></h2>
+<p>Descarga las apps <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/Notificaciones.zip">Notificaciones</a>
+y <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/NotificacionesPush.zip">NotificacionesPush</a>
+   su código y pruébalas. La primera puedes probarla en el
+   simulador. La segunda deberás probarla ejecutándola en un
+   dispositivo real y enviando notificaciones remotas tal y como hemos
+   hecho en la demo.</p>
 <ul>
-<li>Descarga las apps
-   <a href="https://github.com/domingogallardo/apuntes-mastermoviles/blob/gh-pages/apps/Notificaciones.zip">Notificaciones</a>
-   y
-   <a href="https://github.com/domingogallardo/apuntes-mastermoviles/blob/gh-pages/apps/NotificacionesPush.zip">NotificacionesPush</a>. Examina
-   su código y pruébalas.</li>
-<li>Ejercicio 1 (5 puntos): Modifica la app ToDoList (o alguna app tuya
-  con la que estés trabajando) para que genere notificaciones
-  locales. En la app ToDoList puedes hacerlo con un botón en la
-  pantalla con el número de tareas terminadas. Deberás generar una
-  notificación en el intervalo de 10 segundos que contenga alguna
-  imagen y acciones. Y visualizar la acción que el usuario
-  ha realizado sobre la notificación, lanzando una
+<li>Ejercicio 1: Modifica la app ToDoList para que genere
+  notificaciones locales. En la app ToDoList puedes hacerlo con un
+  botón en la pantalla con el número de tareas terminadas. Deberás
+  generar una notificación en el intervalo de 10 segundos que contenga
+  alguna imagen y acciones. Y visualizar la acción que el usuario ha
+  realizado sobre la notificación, lanzando una
   <a href="https://developer.apple.com/reference/uikit/uialertcontroller">alerta</a>
-  la siguiente vez que se abra la app que informe de la acción escogida.</li>
-<li>Ejercicio 2 (2,5 puntos): Implementa una notificación basada en el
+  la siguiente vez que se abra la app que informe de la acción
+  escogida.</li>
+<li>Ejercicio 2: Implementa una notificación basada en el
   calendario, en la que dejes al usuario seleccionar la
   hora y minuto en la que aparezca una notificación informando del
   número de tareas terminadas.</li>
-<li>Ejercicio 3 (2,5 puntos): Añade la posiblidad de añadir una nueva
+<li>Ejercicio 3: Añade la posiblidad de añadir una nueva
   tarea en la lista de tareas pendientes mediante una notificación
-  remota. Utiliza el script PHP y el certificado para generar la
+  silenciosa enviada con una notificación push. Utiliza el script PHP y el certificado para generar la
   notificación. Deberás utilizar un dispositivo real para realizar las
   pruebas.</li>
-<li>Firma la app resultante, exporta el fichero IPA y entrégalo en
-  Moodle, junto con el proyecto comprimido y un documento PDF con una
-  breve descripción de las funcionalidades añadidas.</li>
 </ul>
+<p>Firma la app resultante, exporta el fichero IPA y entrégalo en
+Moodle, junto con el proyecto comprimido y un documento PDF con una
+breve descripción de las funcionalidades añadidas.</p>
 <h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html">Local and Remote Programming Guide</a></li>
-<li><a href="https://developer.apple.com/reference/usernotifications">UserNotifications Framework</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/asking_permission_to_use_notifications">Asking Permission to Use Notifications</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/scheduling_a_notification_locally_from_your_app">Scheduling a Notification Locally from Your App</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/handling_notifications_and_notification-related_actions">Handling Notifications and Notification-Related Actions</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns">Registering Your App with APNs</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification">Generating a Remote
+  Notification</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_updates_to_your_app_silently">Pushing Updates to Your App Silently</a></li>
+<li><a href="https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server">Setting Up a Remote Notification Server</a></li>
 </ul>
                 
                   
@@ -2223,6 +2581,27 @@ no en la obtención del token:<ul>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../sesion01/sesion01-firma-aprovisionamiento.html" title="Firma, aprovisionamiento y distribución de apps" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Firma, aprovisionamiento y distribución de apps
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
