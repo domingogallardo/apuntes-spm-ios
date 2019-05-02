@@ -1551,6 +1551,12 @@ actualiza la vista de la tabla)</p>
 </pre></div>
 </td></tr></table>
 
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Para que funcione la consulta que recupera todos los registros de
+un tipo hay que crear en el <em>dashboard</em> un índice <em>queryable</em> sobre
+el campo nativo <code>recordName</code>.</p>
+</div>
 <p>Otros ejemplos de predicados (consultar <a href="https://developer.apple.com/reference/cloudkit/ckquery">CKQuery</a> y <a href="https://developer.apple.com/reference/foundation/nspredicate">NSPredicate</a>)</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">predicate</span> <span class="p">=</span> <span class="bp">NSPredicate</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&quot;nombre BEGINSWITH &#39;Limpiar&#39;&quot;</span><span class="p">)</span>
