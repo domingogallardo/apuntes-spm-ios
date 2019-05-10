@@ -1539,56 +1539,50 @@ energía.</p>
 </p>
 
 <h3 id="activacion-de-los-servicios-de-localizacion">Activación de los servicios de localización<a class="headerlink" href="#activacion-de-los-servicios-de-localizacion" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Si la app requiere servicios de localización para funcionar
-  correctamente, debes incluir la clave <code>UIRequiredDeviceCapabilities</code>
-  en el fichero <code>Info.plist</code> de la app. La App Store usa la
-  información en esta clava para prevenir la descarga de la app a
-  dispositivos que no contienen estos servicios. Puedes no añadir esta
-  clave si quieres permitir descargar la app aunque no esté disponible
-  el servicio.</li>
-<li>El valor de la clave es un array de cadenas indicando las
-  características que requiere la app. En el caso de los servicios de
-  localización son relevantes las cadenas <code>location-services</code> y
-  <code>gps</code>. La primera si se requieren servicios de localización en
-  general y la segundo si se requiere la precisión ofrecida por el
-  GPS.</li>
-</ul>
-<!-- Tres líneas en blanco para la siguiente transparencia -->
-
+<p>Si la app requiere servicios de localización para funcionar
+correctamente, debes incluir la clave <code>UIRequiredDeviceCapabilities</code>
+en el fichero <code>Info.plist</code> de la app. La App Store usa la información
+en esta clava para prevenir la descarga de la app a dispositivos que
+no contienen estos servicios. Puedes no añadir esta clave si quieres
+permitir descargar la app aunque no esté disponible el servicio.</p>
+<p>El valor de la clave es un array de cadenas indicando las
+características que requiere la app. En el caso de los servicios de
+localización son relevantes las cadenas <code>location-services</code> y
+<code>gps</code>. La primera si se requieren servicios de localización en general
+y la segundo si se requiere la precisión ofrecida por el GPS.</p>
 <h3 id="solicitar-informacion-al-usuario">Solicitar información al usuario<a class="headerlink" href="#solicitar-informacion-al-usuario" title="Permanent link">&para;</a></h3>
-<p><img src="imagenes/autorizacion.png" width="700px"/></p>
-<ul>
-<li>Es necesario añadir también en <code>Info.plist</code> una cadena asociada a la
-  clave <code>NSLocationWhenInUseUsageDescription</code>. Esta clave tiene la
-  descripción en Xcode <code>Privacy - Location When in Use Usage
-  Description</code>.</li>
-<li>Se solicita autorización al usuario llamando al método
-  <code>request​When​In​Use​Authorization()</code> o <code>requestAlwaysAuthorization()</code> del objeto <code>CLLocationManager</code>.</li>
-<li>La cadena se mostrará como subtítulo en el diálogo en el que se
-  solicita al usuario la autorización.</li>
-</ul>
-<p><img src="imagenes/dialogo-autorizacion.png" width="250px"/></p>
-<!-- Tres líneas en blanco para la siguiente transparencia -->
+<p>Es necesario añadir también en <code>Info.plist</code> una cadena asociada a la
+clave <code>NSLocationWhenInUseUsageDescription</code>. Esta clave tiene la
+descripción en Xcode <code>Privacy - Location When in Use Usage
+Description</code>.</p>
+<p style="text-align:center;">
+<img src="imagenes/autorizacion.png" width="700px"/>
+</p>
+
+<p>Se solicita autorización al usuario llamando al método
+<code>request​When​In​Use​Authorization()</code> o <code>requestAlwaysAuthorization()</code> del
+objeto <code>CLLocationManager</code>.</p>
+<p>La cadena se mostrará como subtítulo en el diálogo en el que se
+solicita al usuario la autorización.</p>
+<p style="text-align:center;">
+<img src="imagenes/dialogo-autorizacion.png" width="250px"/>
+</p>
 
 <h3 id="clase-cllocationmanager">Clase <code>CLLocationManager</code><a class="headerlink" href="#clase-cllocationmanager" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Se debe crear una instancia de la clase <a href="https://developer.apple.com/reference/corelocation/cllocationmanager"><code>CLLocation​Manager</code></a> y
-  guardar una referencia fuerte a ella en la app.</li>
-<li>Se necesita mantener una referencia fuerte al objeto <em>location
-  manager</em> hasta que han terminado todas las tareas en las que
-  participa.</li>
-<li>Debido a que las tareas de gestión de localización se ejecutan
-  asíncronamente, es insuficiente almacenar una referencia al
-  <em>location manager</em> en una variable local.</li>
-</ul>
-<!-- Tres líneas en blanco para la siguiente transparencia -->
-
+<p>Se debe crear una instancia de la clase
+<a href="https://developer.apple.com/reference/corelocation/cllocationmanager"><code>CLLocation​Manager</code></a>
+y guardar una referencia fuerte a ella en la app.</p>
+<p>Se necesita mantener una referencia fuerte al objeto <em>location
+manager</em> hasta que han terminado todas las tareas en las que
+participa.</p>
+<p>Debido a que las tareas de gestión de localización se ejecutan
+asíncronamente, es insuficiente almacenar una referencia al <em>location
+manager</em> en una variable local.</p>
 <h3 id="para-activar-la-localizacion">Para activar la localización<a class="headerlink" href="#para-activar-la-localizacion" title="Permanent link">&para;</a></h3>
+<p>La clase <code>AppDelegate</code> también puede funcionar como
+<a href="https://developer.apple.com/reference/corelocation/cllocationmanagerdelegate"><code>CLLocationManagerDelegate</code></a>. Inicializamos
+ahí el <code>CLLocationManager</code>.</p>
 <ul>
-<li>La clase <code>AppDelegate</code> también puede funcionar como
-  <a href="https://developer.apple.com/reference/corelocation/cllocationmanagerdelegate"><code>CLLocationManagerDelegate</code></a>. Inicializamos
-  ahí el <code>CLLocationManager</code>.</li>
 <li>En el método <code>didFinishLaunchingWithOptions</code> podemos actualizar el
   gestor de localización:</li>
 <li>Inicializamos el delegado del gestor de localización.</li>
