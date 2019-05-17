@@ -378,6 +378,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#geocoding" title="Geocoding" class="md-nav__link">
+    Geocoding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-de-localizacion-en-placemarks" title="Conversión de localización en placemarks" class="md-nav__link">
+    Conversión de localización en placemarks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-de-placemarks-en-localizaciones" title="Conversión de placemarks en localizaciones" class="md-nav__link">
+    Conversión de placemarks en localizaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#otras-caracteristicas-busquedas-rutas-y-3d" title="Otras características: búsquedas, rutas y 3D" class="md-nav__link">
     Otras características: búsquedas, rutas y 3D
   </a>
@@ -619,6 +640,27 @@
           <li class="md-nav__item">
   <a href="#overlays" title="Overlays" class="md-nav__link">
     Overlays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geocoding" title="Geocoding" class="md-nav__link">
+    Geocoding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-de-localizacion-en-placemarks" title="Conversión de localización en placemarks" class="md-nav__link">
+    Conversión de localización en placemarks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-de-placemarks-en-localizaciones" title="Conversión de placemarks en localizaciones" class="md-nav__link">
+    Conversión de placemarks en localizaciones
   </a>
   
 </li>
@@ -1380,6 +1422,132 @@ siguiente código se dibujan distintos tipos de overlays:</p>
 </pre></div>
 </td></tr></table>
 
+<h3 id="geocoding">Geocoding<a class="headerlink" href="#geocoding" title="Permanent link">&para;</a></h3>
+<p>El API de MapKit proporciona funcionalidades para realizar
+<em>geocoding</em>, transformar coordenadas del mapa en nombres de lugares y
+vicersa.</p>
+<p>La clase
+<a href="https://developer.apple.com/documentation/corelocation/clgeocoder">CLGeocoder</a>
+proporciona un API que realiza estas operaciones realizando peticiones
+a un servicio de Apple.</p>
+<p>Debemos crear un objeto geocoder y realizar una petición llamando a
+uno de sus métodos de <em>forward geocoding</em> o <em>reverse geocoding</em>.</p>
+<p>Las peticiones de <em>reverse geocoding</em> toman una longitud y latitud y
+obtienen una dirección con nombres.</p>
+<p style="text-align:center;">
+<img src="imagenes/geolocalizacion.png" width="400px"/>
+</p>
+
+<p>Las peticiones de <em>forward geocoding</em> hacen al revés: toman una
+dirección con nombres y buscan la correspondiente latitud y
+longitud. Estas peticiones pueden también devolver información
+adicional acerca de la localización especificada, como un punto de
+interés o un edificio en esa localización.</p>
+<p>El objeto devuelto en ambos tipos de peticiones es un
+<a href="https://developer.apple.com/documentation/corelocation/clplacemark">CLPlacemark</a>. En
+el caso de peticiones <em>forward geocoding</em> se puede devolver una lista
+de lugares a los que corresponde la dirección suministrada. </p>
+<p>Un <em>placemark</em> (marca de lugar) contiene propiedades para especificar
+el nombre de una calle, de una ciudad o de un país. También contienen
+propiedades que describen características geográficas relevantes o
+puntos de interés en la localización, como los nombres de montañas,
+ríos, negocios o localizaciones.</p>
+<p>Existe un límite en el ratio de peticiones de geocoding que puede
+hacer una app. Si se hacen demasiadas peticiones en un tiempo pequeño
+puede producirse un error.</p>
+<h3 id="conversion-de-localizacion-en-placemarks">Conversión de localización en placemarks<a class="headerlink" href="#conversion-de-localizacion-en-placemarks" title="Permanent link">&para;</a></h3>
+<p>Con el método <code>reverseGeocodeLocation</code> se puede obtener una lista de
+<em>placemarks</em> asociadas a unas coordenadas. Las llamadas al objeto
+<em>geocoder</em> son asíncronas y hay que pasarle al método una clausura
+<em>completion handler</em>. </p>
+<p>Un ejemplo de uso:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">lookUpCurrentLocation</span><span class="p">(</span><span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="bp">CLPlacemark</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Use the last reported location.</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">lastLocation</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">locationManager</span><span class="p">.</span><span class="n">location</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">geocoder</span> <span class="p">=</span> <span class="bp">CLGeocoder</span><span class="p">()</span>
+
+        <span class="c1">// Look up the location and pass it to the completion handler</span>
+        <span class="n">geocoder</span><span class="p">.</span><span class="n">reverseGeocodeLocation</span><span class="p">(</span><span class="n">lastLocation</span><span class="p">,</span> 
+                    <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">placemarks</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nv">firstLocation</span> <span class="p">=</span> <span class="n">placemarks</span><span class="p">?[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">completionHandler</span><span class="p">(</span><span class="n">firstLocation</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+             <span class="c1">// An error occurred during geocoding.</span>
+                <span class="n">completionHandler</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// No location was available.</span>
+        <span class="n">completionHandler</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="conversion-de-placemarks-en-localizaciones">Conversión de placemarks en localizaciones<a class="headerlink" href="#conversion-de-placemarks-en-localizaciones" title="Permanent link">&para;</a></h3>
+<p>Con el método <code>geocodeAddressString</code> se puede pasar una dirección al
+<em>geocoder</em> y obtener una lista de lugares asociados (<em>placemarks</em>). Se
+obtendrán menos lugares cuanto más precisa sea la dirección.</p>
+<p>Ejemplo:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">getCoordinate</span><span class="p">(</span> <span class="n">addressString</span> <span class="p">:</span> <span class="nb">String</span><span class="p">,</span> 
+        <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span><span class="p">(</span><span class="n">CLLocationCoordinate2D</span><span class="p">,</span> <span class="bp">NSError</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">geocoder</span> <span class="p">=</span> <span class="bp">CLGeocoder</span><span class="p">()</span>
+    <span class="n">geocoder</span><span class="p">.</span><span class="n">geocodeAddressString</span><span class="p">(</span><span class="n">addressString</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">placemarks</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="kd">let</span> <span class="nv">placemark</span> <span class="p">=</span> <span class="n">placemarks</span><span class="p">?[</span><span class="mi">0</span><span class="p">]</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nv">location</span> <span class="p">=</span> <span class="n">placemark</span><span class="p">.</span><span class="n">location</span><span class="p">!</span>
+
+                <span class="n">completionHandler</span><span class="p">(</span><span class="n">location</span><span class="p">.</span><span class="n">coordinate</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">completionHandler</span><span class="p">(</span><span class="n">kCLLocationCoordinate2DInvalid</span><span class="p">,</span> <span class="n">error</span> <span class="k">as</span> <span class="bp">NSError</span><span class="p">?)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
 <h3 id="otras-caracteristicas-busquedas-rutas-y-3d">Otras características: búsquedas, rutas y 3D<a class="headerlink" href="#otras-caracteristicas-busquedas-rutas-y-3d" title="Permanent link">&para;</a></h3>
 <p>No tenemos tiempo de verlo, pero el API también proporciona la
 posibilidad de realizar búsquedas y rutas en los mapas:</p>
@@ -1683,6 +1851,16 @@ dependiendo de si el número de pin es par o impar.</li>
 
 <p><strong>Parte opcional 2</strong></p>
 <ol start="9">
+<li>Implementa una llamada al servicio de geolocalización que coloque
+   como subtítulo del Pin el país en el que se ha colocado el
+   mismo. </li>
+</ol>
+<p style="text-align:center;">
+<img src="imagenes/mapa-con-pais.png" width="300px"/>
+</p>
+
+<p><strong>Parte opcional 3</strong></p>
+<ol start="10">
 <li>
 <p>Añade el tracking de localización a la aplicación, imprimiendo la
 localización en la salida estándar cada 10 metros. Comprueba el
