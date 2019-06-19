@@ -1131,22 +1131,22 @@ pantalla:</p>
     <span class="n">bannerView</span><span class="p">.</span><span class="n">translatesAutoresizingMaskIntoConstraints</span> <span class="p">=</span> <span class="kc">false</span>
     <span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="n">bannerView</span><span class="p">)</span>
     <span class="n">view</span><span class="p">.</span><span class="n">addConstraints</span><span class="p">(</span>
-      <span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">bannerView</span><span class="p">,</span>
-                          <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">bottom</span><span class="p">,</span>
-                          <span class="n">relatedBy</span><span class="p">:</span> <span class="p">.</span><span class="bp">equal</span><span class="p">,</span>
-                          <span class="n">toItem</span><span class="p">:</span> <span class="n">bottomLayoutGuide</span><span class="p">,</span>
-                          <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">top</span><span class="p">,</span>
-                          <span class="n">multiplier</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                          <span class="n">constant</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span>
-       <span class="bp">NSLayoutConstraint</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">bannerView</span><span class="p">,</span>
-                          <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">centerX</span><span class="p">,</span>
-                          <span class="n">relatedBy</span><span class="p">:</span> <span class="p">.</span><span class="bp">equal</span><span class="p">,</span>
-                          <span class="n">toItem</span><span class="p">:</span> <span class="n">view</span><span class="p">,</span>
-                          <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">centerX</span><span class="p">,</span>
-                          <span class="n">multiplier</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                          <span class="n">constant</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
-      <span class="p">])</span>
-   <span class="p">}</span>
+        <span class="p">[</span><span class="bp">NSLayoutConstraint</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">bannerView</span><span class="p">,</span>
+                            <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">bottom</span><span class="p">,</span>
+                            <span class="n">relatedBy</span><span class="p">:</span> <span class="p">.</span><span class="bp">equal</span><span class="p">,</span>
+                            <span class="n">toItem</span><span class="p">:</span> <span class="n">view</span><span class="p">.</span><span class="n">safeAreaLayoutGuide</span><span class="p">,</span>
+                            <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">bottom</span><span class="p">,</span>
+                            <span class="n">multiplier</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="n">constant</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span>
+         <span class="bp">NSLayoutConstraint</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">bannerView</span><span class="p">,</span>
+                            <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">centerX</span><span class="p">,</span>
+                            <span class="n">relatedBy</span><span class="p">:</span> <span class="p">.</span><span class="bp">equal</span><span class="p">,</span>
+                            <span class="n">toItem</span><span class="p">:</span> <span class="n">view</span><span class="p">,</span>
+                            <span class="n">attribute</span><span class="p">:</span> <span class="p">.</span><span class="n">centerX</span><span class="p">,</span>
+                            <span class="n">multiplier</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="n">constant</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">])</span>
+<span class="p">}</span>
 </pre></div>
 </td></tr></table>
 
