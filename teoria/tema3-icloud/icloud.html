@@ -1,0 +1,1928 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>3. iCloud y CloudKit - SPM-iOS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#icloud-y-cloudkit" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="SPM-iOS" class="md-header-nav__button md-logo">
+          
+            <img src="../../imagenes/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              SPM-iOS
+            </span>
+            <span class="md-header-nav__topic">
+              
+                3. iCloud y CloudKit
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="SPM-iOS" class="md-nav__button md-logo">
+      
+        <img src="../../imagenes/logo.png" width="48" height="48">
+      
+    </a>
+    SPM-iOS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Teoría
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        Teoría
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema0-introduccion-servicios-ios/introduccion-servicios-ios.html" title="0. Introducción" class="md-nav__link">
+      0. Introducción
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema1-firma-aprovisionamiento/firma-aprovisionamiento.html" title="1. Firma, aprovisionamiento y distribución de apps" class="md-nav__link">
+      1. Firma, aprovisionamiento y distribución de apps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema2-notificaciones/notificaciones.html" title="2. Notificaciones" class="md-nav__link">
+      2. Notificaciones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. iCloud y CloudKit
+      </label>
+    
+    <a href="icloud.html" title="3. iCloud y CloudKit" class="md-nav__link md-nav__link--active">
+      3. iCloud y CloudKit
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#icloud" class="md-nav__link">
+    iCloud
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filosofia-de-icloud-para-el-usuario-de-ios" class="md-nav__link">
+    Filosofía de iCloud para el usuario de iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuenta-icloud" class="md-nav__link">
+    Cuenta iCloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distintas-apis" class="md-nav__link">
+    Distintas APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparacion-de-aprovisionamiento-y-permisos-para-icloud" class="md-nav__link">
+    Preparación de aprovisionamiento y permisos para iCloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-app-id" class="md-nav__link">
+    Creación del App ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icloud-clave-valor" class="md-nav__link">
+    iCloud clave-valor
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-de-almacenamiento-clave-valor" class="md-nav__link">
+    API de almacenamiento clave-valor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-synchronize" class="md-nav__link">
+    Método synchronize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-uso-de-synchronize-al-lanzar-la-app" class="md-nav__link">
+    Ejemplo de uso de synchronize al lanzar la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardar-valores-en-el-almacen-de-claves-valor" class="md-nav__link">
+    Guardar valores en el almacén de claves-valor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-de-valores-del-almacen-de-claves-valor" class="md-nav__link">
+    Obtención de valores del almacén de claves-valor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicion-de-un-observador-de-cambios" class="md-nav__link">
+    Definición de un observador de cambios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudkit" class="md-nav__link">
+    CloudKit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-cloudkit" class="md-nav__link">
+    Introducción a CloudKit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-transporte" class="md-nav__link">
+    Tecnología de transporte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-cloudkit" class="md-nav__link">
+    Elementos de CloudKit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenedores" class="md-nav__link">
+    Contenedores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-ckcontainer" class="md-nav__link">
+    Clase CKContainer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-publicos-y-privados" class="md-nav__link">
+    Datos públicos y privados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    Bases de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    Dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudkit-trabaja-sobre-registros-en-icloud" class="md-nav__link">
+    CloudKit trabaja sobre registros en iCloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registros" class="md-nav__link">
+    Registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-en-los-registros" class="md-nav__link">
+    Datos en los registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grabacion-de-registros" class="md-nav__link">
+    Grabación de registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones-entre-registros-referencias" class="md-nav__link">
+    Relaciones entre registros: referencias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-con-registros-obtenidos" class="md-nav__link">
+    Operaciones con registros obtenidos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-sociales-de-cloudkit" class="md-nav__link">
+    Características sociales de CloudKit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suscripciones" class="md-nav__link">
+    Suscripciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudkit-js" class="md-nav__link">
+    CloudKit JS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_1" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-en-el-member-center" class="md-nav__link">
+    Gestión en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignacion-del-container-al-app-id" class="md-nav__link">
+    Asignación del container al App ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-perfil-de-aprovisionamiento" class="md-nav__link">
+    Creación del perfil de aprovisionamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizacion-de-capacidades-de-la-app-todolist" class="md-nav__link">
+    Actualización de capacidades de la app ToDoList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutamos-la-app-todolist" class="md-nav__link">
+    Ejecutamos la app ToDoList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard_1" class="md-nav__link">
+    Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema4-mapas-localizacion/mapas-localizacion.html" title="4. Mapas y localización" class="md-nav__link">
+      4. Mapas y localización
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema5-extensiones/extensiones.html" title="5. Extensiones" class="md-nav__link">
+      5. Extensiones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema6-anuncios/anuncios.html" title="6. Anuncios" class="md-nav__link">
+      6. Anuncios
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tema7-compras-in-app/compras-in-app.html" title="7. Compras InApp" class="md-nav__link">
+      7. Compras InApp
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Prácticas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Prácticas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica1/practica1-firma-aprovisionamiento.html" title="Práctica 1" class="md-nav__link">
+      Práctica 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica2/practica2-notificaciones.html" title="Práctica 2" class="md-nav__link">
+      Práctica 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica3/practica3-icloud.html" title="Práctica 3" class="md-nav__link">
+      Práctica 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica4/practica4-mapas-localizacion.html" title="Práctica 4" class="md-nav__link">
+      Práctica 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica5/practica5-extensiones.html" title="Práctica 5" class="md-nav__link">
+      Práctica 5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica6/practica6-anuncios.html" title="Práctica 6" class="md-nav__link">
+      Práctica 6
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#icloud" class="md-nav__link">
+    iCloud
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filosofia-de-icloud-para-el-usuario-de-ios" class="md-nav__link">
+    Filosofía de iCloud para el usuario de iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuenta-icloud" class="md-nav__link">
+    Cuenta iCloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distintas-apis" class="md-nav__link">
+    Distintas APIs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparacion-de-aprovisionamiento-y-permisos-para-icloud" class="md-nav__link">
+    Preparación de aprovisionamiento y permisos para iCloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-app-id" class="md-nav__link">
+    Creación del App ID
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#icloud-clave-valor" class="md-nav__link">
+    iCloud clave-valor
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-de-almacenamiento-clave-valor" class="md-nav__link">
+    API de almacenamiento clave-valor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-synchronize" class="md-nav__link">
+    Método synchronize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-uso-de-synchronize-al-lanzar-la-app" class="md-nav__link">
+    Ejemplo de uso de synchronize al lanzar la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardar-valores-en-el-almacen-de-claves-valor" class="md-nav__link">
+    Guardar valores en el almacén de claves-valor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-de-valores-del-almacen-de-claves-valor" class="md-nav__link">
+    Obtención de valores del almacén de claves-valor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definicion-de-un-observador-de-cambios" class="md-nav__link">
+    Definición de un observador de cambios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudkit" class="md-nav__link">
+    CloudKit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-cloudkit" class="md-nav__link">
+    Introducción a CloudKit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-de-transporte" class="md-nav__link">
+    Tecnología de transporte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-cloudkit" class="md-nav__link">
+    Elementos de CloudKit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenedores" class="md-nav__link">
+    Contenedores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clase-ckcontainer" class="md-nav__link">
+    Clase CKContainer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-publicos-y-privados" class="md-nav__link">
+    Datos públicos y privados
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos" class="md-nav__link">
+    Bases de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    Dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudkit-trabaja-sobre-registros-en-icloud" class="md-nav__link">
+    CloudKit trabaja sobre registros en iCloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registros" class="md-nav__link">
+    Registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-en-los-registros" class="md-nav__link">
+    Datos en los registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grabacion-de-registros" class="md-nav__link">
+    Grabación de registros
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relaciones-entre-registros-referencias" class="md-nav__link">
+    Relaciones entre registros: referencias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#queries" class="md-nav__link">
+    Queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operaciones-con-registros-obtenidos" class="md-nav__link">
+    Operaciones con registros obtenidos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-sociales-de-cloudkit" class="md-nav__link">
+    Características sociales de CloudKit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#suscripciones" class="md-nav__link">
+    Suscripciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudkit-js" class="md-nav__link">
+    CloudKit JS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_1" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-en-el-member-center" class="md-nav__link">
+    Gestión en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asignacion-del-container-al-app-id" class="md-nav__link">
+    Asignación del container al App ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-perfil-de-aprovisionamiento" class="md-nav__link">
+    Creación del perfil de aprovisionamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizacion-de-capacidades-de-la-app-todolist" class="md-nav__link">
+    Actualización de capacidades de la app ToDoList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejecutamos-la-app-todolist" class="md-nav__link">
+    Ejecutamos la app ToDoList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard_1" class="md-nav__link">
+    Dashboard
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referencias
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!--
+Referencias:
+WWDC vídeo What's next in CoreData: https://developer.apple.com/videos/wwdc/2014/?id=225
+WWDC vídeo Advanced CloudKit: https://developer.apple.com/videos/wwdc/2014/?id=231
+WWDC vídeo Introducing CloudKit: https://developer.apple.com/videos/wwdc/2014/?id=208
+iCloud Design Guide: https://developer.apple.com/library/ios/documentation/General/Conceptual/iCloudDesignGuide/Chapters/Introduction.html
+CloudKit Quick Start: https://developer.apple.com/library/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987
+
+Xamarin Tutorial CloudKit: http://developer.xamarin.com/guides/ios/platform_features/intro_to_cloudkit/
+Ray Wenderlich Core Data Tutorial con Swift: http://www.raywenderlich.com/85578/first-core-data-app-using-swift
+Tutorial Hacking with Swift: https://www.hackingwithswift.com/read/33/6/reading-from-icloud-with-cloudkit-ckqueryoperation-and-nspredicate
+-->
+
+<h1 id="icloud-y-cloudkit">iCloud y CloudKit<a class="headerlink" href="#icloud-y-cloudkit" title="Permanent link">&para;</a></h1>
+<h2 id="icloud">iCloud<a class="headerlink" href="#icloud" title="Permanent link">&para;</a></h2>
+<p><img src="imagenes/iCloud_intro.png" width="400px"/></p>
+<p>iCloud es un servicio de Apple que permite a un usuario acceder a su
+contenido personal (datos, documentos) en todos sus dispositivos
+utilizando su Apple ID.</p>
+<p>iCloud consigue esto combinando almacenamiento en la nube y APIs
+dedicadas integradas en el sistema operativo.</p>
+<p>Apple proporciona la infraestructura de servidores, de transmisión de
+datos y de cuentas de usuario, facilitando el trabajo a los
+desarrolladores que no necesitan crear sus propios servicios ni
+recurrir a soluciones de terceros.</p>
+<h3 id="filosofia-de-icloud-para-el-usuario-de-ios">Filosofía de iCloud para el usuario de iOS<a class="headerlink" href="#filosofia-de-icloud-para-el-usuario-de-ios" title="Permanent link">&para;</a></h3>
+<p>Un escenario frecuente es que un usuario tenga una app instalada en
+más de un dispositivo (un iPhone y un iPad, por ejemplo).  Por
+ejemplo es muy común usar la app de fotos, la del calendario, o las
+notas en cualquier dispositivo.</p>
+<p>En este escenario, la idea principal de iCloud es que el usuario pueda
+pasar de un dispositivo a otro y seguir trabajando con el mismo estado
+de la app tal y como la dejó en el dispositivo anterior.</p>
+<p>Para el usuario, los cambios aparecen automáticamente en todos los
+dispositivos conectados a la cuenta iCloud.</p>
+<h3 id="cuenta-icloud">Cuenta iCloud<a class="headerlink" href="#cuenta-icloud" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/icloud-movil.png" width="250px"/></p>
+<p>Todo usuario de Apple puede activar una cuenta de iCloud usando su
+Apple ID. Casi todos los usuarios de dispositivos Apple tienen
+activada esta cuenta.</p>
+<p>Permite mantener el estado en aplicaciones ejecutándose en distintos
+dispositivos asociados al mismo Apple ID: Recordatorios, Notas, etc.</p>
+<p>El sistema operativo encripta todos los datos antes de
+transmitirlos a los servidores de iCloud, los cuales almacenan los
+datos también en formato encriptado. Se utilizan tokens para la
+autenticación. </p>
+<p>De forma gratuita Apple proporciona 5Gb de espacio en la cuenta de
+iCloud.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>La cuenta de iCloud puede activarse desde el simulador. Si es la
+primera vez que usas iCloud desde el simulador <strong>debes logearte con tu Apple Id en
+<a href="https://www.icloud.com">icloud.com</a> y aceptar los términos</strong>.</p>
+</div>
+<h3 id="distintas-apis">Distintas APIs<a class="headerlink" href="#distintas-apis" title="Permanent link">&para;</a></h3>
+<p>Bajo el nombre genérico de iCloud, existen distintas APIs que Apple ha
+ido proporcionando a los desarrolladores para gestionar datos
+asociados a la cuenta de usuario:</p>
+<ul>
+<li>Almacenamiento <strong>clave-valor en iCloud</strong>: para mantener el estado de
+  la aplicación (puntuación de un juego, última página leída, etc.).</li>
+<li><strong>Documentos en iCloud</strong>: para gestionar documentos en la nube y
+  mantenerlos sincronizados entre iPhone/iPad/Mac.</li>
+<li><strong>iCloud con Core Data</strong>: para mantener de forma automática en
+  iCloud una copia de todos los datos de la app gestionados con Core
+  Data. Versión inicial con muchos problemas, muy mejorado en las
+  últimas versiones.</li>
+<li><strong>CloudKit</strong>: nueva tecnología a partir de iOS 8
+  que permite mayor flexibilidad y control. Basado en la gestión en la
+  nube de registros con diccionarios clave-valor, con un enfoque muy
+  similar a las tecnologías NoSQL.<ul>
+<li>Se trata de un API de peticiones a los servidores en la nube,
+  que no mantiene un estado local. Es conveniente usarla en combinación
+  con Core Data, si queremos hacer persistentes en local los datos
+  existentes en la nube.</li>
+<li>Basada en peticiones y respuestas asíncronas.</li>
+</ul>
+</li>
+</ul>
+<p>Vamos a ver en esta sesión el <strong>almacenamiento clave-valor</strong> y
+<strong>CloudKit</strong>, que son las APIs más usadas.</p>
+<h3 id="preparacion-de-aprovisionamiento-y-permisos-para-icloud">Preparación de aprovisionamiento y permisos para iCloud<a class="headerlink" href="#preparacion-de-aprovisionamiento-y-permisos-para-icloud" title="Permanent link">&para;</a></h3>
+<p>Para desarrollar con iCloud es necesario estar registrado como
+desarrollador en el programa de desarrollo de Apple. También puedes
+hacerlo con tu Apple ID registrado en el equipo de la UA.</p>
+<p>Para usar los servicios de iCloud es necesario crear un perfil de
+aprovisionamiento con un App Id concreto, añadir el servicio de
+iCloud y activar el permiso (<em>capabilities</em>) en la app con XCode.</p>
+<p>Si estás registrado en el equipo de desarrollo con un rol de
+administrador (o tienes una cuenta de pago en la que tienes todos
+los permisos de tu equipo), se puede hacer todo automáticamente
+desde Xcode.</p>
+<h3 id="creacion-del-app-id">Creación del App ID<a class="headerlink" href="#creacion-del-app-id" title="Permanent link">&para;</a></h3>
+<p>Para trabajar con iCloud clave-valor puedes utilizar el perfil de
+aprovisionamiento <code>Master Moviles iCloud</code> creado en el <em>member
+center</em> del equipo de la universidad. El <em>bundle ID</em> de la app debe
+ser <code>es.ua.mastermoviles.iCloud</code>.</p>
+<p>También hemos actualizado el perfil <code>Master Moviles ToDoList</code> para
+incluir los permisos de uso de iCloud y CloudKit.</p>
+<p>Se debe crear el App ID que otorgue la capacidad de acceso a iCloud.</p>
+<p>Hemos creado el permiso (App ID) <code>Master Moviles iCloud</code> con el
+<em>bundle name</em> <code>es.ua.mastermoviles.iCloud</code> que incluye la capacidad de
+iCloud.  </p>
+<p><img src="imagenes/appid-icloud.png" width="470px"/> </p>
+<p>La activación del permiso de iCloud aparecerá en amarillo porque
+requiere una configuración posterior relacionada con CloudKit (lo
+veremos más adelante). Pero es suficiente para trabajar con iCloud
+clave-valor.</p>
+<h2 id="icloud-clave-valor">iCloud clave-valor<a class="headerlink" href="#icloud-clave-valor" title="Permanent link">&para;</a></h2>
+<h3 id="api-de-almacenamiento-clave-valor">API de almacenamiento clave-valor<a class="headerlink" href="#api-de-almacenamiento-clave-valor" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/kvs_intro.png" width="300px"/></p>
+<p>Permite guardar y recuperar en iCloud claves y valores desde los
+dispositivos en los que el usuario está registrado con su Apple Id.</p>
+<p>Para gestionar estos valores debemos usar la clase
+<a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSUbiquitousKeyValueStore_class/index.html">NSUbiquitousKeyValueStore</a>.</p>
+<p>Puedes almacenar <code>String</code>s, valores escalares como <code>BOOL</code> o
+<code>Double</code>, diccionarios y también objetos de cualquiera de los
+siguientes tipos: <code>NSNumber</code>, <code>NSString</code>, <code>NSDate</code>, <code>NSData</code>,
+<code>NSArray</code>, or <code>NSDictionary</code>.</p>
+<p>El espacio de almacenamiento total, para un usuario dado y una app,
+es de 1 MB y un máximo de 1024 claves.</p>
+<p>Para obtener el objeto compartido iCloudKeyValueStore:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">iCloudStore</span> <span class="p">=</span> <span class="bp">NSUbiquitousKeyValueStore</span><span class="p">.</span><span class="k">default</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="metodo-synchronize">Método <code>synchronize</code><a class="headerlink" href="#metodo-synchronize" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">synchronize</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Bool</span>
+</pre></div>
+</td></tr></table>
+
+<p>Devuelve <code>true</code> si las claves y valores en memoria y en disco están
+sincronizados o <code>false</code> si ha sucedido algún error. Por ejemplo,
+devuelve <code>false</code> si la app no se ha compilado con las peticiones
+adecuadas de <em>entitlement</em> o si el usuario no está logeado e iCloud.</p>
+<p>Los cambios al almacén de claves-valor se salvan en memoria. El
+sistema sincroniza automáticamente estos datos con la caché del
+disco en los momentos apropiados. Por ejemplo, cuando el app pasa a
+segundo plano o cuando se reciben cambios de iCloud.</p>
+<p>Este método no fuerza la subida a iCloud de los nuevos valores y
+claves, sino que hace saber a iCloud que los valores están listos
+para ser subidos. El sistema controla cuándo subir los datos.</p>
+<p>No es obligatorio su uso, pero es recomendable cuando estamos
+trabajando con el simulador para asegurarnos de que el almacén de
+claves-valor se guarda.</p>
+<p>Se recomiendo también hacerlo después de lanzar la app o cuando
+vuelve al primer plano.</p>
+<h3 id="ejemplo-de-uso-de-synchronize-al-lanzar-la-app">Ejemplo de uso de <code>synchronize</code> al lanzar la app<a class="headerlink" href="#ejemplo-de-uso-de-synchronize-al-lanzar-la-app" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">@UIApplicationMain</span>
+<span class="kd">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="bp">UIResponder</span><span class="p">,</span> <span class="bp">UIApplicationDelegate</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nv">window</span><span class="p">:</span> <span class="bp">UIWindow</span><span class="p">?</span>
+    <span class="kd">let</span> <span class="nv">store</span> <span class="p">=</span> <span class="bp">NSUbiquitousKeyValueStore</span><span class="p">.</span><span class="k">default</span>
+
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIApplication</span><span class="p">.</span><span class="n">LaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+        <span class="c1">// Override point for customization after application launch.</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">synchronize</span><span class="p">())</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Sincronización OK&quot;</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Problemas en la sincronización&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="p">...</span>
+
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="guardar-valores-en-el-almacen-de-claves-valor">Guardar valores en el almacén de claves-valor<a class="headerlink" href="#guardar-valores-en-el-almacen-de-claves-valor" title="Permanent link">&para;</a></h3>
+<p>Para actualizar los valores hay que usar los métodos <em>set</em>. El
+primer parámetro es el valor a guardar y el segundo la clave:</p>
+<ul>
+<li><code>set(Bool, forKey: String)</code></li>
+<li><code>set(Double, forKey: String)</code></li>
+<li><code>set(Int64, forKey: String)</code></li>
+<li><code>set([Any]?, forKey: String)</code></li>
+<li>...</li>
+</ul>
+<p>Por ejemplo,
+<a href="https://developer.apple.com/reference/foundation/nsubiquitouskeyvaluestore/1407812-set"><code>set(Int64, forKey: String)</code></a> actualiza en el almacén el valor long long (<code>Int64</code>) asociándolo a una clave especificada:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">store</span><span class="p">.</span><span class="kr">set</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">&quot;puntuacion&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="obtencion-de-valores-del-almacen-de-claves-valor">Obtención de valores del almacén de claves-valor<a class="headerlink" href="#obtencion-de-valores-del-almacen-de-claves-valor" title="Permanent link">&para;</a></h3>
+<p>Funciones que obtienen los distintos tipos de datos a partir de una
+clave (una cadena):</p>
+<ul>
+<li><code>array(forKey: String) -&gt; [Any]?</code></li>
+<li><code>bool(forKey: String) -&gt; Bool</code></li>
+<li><code>dictionary(forKey: String) -&gt; [String : Any]?</code></li>
+<li><code>string(forKey: String) -&gt; String?</code></li>
+<li><code>longLong(forKey: String) -&gt; Int64</code></li>
+<li>...</li>
+</ul>
+<p><code>forKey</code> es el String que es la clave en el almacén de  claves-valor.</p>
+<p>Devuelve el valor asociado a la clave o <code>nil</code> si la clave no existe
+(0 en el caso de los métodos que devuelven un valor numérico).</p>
+<p>Por ejemplo, <a href="https://developer.apple.com/reference/foundation/nsubiquitouskeyvaluestore/1413240-longlong"><code>longlong(forKey: String)</code></a>
+ devuelve el valor <code>Int64</code> asociado a una clave especificada:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">puntuacion</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">longLong</span><span class="p">(</span><span class="n">forKey</span><span class="p">:</span><span class="s">&quot;puntuacion&quot;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="definicion-de-un-observador-de-cambios">Definición de un observador de cambios<a class="headerlink" href="#definicion-de-un-observador-de-cambios" title="Permanent link">&para;</a></h3>
+<p>Además de almacenar los valores podemos recibir notificaciones
+(<a href="https://developer.apple.com/reference/foundation/nsnotification"><code>NSNotification</code></a>
+gestionadas por el
+<a href="https://developer.apple.com/reference/foundation/notificationcenter"><code>NotificationCenter</code></a>)
+de cambio de los valores en otros dispositivos conectados a iCloud.</p>
+<p>En el lanzamiento del app hay que registrarse para la notificación
+<code>NSUbiquitousKeyValueStoreDidChangeExternallyNotification</code>.</p>
+<p>La notificación se envía cuando el valor de una o más claves han
+cambiado debido a datos que han llegado desde iCloud. La
+notificación no se envía cuando la propia app ha cambiado los
+valores.</p>
+<p>El diccionario atributo <code>userInfo</code> de la notificación contiene la
+razón de la notificación, así como una lista de los valores
+cambiados.</p>
+<p>El objeto en la notificación es el <code>NSUbiquitousKeyValueStore</code> cuyo
+contenido ha cambiado.</p>
+<p>Por ejemplo, en el siguiente código se registra como observador un
+método de la propia clase <code>AppDelegate</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIApplication</span><span class="p">.</span><span class="n">LaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+    <span class="c1">// Override point for customization after application launch.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">synchronize</span><span class="p">())</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Sincronización OK&quot;</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Problemas en la sincronización&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">NotificationCenter</span><span class="p">.</span><span class="k">default</span><span class="p">.</span><span class="n">addObserver</span><span class="p">(</span>
+        <span class="kc">self</span><span class="p">,</span>
+        <span class="n">selector</span><span class="p">:</span> <span class="k">#selector</span><span class="p">(</span><span class="n">muestraValoriCloud</span><span class="p">(</span><span class="n">notification</span><span class="p">:)),</span>
+        <span class="n">name</span><span class="p">:</span> <span class="bp">NSUbiquitousKeyValueStore</span><span class="p">.</span><span class="n">didChangeExternallyNotification</span><span class="p">,</span>
+        <span class="n">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="kr">@objc</span> <span class="kd">func</span> <span class="nf">muestraValoriCloud</span><span class="p">(</span><span class="n">notification</span><span class="p">:</span> <span class="n">Notification</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nv">valoriCloud</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">longLong</span><span class="p">(</span><span class="n">forKey</span><span class="p">:</span> <span class="s">&quot;puntuación&quot;</span><span class="p">))</span>
+    <span class="c1">// Actualizamos el valor en el controller</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="demo">Demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Mostramos la app <code>iCloudKeyValue</code>, primero la versión sin
+comunicación con iCloud clave-valor y después la que utiliza iCloud
+clave-valor para guardar el valor del contador.</li>
+<li>Mostramos la app ejecutándose en dos dispositivos simultáneamente y
+mostrando cómo los cambios en un dispositivo se actualizan en el otro.</li>
+</ul>
+<p><img src="imagenes/icloudapp-clave-valor.png" width="300px"/></p>
+<h2 id="cloudkit">CloudKit<a class="headerlink" href="#cloudkit" title="Permanent link">&para;</a></h2>
+<h3 id="introduccion-a-cloudkit">Introducción a CloudKit<a class="headerlink" href="#introduccion-a-cloudkit" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/cloudkit-base-otras-tecnologias.png" width="500px"/></p>
+<p>El origen de CloudKit es un proyecto interno de Apple en el que se
+basan muchas de sus APIs de persistencia. Su uso se ofrece a les
+desarrolladores en la WWDC de 2014, para apps a partir de iOS 8.</p>
+<p>Permite gestionar datos remotos ubicados en los servidores de iCloud propios de Apple.</p>
+<p>En los datos propios de la aplicación (datos privados del usuario) el
+almacenamiento se imputa a las cuentas iCloud de los usuarios.</p>
+<p>Existe la posibilidad de datos públicos, en un almacenamiento
+gestionado por el desarrollador (gratuito hasta una capacidad y de
+pago a partir de ella).</p>
+<p>Permite datos estructurados y datos <em>bulk</em>.</p>
+<p>Los datos están en la nube e iCloud proporciona una tecnología de
+transporte, basada en peticiones de registro, de lectura y de
+búsqueda. Los datos obtenidos se almacenan en la aplicación. Si
+queremos hacerlos persistentes de forma local (para que estén
+disponibles sin conexión) podemos utilizar otra tecnología como Core
+Data.</p>
+<h3 id="tecnologia-de-transporte">Tecnología de transporte<a class="headerlink" href="#tecnologia-de-transporte" title="Permanent link">&para;</a></h3>
+<p>CloudKit no proporciona ninguna forma de almacenar datos localmente.</p>
+<p>Es un servicio para <strong>mover datos a y desde iCloud</strong> y no está pensado
+para reemplazar los modelos de datos ya existentes en tu app
+(CoreData).</p>
+<p>El objetivo del framework es complementar estos modelos con una
+forma de empaquetar los datos para iCloud y recibir actualizaciones
+posteriores sobre esos datos.</p>
+<p>Con CloudKit, tu eres el responsable de mover los datos desde tu app
+a iCloud y desde iCloud a la app. Aunque CloudKit proporciona
+facilidades para mantenerte informado cuando sucede un cambio, tu
+debes obtener esos cambios explícitamente.</p>
+<p>Debido a que eres el responsable de obtener y salvar los datos,
+debes de asegurarte de que los datos se obtienen en el momento
+oportuno y en el orden correcto, y de manejar los errores que se
+producen.</p>
+<h3 id="elementos-de-cloudkit">Elementos de CloudKit<a class="headerlink" href="#elementos-de-cloudkit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Contenedores</li>
+<li>Bases de datos</li>
+<li>Registros</li>
+<li>Zonas de registros</li>
+<li>Identificadores</li>
+<li>Referencias </li>
+</ul>
+<h3 id="contenedores">Contenedores<a class="headerlink" href="#contenedores" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/containers.png" width="400px"/></p>
+<p>Múltiples apps y usuarios tienen acceso a iCloud, pero los datos se
+encuentran segregados y encapsulados en particiones llamadas
+<code>contenedores</code>.</p>
+<p>Los contenedores de tus apps no pueden ser usados por apps de otro
+desarrollador.</p>
+<p>Es posible <strong>compartir un contenedor entre varias apps</strong>, siempre que
+hayan sido desarrolladas por el mismo desarrollador.</p>
+<p>Cada contenedor tiene un nombre único. El nombre del contenedor con el
+que trabaja la app se define en la configuración de <em>capabilities</em> de
+Xcode y en el App ID del perfil de aprovisionamiento.</p>
+<p><strong>Los contenedores no pueden borrarse.</strong></p>
+<h3 id="clase-ckcontainer">Clase CKContainer<a class="headerlink" href="#clase-ckcontainer" title="Permanent link">&para;</a></h3>
+<p>La clase con la que trabajar para gestionar el contenedor es
+  <a href="https://developer.apple.com/library/ios/documentation/CloudKit/Reference/CKContainer_class/index.html#//apple_ref/occ/cl/CKContainer">CKContainer</a></p>
+<p>La debemos usar para:</p>
+<ul>
+<li>Obtener las bases de datos públicas y privadas</li>
+<li>Obtener el identificador del contenedor</li>
+<li>Determinar el estado del acceso de la cuenta iCloud del usuario</li>
+<li>Solicitar y determinar permisos de la app</li>
+<li>Ejecutar operaciones sobre el contenedor</li>
+<li>Descubrir registros de usuarios </li>
+</ul>
+<p>En CloudKit todas las operaciones son asíncronas: se pasa el código
+de <em>callback</em> al que se llamará cuando la petición devuelva la
+respuesta.</p>
+<h3 id="datos-publicos-y-privados">Datos públicos y privados<a class="headerlink" href="#datos-publicos-y-privados" title="Permanent link">&para;</a></h3>
+<p>Se pueden guardar datos de forma pública y privada, dependiendo
+de si se guardan en la <strong>base de datos pública o en la privada</strong>.</p>
+<p>Los datos públicos son accesibles a todos los usuarios de la
+app, aunque el usuario no se haya identificado con su cuenta de
+iCloud.</p>
+<p>Los datos privados son sólo visibles por el usuario actual
+logeado en iCloud.</p>
+<p>Para salvar datos en la base de datos pública es necesario que
+el usuario esté identificado, porque siempre se guarda el usuario
+propietario del registro.</p>
+<h3 id="bases-de-datos">Bases de datos<a class="headerlink" href="#bases-de-datos" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/database-container.png" width="1000px"/></p>
+<p><img src="imagenes/database-container-2.png" width="1000px"/></p>
+<p>Las bases de datos son instancias de la clase
+<a href="https://developer.apple.com/library/ios/documentation/CloudKit/Reference/CKDatabase_class/index.html#//apple_ref/occ/cl/CKDatabase"><code>CKDatabase</code></a></p>
+<p>Cada app tiene acceso a dos bases de datos:</p>
+<ul>
+<li>Base de datos pública</li>
+<li>Base de datos privada</li>
+</ul>
+<p>Se obtienen a través del <code>CKContainer</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">container</span> <span class="p">=</span> <span class="bp">CKContainer</span><span class="p">.</span><span class="k">default</span><span class="p">()</span>
+<span class="kd">let</span> <span class="nv">privateDB</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">privateCloudDatabase</span>
+<span class="kd">let</span> <span class="nv">publicDB</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">publicCloudDatabase</span>
+</pre></div>
+</td></tr></table>
+
+<p><img src="imagenes/databases-permisos.png" width="1000px"/></p>
+<h3 id="dashboard">Dashboard<a class="headerlink" href="#dashboard" title="Permanent link">&para;</a></h3>
+<p><em>Dashboard</em> es una interfaz web con la que podemos gestionar
+nuestros contenedores y bases de datos.</p>
+<p><a href="https://icloud.developer.apple.com/dashboard/">https://icloud.developer.apple.com/dashboard/</a></p>
+<p><img src="imagenes/dashboard.png" width="600px"/></p>
+<p>La interfaz web permite:</p>
+<ul>
+<li>Crear, visualizar, editar y borrar tipos de registros, registros, etc.</li>
+<li>Estadísticas de uso</li>
+<li>Administración de acceso
+ Configuración de despliegue</li>
+</ul>
+<p>Ejemplo de visualización de tipos de registros:</p>
+<p><img src="imagenes/dashboard-records.png" width="900px"/></p>
+<h3 id="cloudkit-trabaja-sobre-registros-en-icloud">CloudKit trabaja sobre registros en iCloud<a class="headerlink" href="#cloudkit-trabaja-sobre-registros-en-icloud" title="Permanent link">&para;</a></h3>
+<p>CloudKit proporciona una forma de mover datos estructurados entre tu
+aplicación y iCloud.</p>
+<p>A diferencia de las bases de datos relacionales tradicionales, en las
+que el modelo de datos se basa en tablas, en CloudKit se trabaja con
+<strong>tipos de registros</strong>. </p>
+<p>Un tipo de registro se define dinámicamente, en tiempo de ejecución de
+la app, por un nombre y un conjunto de claves. Una instancia concreta de
+un registro tiene un identificador único y es un <strong>diccionario de parejas
+clave-valor con cada clave representando un campo del registro</strong>.</p>
+<p>El valor de cada campo suele ser un tipo de datos simple como una
+cadena, una fecha o un número, pero es posible almacenar también
+bloques de datos arbitrarios (ficheros),</p>
+<p>Es posible guardar en los valores <strong>referencias a otros registros</strong>,
+permitiendo definir relaciones entre registros.</p>
+<p>Por ejemplo, en la siguiente figura se muestran dos tipos de registros
+con sus campos asociados. El nombre del primer tipo de registro es
+<code>Artwork</code> y el del segundo <code>Artist</code>.</p>
+<p><img src="imagenes/schemaDesign.png" width="500px"/></p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En iCloud se dispone de dos tipos de entornos: el <strong>entorno de
+desarrollo</strong> y el de <strong>producción</strong>. Cuando se desarrolla la app se
+construyen de forma dinámica los tipos de registros, con sus
+identificadores y sus campos. Después se debe desplegar estos
+tipos de registros al entorno de producción, en donde ya no es
+posible modificar los tipos de registro.</p>
+</div>
+<h3 id="registros">Registros<a class="headerlink" href="#registros" title="Permanent link">&para;</a></h3>
+<p>Una base de datos está compuesta de registros:</p>
+<p><img src="imagenes/records.png" width="700px"/></p>
+<p>Las instancias de registro son objetos de la clase
+<a href="https://developer.apple.com/library/ios/documentation/CloudKit/Reference/CKRecord_class/">CKRecord</a>.</p>
+<p>Cada instancia es un conjunto de parejas clave y valor (determinados
+por el tipo de registro) y tiene un identificador único, un objeto de
+la clase
+<a href="https://developer.apple.com/documentation/cloudkit/ckrecord/id"><code>CKRecord.ID</code></a>. Este
+identificador único podemos proporcionarlo en el momento de creación
+del registro o podemos dejar que se inicializa automáticamente, si no
+lo definimos.</p>
+<p>Para crear una instancia de registro es necesario identificar el tipo
+de registro, definido por un <code>String</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">artistaRecord</span> <span class="p">=</span> <span class="bp">CKRecord</span><span class="p">(</span><span class="n">recordType</span><span class="p">:</span> <span class="s">&quot;Artista&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Si es la primera vez que se crea un registro de ese tipo, se crea el
+tipo de registro dinámicamente en la base de datos.</p>
+<ul>
+<li>Una vez creado el registro se añaden valores a sus campos (que
+  también se crean dinámicamente):</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">artistaRecord</span><span class="p">[</span><span class="s">&quot;artista&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;Jonhn Lennon&quot;</span>
+<span class="kd">let</span> <span class="nv">formatter</span> <span class="p">=</span> <span class="n">DateFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="p">.</span><span class="n">dateFormat</span> <span class="p">=</span> <span class="s">&quot;yyyy/MM/dd&quot;</span>
+<span class="n">artistaRecord</span><span class="p">[</span><span class="s">&quot;fechanacimiento&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">formatter</span><span class="p">.</span><span class="n">date</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="s">&quot;1940/10/09&quot;</span><span class="p">)</span><span class="o">!</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="datos-en-los-registros">Datos en los registros<a class="headerlink" href="#datos-en-los-registros" title="Permanent link">&para;</a></h3>
+<p>Es posible definir los siguientes tipos de valores que pueden haber en los campos de los registros:</p>
+<ul>
+<li><code>NSString</code> (<code>String</code>): Cadenas</li>
+<li><code>NSNumber</code> (<code>Int</code>, <code>Double</code>, ...): Números, incluidos enteros y punto flotante.</li>
+<li><code>NSData</code>: Bytes arbitrarios de datos (por ejemplo, la
+  serialización binaria de un <code>struct</code>. No usar para almacenar
+  ficheros binarios grandes, usar <code>CKAsset</code> en su lugar.</li>
+<li><code>NSDate</code>: Fechas</li>
+<li><code>CLLocation</code>: Coordenadas geográficas</li>
+<li><code>CKReference</code>: Referencias a otros registros para crear relaciones entre ellos.</li>
+<li><code>CKAsset</code>: Fichero binario.</li>
+<li>Arrays de todo lo anterior</li>
+</ul>
+<h3 id="grabacion-de-registros">Grabación de registros<a class="headerlink" href="#grabacion-de-registros" title="Permanent link">&para;</a></h3>
+<p>Se añaden registros a una base de datos usando la función
+<a href="https://developer.apple.com/reference/cloudkit/ckdatabase/1449114-save"><code>save</code></a>,
+a la que hay que pasar un bloque que recibe el registro salvado y un
+error (en caso en que no se haya podido salvar).</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">privateDB</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">toDoItemRecord</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="bp">CKRecord</span><span class="p">?,</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="k">in</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Error: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="si">))</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="relaciones-entre-registros-referencias">Relaciones entre registros: referencias<a class="headerlink" href="#relaciones-entre-registros-referencias" title="Permanent link">&para;</a></h3>
+<p>Es posible definir relaciones entre los registros. Por ejemplo un
+<code>Artwork</code> está relacionado con un <code>Artist</code>. Son similares a las claves
+ajenas en el tradicional modelo relacional con las que se implementan
+relaciones muchos-a-uno.</p>
+<p><img src="imagenes/referencias.png" width="700px"/></p>
+<p><img src="imagenes/ckreference_owner_owned.png" width="600px"/></p>
+<p>La clase
+<a href="https://developer.apple.com/documentation/cloudkit/ckrecord/reference">CKReference</a>
+es la utilizada para definir estas relaciones:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">itemRecord</span><span class="p">[</span><span class="s">&quot;owningList&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="bp">CKReference</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="n">listRecord</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="p">.</span><span class="n">deleteSelf</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>La constante <code>.deleteSelf</code> indica que si el registro referenciado se
+borra, el propio registro también debe borrarse (borrado en
+cascada). La otra posible acción es <code>.none</code>.</p>
+<h3 id="queries">Queries<a class="headerlink" href="#queries" title="Permanent link">&para;</a></h3>
+<p>Para realizar una consulta se debe utilizar la clase
+<a href="https://developer.apple.com/library/ios/documentation/CloudKit/Reference/CKQuery_class/index.html#//apple_ref/occ/cl/CKQuery"><code>CKQuery</code></a>
+para buscar objetos que cumplen una determinada condición en una base
+de datos.</p>
+<p>La consulta almacena los parámetros de búsqueda, incluyendo el tipo
+de registros a buscar, el criterio (predicado) a aplicar, y el
+parámetro de ordenación que aplicar a los resultados.</p>
+<p>El objeto de la búsqueda se usa para ejecutar una consulta en la
+base de datos usando el método
+<a href="https://developer.apple.com/reference/cloudkit/ckdatabase/1449127-perform"><code>perform</code></a></p>
+<p>Se le pasa un manejador al que se llamará cuando se obtengan los
+resultados. La operación de búsqueda se restringe a los objetos de
+una zona (se pasa <code>nil</code> para la zona por defecto).</p>
+<p>Para realizar consultas con más control sobre el número de registros
+devueltos, o utilizar un cursor definido por el límite de registros
+devueltos, hay que realizar una
+<a href="https://developer.apple.com/library/ios/documentation/CloudKit/Reference/CKQueryOperation_class/index.html#//apple_ref/occ/cl/CKQueryOperation"><code>CKQueryOperation</code></a>.</p>
+<p>Por ejemplo, la query que devuelve todos los registros de tipo "Tarea" de la base de
+datos privada del usuario actual es la siguiente (se ha añadido código
+de ejemplo en el que se actualiza el array de tareas por hacer y se
+actualiza la vista de la tabla)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">privateDB</span> <span class="p">=</span> <span class="bp">CKContainer</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">privateCloudDatabase</span>
+<span class="kd">let</span> <span class="nv">query</span> <span class="p">=</span> <span class="bp">CKQuery</span><span class="p">(</span><span class="n">recordType</span><span class="p">:</span> <span class="s">&quot;Tarea&quot;</span><span class="p">,</span> <span class="n">predicate</span><span class="p">:</span> <span class="bp">NSPredicate</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="kc">true</span><span class="p">))</span>
+<span class="n">privateDB</span><span class="p">.</span><span class="n">perform</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">inZoneWith</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="n">result</span> <span class="k">in</span> <span class="n">results</span><span class="p">!</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="kd">let</span> <span class="nv">nombre</span> <span class="p">=</span> <span class="n">result</span><span class="p">[</span><span class="s">&quot;nombre&quot;</span><span class="p">]</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nv">toDoItem</span> <span class="p">=</span> <span class="n">ToDoItem</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span> <span class="n">nombre</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span><span class="p">,</span> <span class="n">publica</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+                <span class="kc">self</span><span class="p">.</span><span class="n">toDoItems</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">toDoItem</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span><span class="p">(</span> <span class="n">execute</span><span class="p">:</span> <span class="p">{</span>
+            <span class="kc">self</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">reloadData</span><span class="p">()</span>
+        <span class="p">})</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Query error: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="si">))</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Para que funcione la consulta que recupera todos los registros de
+un tipo hay que crear en el <em>dashboard</em> un índice <em>queryable</em> sobre
+el campo nativo <code>recordName</code>.</p>
+</div>
+<p>Otros ejemplos de predicados (consultar <a href="https://developer.apple.com/reference/cloudkit/ckquery">CKQuery</a> y <a href="https://developer.apple.com/reference/foundation/nspredicate">NSPredicate</a>)</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">predicate</span> <span class="p">=</span> <span class="bp">NSPredicate</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&quot;nombre BEGINSWITH &#39;Limpiar&#39;&quot;</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">predicate</span> <span class="p">=</span> <span class="bp">NSPredicate</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&quot;favoriteColors CONTAINS &#39;red&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="operaciones-con-registros-obtenidos">Operaciones con registros obtenidos<a class="headerlink" href="#operaciones-con-registros-obtenidos" title="Permanent link">&para;</a></h3>
+<p>Un ejemplo de código en el que borramos los registros de tipo "Tarea" cuyo nombre coincide con un nombre:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">deleteTarea</span><span class="p">(</span><span class="kc">_</span> <span class="n">toDoItem</span><span class="p">:</span> <span class="n">ToDoItem</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">query</span> <span class="p">=</span> <span class="bp">CKQuery</span><span class="p">(</span><span class="n">recordType</span><span class="p">:</span> <span class="s">&quot;Tarea&quot;</span><span class="p">,</span>
+                        <span class="n">predicate</span><span class="p">:</span> <span class="bp">NSPredicate</span><span class="p">(</span><span class="n">format</span><span class="p">:</span> <span class="s">&quot;nombre == %@&quot;</span><span class="p">,</span> <span class="n">argumentArray</span><span class="p">:</span> <span class="p">[</span><span class="n">toDoItem</span><span class="p">.</span><span class="n">nombreItem</span><span class="p">]))</span>
+    <span class="kd">let</span> <span class="nv">publicDB</span> <span class="p">=</span> <span class="bp">CKContainer</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">publicCloudDatabase</span>
+    <span class="n">publicDB</span><span class="p">.</span><span class="n">perform</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">inZoneWith</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span>
+        <span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">result</span> <span class="k">in</span> <span class="n">results</span><span class="p">!</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nv">record</span><span class="p">:</span> <span class="bp">CKRecord</span><span class="p">!</span> <span class="p">=</span> <span class="n">result</span> <span class="k">as</span> <span class="bp">CKRecord</span>
+                <span class="n">publicDB</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="n">withRecordID</span><span class="p">:</span> <span class="n">record</span><span class="p">.</span><span class="n">recordID</span><span class="p">,</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="p">(</span><span class="n">recordID</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span> <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Error: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">error</span><span class="si">))</span><span class="s">&quot;</span><span class="p">)</span>
+                <span class="p">})</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+<span class="p">}</span> 
+</pre></div>
+</td></tr></table>
+
+<h3 id="caracteristicas-sociales-de-cloudkit">Características sociales de CloudKit<a class="headerlink" href="#caracteristicas-sociales-de-cloudkit" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/cloudkit-permiso.png" width="250px"/></p>
+<p>CloudKit permite descubrirse entre ellos a usuarios que están usando
+nuestra app. Los usuarios podrán compartir datos de identidad
+(nombre de usuario y correo elctrónico) si:</p>
+<ul>
+<li>Están en los contactos del usuario actual</li>
+<li>Han dado el permiso a la app</li>
+</ul>
+<p>Para que otros usuarios puedan acceder a la información del usuario
+actual, hay que solicitarle su aprobación llamando a la función
+<a href="https://developer.apple.com/reference/cloudkit/ckcontainer/1399174-requestapplicationpermission"><code>requestApplicationPermission</code></a></p>
+<p>Se le pasa como parámetro <code>completionHandler</code> el manejador de la
+respuesta del usuario. Recibiremos dos parámetros, el
+<code>applicationPermissionStatus</code> (constante que indica lo que ha
+respondido el usuario) y un objeto <code>error</code> que será <code>nil</code> si todo ha
+ido correctamente.</p>
+<p>Se pueden buscar los usuarios que han dado permiso y que están en la
+agenda del usuario actual por su dirección de correo electrónico
+registrada en el Apple Id.</p>
+<p>La función
+<a href="https://developer.apple.com/reference/cloudkit/ckcontainer/1640421-discoverallidentities"><code>discover​All​Identities(completion​Handler:​)</code></a>
+de <code>CKContainer</code> permite obtener estos usuarios</p>
+<p>Se le pasa como parámetro <code>completionHandler</code>, una función que
+la consulta ejecutará cuando se obtengan los resultados. Tiene
+dos parámetros:</p>
+<ul>
+<li>
+<p>Un array de objetos <code>CKUser​Identity</code> que corresponde con los
+contactos del usuario que han autorizado conocerlos. Si no hay
+usuarios, el array estará vacío.</p>
+</li>
+<li>
+<p>Un objeto error si sucede algún problema, o <code>nil</code> si los IDs
+se han obtenido correctamente.</p>
+</li>
+</ul>
+<p>Ejemplo de código:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">container</span> <span class="p">=</span> <span class="bp">CKContainer</span><span class="p">.</span><span class="k">default</span><span class="p">()</span>
+<span class="bp">print</span><span class="p">(</span><span class="s">&quot;Container: &quot;</span><span class="p">)</span>
+<span class="bp">print</span><span class="p">(</span><span class="n">container</span><span class="p">)</span>
+<span class="c1">// Solicitamos permiso para que el usuario se haga descubrible</span>
+<span class="n">container</span><span class="p">.</span><span class="n">requestApplicationPermission</span><span class="p">(</span>
+    <span class="n">CKApplicationPermissions</span><span class="p">.</span><span class="n">userDiscoverability</span><span class="p">,</span>
+    <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">permissionStatus</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Permiso concedido: &quot;</span> <span class="o">+</span>
+            <span class="s">&quot;</span><span class="si">\(</span><span class="n">permissionStatus</span> <span class="p">==</span> <span class="n">CKApplicationPermissionStatus</span><span class="p">.</span><span class="n">granted</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)})</span>
+
+<span class="c1">// Obtenemos los usuarios de la app que han dado permiso</span>
+<span class="n">container</span><span class="p">.</span><span class="n">discoverAllIdentities</span><span class="p">(</span><span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">optUsers</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">users</span> <span class="p">=</span> <span class="n">optUsers</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="n">user</span> <span class="k">in</span> <span class="n">users</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+            <span class="c1">// usamos user.userRecordID para buscar</span>
+            <span class="c1">// registros públicos de un usuario</span>
+        <span class="p">}</span>
+    <span class="p">}})</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="suscripciones">Suscripciones<a class="headerlink" href="#suscripciones" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/subscription.png" width="600px"/></p>
+<p>Es posible hacer consultas "permanentes" que son ejecutadas en
+background por el servidor tras cada registro salvado. </p>
+<p>Generan notificaciones push con los resultados.</p>
+<h3 id="cloudkit-js">CloudKit JS<a class="headerlink" href="#cloudkit-js" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/cloudkit-webservices.png" width="450px"/></p>
+<p><a href="https://developer.apple.com/library/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html">CloudKit JS</a>
+es una librería que proporciona un API JavaScript para acceder a los
+datos en los contenedores CloudKit.</p>
+<p>Lanzado en WWDC 2015.</p>
+<p>Necesita un token generado en el dashboard para acceso seguro al API
+en la conexión servidor-servidor.</p>
+<p>Permite autentificarse y realizar peticiones seguras JavaScript
+desde una aplicación web para acceder a los datos de CloudKit.</p>
+<p>Sistema usado por la interfaz web de las apps de Apple en la página
+web de iCloud (Notas, Photos, etc.)</p>
+<p>Un ejemplo de aplicación web presentado por Apple en el que se
+demuestra el uso de esta librería  <a href="https://cdn.apple-cloudkit.com/cloudkit-catalog/#readme/CloudKit-on-the-web">CloudKit Catalog</a></p>
+<h2 id="demo_1">Demo<a class="headerlink" href="#demo_1" title="Permanent link">&para;</a></h2>
+<h3 id="gestion-en-el-member-center">Gestión en el <em>member center</em><a class="headerlink" href="#gestion-en-el-member-center" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/member-center-icloud-container.png" width="750px" /></p>
+<p>Una de las opciones del <em>member center</em> permite gestionar contenedores de iCloud.</p>
+<p>Utilizaremos un contenedor con el identificador <code>iCloud.es.ua.mastermoviles.ToDoList</code> que utilizaremos en la app <em>ToDoList</em>.</p>
+<h3 id="asignacion-del-container-al-app-id">Asignación del container al App ID<a class="headerlink" href="#asignacion-del-container-al-app-id" title="Permanent link">&para;</a></h3>
+<p>Incluimos en el App ID <code>Master Moviles ToDoList</code> (con el bundle Id
+<code>es.ua.mastermoviles.ToDoList</code>) el contenedor de iCloud anterior.</p>
+<p><img src="imagenes/aprovisionamiento-icloud-container.png" width="700px"/> </p>
+<h3 id="creacion-del-perfil-de-aprovisionamiento">Creación del perfil de aprovisionamiento<a class="headerlink" href="#creacion-del-perfil-de-aprovisionamiento" title="Permanent link">&para;</a></h3>
+<p>Actualizamos el perfil de aprovisionamiento <code>Master Moviles ToDoList</code>
+con el App ID anterior.</p>
+<p><img src="imagenes/aprovisionamiento-icloud.png" width="700px"/></p>
+<h3 id="actualizacion-de-capacidades-de-la-app-todolist">Actualización de capacidades de la app ToDoList<a class="headerlink" href="#actualizacion-de-capacidades-de-la-app-todolist" title="Permanent link">&para;</a></h3>
+<p><img src="imagenes/capabilities.png" width="600px"/></p>
+<h3 id="ejecutamos-la-app-todolist">Ejecutamos la app ToDoList<a class="headerlink" href="#ejecutamos-la-app-todolist" title="Permanent link">&para;</a></h3>
+<p>Ejecutamos la app ToDoList modificada para trabajar con CloudKit y
+comprobamos cómo se guardan las tareas, a pesar de eliminarlas de la
+memoria. Las tareas se cargan de la base de datos cuando la app se
+inicializa, en el método <code>viewDidLoad</code>.</p>
+<p>Mostramos cómo se añaden registros en las bases de datos públicas y
+privadas.</p>
+<p><img src="imagenes/todolist-cloudkit.png" width="300px"/></p>
+<h3 id="dashboard_1">Dashboard<a class="headerlink" href="#dashboard_1" title="Permanent link">&para;</a></h3>
+<p>Comprobamos también el <em>Dashboard</em> y vemos cómo se actualiza conforme
+guardamos nuevos registros.</p>
+<p>El administrador del equipo de desarrollo puede gestionar permisos
+para el resto de miembros. Los permisos se definen a nivel de
+contenedor.</p>
+<p><a href="https://icloud.developer.apple.com/dashboard/">https://icloud.developer.apple.com/dashboard/</a></p>
+<p><img src="imagenes/dashboard.png" width="600px"/></p>
+<p>Comprobamos los permisos de los miembros del equipo de la universidad en el <em>dashboard</em> de iCloud.</p>
+<p><img src="imagenes/dashboard-permisos.png" width="600px"/></p>
+<p>Los tipos de registros:</p>
+<p><img src="imagenes/dashboard-records.png" width="900px"/></p>
+<p>Y los logs:</p>
+<p><img src="imagenes/dashboard-logs.png" width="900px"/></p>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developer.apple.com/documentation/cloudkit">CloudKit Documentation</a></li>
+<li><a href="https://developer.apple.com/library/archive/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987">CloudKit Quick Start</a></li>
+<li><a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/iCloudDesignGuide/Chapters/Introduction.html#//apple_ref/doc/uid/TP40012094-CH1-SW1">iCloud Design Guide</a></li>
+<li><a href="https://developer.apple.com/documentation/cloudkit/providing_user_access_to_cloudkit_data">Providing User Access to CloudKit Data</a></li>
+<li><a href="https://developer.apple.com/documentation/cloudkit/changing_access_controls_on_user_data">Changing Access Controls on User Data</a>  </li>
+<li><a href="https://developer.apple.com/documentation/cloudkit/responding_to_requests_to_delete_data">Responding to Requests to Delete Data</a>  </li>
+<li><a href="https://developer.apple.com/documentation/cloudkit/identifying_an_app_s_containers">Identifying an App's Containers</a></li>
+<li><a href="https://developer.apple.com/documentation/cloudkitjs">CloudKit JS</a></li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tema2-notificaciones/notificaciones.html" title="2. Notificaciones" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2. Notificaciones
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../tema4-mapas-localizacion/mapas-localizacion.html" title="4. Mapas y localización" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                4. Mapas y localización
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
