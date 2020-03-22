@@ -269,22 +269,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-de-la-cuenta-de-desarrollador" class="md-nav__link">
-    Configuración de la cuenta de desarrollador
+  <a href="#2-configuracion-de-la-cuenta-de-desarrollador" class="md-nav__link">
+    2. Configuración de la cuenta de desarrollador
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento" class="md-nav__link">
-    Firma y despliegue de app con perfil de aprovisionamiento
+  <a href="#3-firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento" class="md-nav__link">
+    3. Firma y despliegue de app con perfil de aprovisionamiento
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#distribucion-con-fabric" class="md-nav__link">
-    Distribución con Fabric
+  <a href="#4-distribucion-con-firebase" class="md-nav__link">
+    4. Distribución con Firebase
   </a>
   
 </li>
@@ -340,22 +340,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuracion-de-la-cuenta-de-desarrollador" class="md-nav__link">
-    Configuración de la cuenta de desarrollador
+  <a href="#2-configuracion-de-la-cuenta-de-desarrollador" class="md-nav__link">
+    2. Configuración de la cuenta de desarrollador
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento" class="md-nav__link">
-    Firma y despliegue de app con perfil de aprovisionamiento
+  <a href="#3-firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento" class="md-nav__link">
+    3. Firma y despliegue de app con perfil de aprovisionamiento
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#distribucion-con-fabric" class="md-nav__link">
-    Distribución con Fabric
+  <a href="#4-distribucion-con-firebase" class="md-nav__link">
+    4. Distribución con Firebase
   </a>
   
 </li>
@@ -404,24 +404,38 @@ qué actividades debes realizar.</p>
 </ol>
 <h2 id="1-firma-e-instalacion-de-una-app-en-un-dispositivo-de-desarrollo">1. Firma e instalación de una app en un dispositivo de desarrollo<a class="headerlink" href="#1-firma-e-instalacion-de-una-app-en-un-dispositivo-de-desarrollo" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Lee los siguientes apartados del tema de teoría:</li>
-</ol>
+<li>
+<p>Lee los siguientes apartados del tema de teoría:</p>
 <ul>
-<li><a href="">Introducción</a></li>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#introduccion">Introducción</a>:
+ Resumen de lo que vamos a ver en este tema e introducción breve a
+ la importancia de la seguridad en la plataforma de Apple.</li>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#cuenta-de-desarrollador-de-apple">Cuenta de desarrollador de
+ Apple</a>:
+ Explicación de los distintos tipo de programas de desarrollo en
+ la plataforma Apple y características de cada uno.</li>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#demo">Demo sobre distintos tipos de programas de desarrollo de
+ Apple</a>:
+ Demostración sobre el apartado anterior. No es posible
+ realizarla de forma no presencial, pero se muestran capturas de pantalla que te pueden dar
+ una idea del proceso y guiarte de cara a la realización de la siguiente actividad.</li>
 </ul>
-<ol>
-<li>Deberás crear un Apple ID introduciendo tus datos en <a href="https://appleid.apple.com/account?localang=es_es">este
-enlace</a>. Este Apple
-ID será el que se asociará a la cuenta de desarrollador.</li>
-</ol>
-<p>Activa la autenticación de doble factor de alguna de las formas
-   definida en <a href="https://support.apple.com/es-es/HT204915">este enlace</a>.</p>
+</li>
+<li>
+<p>Deberás crear un Apple ID y darte de alta como desarrollador. Si ya lo tienes, no hace falta que hagas
+nada.</p>
+<p>Para crear un Apple ID, puedes introducir tus datos en <a href="https://appleid.apple.com/account?localang=es_es">este
+enlace</a>. Este
+Apple ID será el que se asociará a la cuenta de desarrollador.</p>
 <p>Después deberás darte de alta como desarrollador Apple con el Apple ID
-   recién creado en <a href="https://developer.apple.com/register/">https://developer.apple.com/register/</a>.</p>
-<p>De esta forma estás accediendo al programa gratuito. Este programa
-   permite acceder a las herramientas de desarrollo, la documentación y
-   acceso limitado a ciertas capacidades (incluido probar aplicaciones en
-   dispositivos conectados a Xcode).</p>
+recién creado en <a href="https://developer.apple.com/register/">https://developer.apple.com/register/</a>.</p>
+</li>
+<li>
+<p>Accede a tu portal de desarrollador. Será el portal del programa
+   gratuito. Este programa permite acceder a las herramientas de
+   desarrollo, la documentación y acceso limitado a ciertas
+   capacidades (incluido probar aplicaciones en dispositivos
+   conectados a Xcode).</p>
 <p><img src="imagenes/apple-developer.png" width="600px"/></p>
 <p>Explora las distintas opciones que permite la cuenta:</p>
 <ul>
@@ -431,76 +445,137 @@ ID será el que se asociará a la cuenta de desarrollador.</li>
 <li>Bug reporter</li>
 <li>Help</li>
 </ul>
-<ol start="2">
-<li>Descarga la app <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/ToDoList.zip">ToDoList</a>. </li>
-<li>Incluye tu nombre en alguna parte de la interfaz de usuario.</li>
-<li>Fírmala con tu cuenta gratuita de desarrollador Apple (no la del
-equipo de la UA). </li>
-<li>Instálala en un dispositivo de desarrollo conectado a Xcode y
-   prueba que funciona correctamente.</li>
-<li>Haz una foto y guárdala como documentación.</li>
-</ol>
-<h2 id="configuracion-de-la-cuenta-de-desarrollador">Configuración de la cuenta de desarrollador<a class="headerlink" href="#configuracion-de-la-cuenta-de-desarrollador" title="Permanent link">&para;</a></h2>
-<p>Para la inscripción en el equipo de desarrollo de la universidad
-escribe tu nombre, apellidos y dirección de e-mail en <a href="https://docs.google.com/document/d/1-fgqgzKNPpo4--PGUvrsnXTe_ABA04gLcpv8rtJd9D0/edit?usp=sharing">este fichero
-Google
-Docs</a>.</p>
-<p>Una vez que te añadamos al equipo de la UA recibirás en el correo
-electrónico un mensaje con un código de invitación. Pincha en él e
-introduce allí tu Apple ID.</p>
-<p><img src="imagenes/member-invitation.png" width="450px"/></p>
-<p>Una vez aceptada la invitación podemos entrar en el <a href="https://developer.apple.com/account/"><em>member
-center</em></a>, comprobar que ya estás
-en el programa y probar las distintas opciones disponibles.</p>
-<h2 id="firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento">Firma y despliegue de app con perfil de aprovisionamiento<a class="headerlink" href="#firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento" title="Permanent link">&para;</a></h2>
-<p>Debes seguir los pasos realizados en la demostración con la app
-<code>ToDoList</code>.</p>
-<ol>
-<li>Nos damos de alta al equipo de la universidad.</li>
-<li>Compilamos la app, añadimos las capacidades necesarias y la firmamos con la cuenta del equipo.</li>
-<li>Exportamos el fichero .ipa compilado de la app.</li>
-<li>Instalamos y ejecutamos la app en un dispositivo de prueba.</li>
-</ol>
-<h2 id="distribucion-con-fabric">Distribución con Fabric<a class="headerlink" href="#distribucion-con-fabric" title="Permanent link">&para;</a></h2>
+</li>
+<li>
+<p>Lee los siguientes apartados de teoría:</p>
 <ul>
-<li>Distribuye la app al profesor (<code>domingo.gallardo@ua.es</code>) usando
-  Fabric.</li>
-<li>Captura la pantalla de la web de fabric en la que se muestra que el
-  profesor ha instalado la app.</li>
-<li>Crea una nueva versión de la app en la que el usuario pueda provocar
-  un crash (consulta cómo hacerlo en la documentación de
-  Crashlytics). Distribúyela al profesor y captura la pantalla en la
-  que se muestra el número de crashes producidos.</li>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#certificados">Certificados</a>: Explicación del concepto de certificado, su ubicación en Xcode y
+  MacOS y su uso para firmar apps.</li>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#demo_1">Demostración sobre la firma y ejecución de apps</a>: No es posible
+ realizarla de forma no presencial, pero se muestran capturas de pantalla que te pueden dar
+ una idea del proceso y guiarte de cara a la realización de la
+ siguiente actividad.</li>
 </ul>
-<h2 id="entregas">Entregas<a class="headerlink" href="#entregas" title="Permanent link">&para;</a></h2>
-<p>Resumen de las prácticas a realizar en esta sesión y entregas a
-realizar en Moodle.</p>
-<ol>
-<li>Descarga la app
-   <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/ToDoList.zip">ToDoList</a>
-   (o usa una app tuya que hayas desarrollado) y fírmala con tu cuenta
-   gratuita de desarrollador Apple (no la del equipo de la
-   UA). Modifica la app para que aparezca tu nombre en la interfaz de
-   usuario. Instálala en un dispositivo de desarrollo de Xcode y
-   prueba que funciona correctamente. Haz una foto y guárdala como
-   documentación.</li>
-<li>Firma la app con tu cuenta del equipo de la UA, activa
-   el servicio de <em>Game Center</em> e instálala en otro dispositivo del
-   profesor que esté dado de alta en el perfil de aprovisionamiento,
-   pero que no sea el dispositivo de desarrollo de Xcode. Instala la
-   app usando <em>Apple Configurator 2</em>. Haz una foto y guárdala como
-   documentación.</li>
-<li>Distribuye la app al profesor (<code>domingo.gallardo@ua.es</code>) usando
-   Fabric. Captura la pantalla de la web de fabric en la que se
-   muestra que el profesor ha instalado la app.</li>
-<li>Crea una nueva versión de la app en la que el usuario
-   pueda provocar un crash (consulta cómo hacerlo en la documentación
-   de Crashlytics). Distribúyela al profesor y captura la pantalla en
-   la que se muestra el número de crashes producidos.</li>
-<li><strong>Guarda las fotografías y pantallas en una carpeta, junto con el
-   binario .ipa de la actividad 2, comprime la carpeta y entrégala en
-   la actividad de Moodle <em>Entrega 1</em></strong>.</li>
+</li>
+<li>
+<p>Descarga la app
+   <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/ToDo.zip">ToDoList</a>. Y
+   sigue los pasos de la demostración anterior para crear el
+   certificado gratuito de desarrollador, cambiar el <em>bundle ID</em> de la
+   app a un identificador tuyo, firmar la app, comprobar el
+   certificado y probar la app en tu dispositivo de desarrollo (si lo tienes).</p>
+</li>
+<li>
+<p>Incluye tu nombre en la pantalla en la que aparece el número de
+   tareas terminadas (a la que se accede pulsando en el botón <em>Done</em>).</p>
+</li>
+<li>
+<p>Captura la pantalla de la app ejecutándose en el dispositivo
+   mostrando la pantalla con tu nombre y guárdala como
+   documentación. Si no tienes dispositivo, hazlo con la ejecución del
+   simulador. </p>
+</li>
 </ol>
+<h2 id="2-configuracion-de-la-cuenta-de-desarrollador">2. Configuración de la cuenta de desarrollador<a class="headerlink" href="#2-configuracion-de-la-cuenta-de-desarrollador" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Para la inscripción en el equipo de desarrollo de la universidad
+   escribe tu nombre, apellidos, dirección de e-mail en <a href="https://docs.google.com/document/d/1-fgqgzKNPpo4--PGUvrsnXTe_ABA04gLcpv8rtJd9D0/edit?usp=sharing">este fichero
+   Google
+   Docs</a>. Escribe
+   también el ID del dispositivo para incorporarlo al portal
+   del equipo de la UA.</p>
+</li>
+<li>
+<p>Una vez que te añadamos al equipo de la UA recibirás en el correo
+   electrónico un mensaje con un código de invitación. Pincha en él e
+   introduce allí tu Apple ID.</p>
+</li>
+</ol>
+<p><img src="imagenes/member-invitation.png" width="450px"/></p>
+<ol start="3">
+<li>Una vez aceptada la invitación entra en el <a href="https://developer.apple.com/account/">portal del
+   desarrollador</a>, comprueba que
+   ya estás en el programa de la UA y prueba las distintas opciones 
+   disponibles. </li>
+</ol>
+<h2 id="3-firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento">3. Firma y despliegue de app con perfil de aprovisionamiento<a class="headerlink" href="#3-firma-y-despliegue-de-app-con-perfil-de-aprovisionamiento" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Lee los siguientes apartados de teoría:</p>
+<ul>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#capacidades-de-las-apps">Capacidades de las
+  apps</a>:
+  Explicación de cómo configurar las apps para que puedan usar
+  determinados servicios restringidos de Apple.</li>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#despliegue-de-apps-en-dispositivos-de-prueba">Despliegue de apps en dispositivos de prueba</a>: Explicación de
+  cómo el <em>perfil de aprovisionamiento</em> de una app permite a ésta
+  utilizar servicios de Apple y ejecutarse en dispositivos de prueba.</li>
+</ul>
+</li>
+<li>
+<p>Sigue los pasos de la <a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#demo-y-ejercicio">demo y
+   ejercicio</a>
+   de teoría, realizando además lo siguiente:</p>
+<ul>
+<li>Captura la pantalla de Xcode en la que se muestre cómo has
+  firmado tu app con el perfil genérico (la pantalla equivalente a <a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/imagenes/perfil-generico-team.png">esta</a>).</li>
+<li>Comprueba en el portal del desarrollador de la UA que el
+  profesor ha creado el <em>App ID</em> y el perfil de aprovisionamiento <code>Master
+  Moviles ToDo</code>. Captura las pantallas con las páginas del portal del
+  desarrollador de la UA mostrándolos (incluye en las pantallas
+  toda la ventana del navegador, para que aparezca tu usuario en
+  la parte superior derecha).</li>
+<li>Si tienes algún dispositivo iOS, instala el fichero .ipa
+  obtenido usando Apple Configurator 2. El UUID del dispositivo
+  deberá estar incluido en el perfil de aprovisionamiento. Captura
+  una pantalla de la aplicación <code>Apple Configurator 2</code> instalando
+  la app en el dispositivo. Comprueba que la app funciona
+  correctamente. </li>
+</ul>
+</li>
+</ol>
+<h2 id="4-distribucion-con-firebase">4. Distribución con Firebase<a class="headerlink" href="#4-distribucion-con-firebase" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Lee los siguientes apartados de teoría:</p>
+<ul>
+<li><a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/tema1-firma-aprovisionamiento/firma-aprovisionamiento.html#distribucion-e-instalacion-de-betas-online">Distribución e instalación de betas
+  online</a>:
+  Explicación de distribución de betas usando TestFlight (servicio
+  de Apple de pago) y Firebase (servicio gratuito de Google).</li>
+</ul>
+</li>
+<li>
+<p><a href="https://firebase.google.com/docs/ios/setup?authuser=0">Agrega Firebase a tu
+   proyecto</a>. Deberás
+   instalar <code>CocoaPods</code> para instalar en tu proyecto Google Analytics
+   para Firebase. </p>
+</li>
+<li>
+<p>Abre el proyecto con Xcode, abriendo el fichero <code>.xcworkspace</code>
+   recién creado. Cambia el número de versión a <code>1.1</code>.</p>
+</li>
+</ol>
+<p><img src="imagenes/proyecto-cocoapods.png" width="600px"/></p>
+<ol start="4">
+<li>Distribuye la app a <code>domingo.gallardo@ua.es</code> usando App
+   Distribution. Captura las pantallas de App Distribution y de Google
+   Analytics en las que se muestran que el profesor se ha descargado y
+   ha abierto la app.</li>
+</ol>
+<h2 id="entregas">Entregas<a class="headerlink" href="#entregas" title="Permanent link">&para;</a></h2>
+<p>Crea una carpeta y guarda en ella lo siguiente:</p>
+<ul>
+<li>Captura la pantalla de la app ejecutándose en el dispositivo (o en
+  el simulador, si no tienes) mostrando la pantalla con tu nombre
+  (paso 1.7).</li>
+<li>Capturas del paso 3.2.</li>
+<li>Capturas del apartado 4.4.</li>
+<li>Binario .ipa del apartado 3.2</li>
+<li>Carpeta con el proyecto completo.</li>
+</ul>
+<p>Comprime la carpeta y entrégala en la actividad de Moodle <em>Entrega 1</em>.</p>
                 
                   
                 

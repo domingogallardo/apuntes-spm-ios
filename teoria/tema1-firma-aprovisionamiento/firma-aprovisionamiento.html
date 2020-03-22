@@ -693,13 +693,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practica" class="md-nav__link">
-    Práctica
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bibliografia" class="md-nav__link">
     Bibliografía
   </a>
@@ -1246,13 +1239,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#practica" class="md-nav__link">
-    Práctica
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bibliografia" class="md-nav__link">
     Bibliografía
   </a>
@@ -1554,9 +1540,6 @@ nombre de login, seguido de un punto y del nombre de la app.</p>
 de esta sesión. Se trata de una app muy sencilla, con la que podemos
 gestionar una lista de tareas por hacer.</p>
 <p><img src="imagenes/app-todo-list-simulador.png" width="300px"/></p>
-<p>Podemos descargar la app de <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/ToDoList.zip">esta
-dirección</a>
-y probar a ejecutarla en el simulador.</p>
 <p>Estando en el programa de desarrollo gratuito podemos probar la app en
 nuestro móvil de desarrollo. Para ello es necesario firmar el código
 compilado de la app con el certificado de desarrollador que acabamos
@@ -1776,7 +1759,8 @@ que permite que un dispositivo sea utilizado para pruebas.</p>
 <p>Físicamente, los perfiles de aprovisionamiento son ficheros XML
 encriptados. Los que usa Xcode se guardan en el directorio
 <code>~Library/MobileDevice/Provisioning Profiles</code>. Si los borramos de esa
-carpeta, automáticamente se borran de Xcode.</p>
+carpeta, <strong>automáticamente se borran de Xcode</strong> (esto es muy útil cuando
+tenemos algún problema con los perfiles y queremos empezar de cero).</p>
 <p>Es posible consultar su contenido desde el terminal con el comando:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="err">security cms -D -i &lt;perfil&gt;.mobileprovision</span>
 </code></pre></div>
@@ -1897,7 +1881,7 @@ estar incluido en un perfil de aprovisionamiento compatible con la app
 que estamos desarrollando.</p>
 <p>En el portal de desarrolladores existe un certificado de
 aprovisionamiento genérico, con App ID comodín (<code>*</code>) con el que se
-puede compilar cualquier app. El administrador debe comprobar si el
+puede compilar cualquier app. <strong>El administrador</strong> debe comprobar si el
 certificado está incluido y si no es así, deberá incluirlo.</p>
 <p><img src="imagenes/actualizar-perfil-aprovisionamiento-cert.png" width="700px" /></p>
 <p><img src="imagenes/actualizar-perfil-aprovisionamiento-cert2.png" width="700px" /></p>
@@ -1933,7 +1917,8 @@ e incorporar en ese perfil el certificado del desarrollador.</p>
 <h3 id="examinamos-los-perfiles-de-aprovisionamiento">Examinamos los perfiles de aprovisionamiento<a class="headerlink" href="#examinamos-los-perfiles-de-aprovisionamiento" title="Permanent link">&para;</a></h3>
 <p><img src="imagenes/apple-developer-universidad.png" width="600px"/></p>
 <p>Podemos examinar los perfiles de aprovisionamiento desde el portal del
-desarrollador o desde Xcode y el terminal</p>
+desarrollador, desde Xcode y desde el terminal o el Finder (en el
+directorio <code>~Library/MobileDevice/Provisioning Profiles</code>). </p>
 <p>En el portal del desarrollador tenemos que entrar en la opción
 <em>Certificates, Identifiers and Profiles</em> para entrar en la página de
 gestión de los perfiles de aprovisionamiento.</p>
@@ -2016,7 +2001,7 @@ desarrolladores:</p>
 en la app. </p>
 <p>Igual que antes nos aseguramos de que tenemos activa la opción manual
 y volvemos a seleccionar <em>Download Profile...</em>. Veremos ahora que ha
-aparecido el perfil que el administrador acaba de añadir. Lo
+aparecido el perfil que el administrador ha añadido. Lo
 seleccionamos:</p>
 <p><img src="imagenes/provisioning-profile-manual-2.png" width="700px"/> </p>
 <p>Y ahora ya podemos ver que desparece el error anterior porque el nuevo
@@ -2106,23 +2091,6 @@ correo al usuario, y éste podrá descargar y probar la app.</p>
 de Google Analytics con el que podemos comprobar una gran cantidad de
 opciones relacionadas con el uso del app.</p>
 <p><img src="imagenes/google-analytics-firebase.png" width="700px"/></p>
-<ul>
-<li>
-<p>App Distribution</p>
-</li>
-<li>
-<p>Incluye tu nombre en la pantalla <code>Lista To-Do</code> </p>
-</li>
-</ul>
-<p>Para sobresaliente: instalar Crashlytics: https://firebase.google.com/docs/crashlytics/get-started-new-sdk?platform=ios&amp;authuser=0</p>
-<hr />
-<h2 id="practica">Práctica<a class="headerlink" href="#practica" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://firebase.google.com/docs/ios/setup?authuser=0">Agrega Firebase a tu proyecto</a></li>
-<li>Cambiar el número de versión a 1.1</li>
-<li>Generar el .ipa</li>
-<li>Distribuirla a <code>domingo.gallardo@ua.es</code> usando App Distribution</li>
-</ul>
 <!--
 
 ## Test Flight ##
