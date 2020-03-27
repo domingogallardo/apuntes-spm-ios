@@ -280,29 +280,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#aspectos-basicos-de-mapkit_1" class="md-nav__link">
-    Aspectos básicos de MapKit
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#geometria-de-los-mapas" class="md-nav__link">
     Geometría de los mapas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#otros-puntos" class="md-nav__link">
-    Otros puntos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permisos-para-activar-los-mapas-en-nuestra-app" class="md-nav__link">
-    Permisos para activar los mapas en nuestra app
   </a>
   
 </li>
@@ -528,7 +507,6 @@ incluir datos geográficos en nuestras apps.</p>
 <img style="margin-left: 60px;" src="imagenes/map-tracking-position.png" width="200px"/>
 </p>
 
-<h3 id="aspectos-basicos-de-mapkit_1">Aspectos básicos de MapKit<a class="headerlink" href="#aspectos-basicos-de-mapkit_1" title="Permanent link">&para;</a></h3>
 <p>Los mapas permiten a los usuarios a visualizar datos geográficos de
 una forma fácil de entender. Por ejemplo, un mapa puede mostrar datos
 de satélite de un área, o una visualización tridimensional de una
@@ -576,7 +554,6 @@ situada en Alicante:</p>
 </code></pre></div>
 </td></tr></table>
 
-<h3 id="otros-puntos">Otros puntos<a class="headerlink" href="#otros-puntos" title="Permanent link">&para;</a></h3>
 <p>Un <em>punto en el mapa</em> se define por los valores <code>x</code> e <code>y</code> en la
 proyección de Mercator. Se define utilizando la estructura
 <a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MapKitDataTypesReference/index.html#//apple_ref/c/tdef/MKMapPoint"><code>MKMapPoint</code></a>. Se
@@ -595,18 +572,18 @@ funciones del API de geometría y los tipos de datos en <a href="https://develop
 enlace</a>.</p>
 <p>Para almacenar los datos en ficheros es preferible usar coordenadas
 de mapas.</p>
-<h3 id="permisos-para-activar-los-mapas-en-nuestra-app">Permisos para activar los mapas en nuestra app<a class="headerlink" href="#permisos-para-activar-los-mapas-en-nuestra-app" title="Permanent link">&para;</a></h3>
+<h3 id="anadir-un-mapa-en-nuestra-app">Añadir un mapa en nuestra app<a class="headerlink" href="#anadir-un-mapa-en-nuestra-app" title="Permanent link">&para;</a></h3>
 <p>Para poder distribuir apps que trabajen con el servicio de mapas es
 necesario activar en la app el <em>entitlement</em> correspondiente,
-activando los servicios que necesitamos.</p>
-<p>Debemos tener un perfil de aprovisionamiento aprobado con un App ID
-que soporte estos servicios.</p>
-<p>No es necesario para el desarrollo y las pruebas.</p>
+activando los servicios que necesitamos. Debemos tener un perfil de
+aprovisionamiento aprobado con un App ID que soporte estos servicios.</p>
 <p style="text-align:center;">
 <img style="margin-left:50px" src="imagenes/map-entitlements.png" width="500px">
 </p>
 
-<h3 id="anadir-un-mapa-en-nuestra-app">Añadir un mapa en nuestra app<a class="headerlink" href="#anadir-un-mapa-en-nuestra-app" title="Permanent link">&para;</a></h3>
+<p>No es necesario para el desarrollo y para las pruebas en el
+simulador. No utilizaremos por tanto ningún perfil de
+aprovisionamiento especial para la práctica.</p>
 <p>La clase
 <a href="https://developer.apple.com/reference/mapkit/mkmapview"><code>MKMapView</code></a>
 es una interfaz autocontenida para presentar los mapas en tu
@@ -805,6 +782,8 @@ definida en el <em>View Controller</em> que contiene el <code>mapView</code>:</p
 </td></tr></table>
 
 <h3 id="uso-del-delegado">Uso del delegado<a class="headerlink" href="#uso-del-delegado" title="Permanent link">&para;</a></h3>
+<p>Hemos visto que Lo más sencillo es definir como delegado el <em>view
+controller</em> en el que se incluye el mapa.</p>
 <p>El objeto delegado puede implementar las funciones del protocolo
 <a href="https://developer.apple.com/library/ios/documentation/MapKit/Reference/MKMapViewDelegate_Protocol/index.html#//apple_ref/occ/intf/MKMapViewDelegate"><code>MKMapViewDelegate</code></a>
 donde recibe los eventos relacionados con el mapa:</p>
@@ -814,8 +793,6 @@ donde recibe los eventos relacionados con el mapa:</p>
 <li>Cambios en la localización del usuario.</li>
 <li>Cambios asociados con anotaciones y overlys.</li>
 </ul>
-<p>Lo más sencillo es definir como delegado el <em>view controller</em> en el
-que se incluye el mapa.</p>
 <p>Por ejemplo:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
