@@ -36,7 +36,7 @@
     
     
       
-        <title>Notificaciones - SPM-iOS</title>
+        <title>3. Notificaciones - SPM-iOS</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Notificaciones
+                3. Notificaciones
               
             </span>
           
@@ -176,10 +176,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Teoría
@@ -212,6 +214,474 @@
     <a href="../tema4-mapas-localizacion/mapas-localizacion.html" title="2. Mapas y localización" class="md-nav__link">
       2. Mapas y localización
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. Notificaciones
+      </label>
+    
+    <a href="notificaciones.html" title="3. Notificaciones" class="md-nav__link md-nav__link--active">
+      3. Notificaciones
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apariencia-de-las-notificaciones" class="md-nav__link">
+    Apariencia de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-aparecen-las-notificaciones" class="md-nav__link">
+    Dónde aparecen las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccion-en-las-notificaciones" class="md-nav__link">
+    Interacción en las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones-locales" class="md-nav__link">
+    Notificaciones locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones-remotas" class="md-nav__link">
+    Notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-se-usan-las-notificaciones" class="md-nav__link">
+    Para qué se usan las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-service-app-extensions" class="md-nav__link">
+    Notification service app extensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-la-app" class="md-nav__link">
+    Ciclo de vida de la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-de-notificaciones" class="md-nav__link">
+    API de notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusernotificationcenter" class="md-nav__link">
+    UNUserNotificationCenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications-ui-framework" class="md-nav__link">
+    Notifications UI Framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparacion-de-las-notificaciones" class="md-nav__link">
+    Preparación de las notificaciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-los-tipos-de-notificacion" class="md-nav__link">
+    Registro de los tipos de notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-los-ajustes-definidos-por-el-usuario" class="md-nav__link">
+    Obtener los ajustes definidos por el usuario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificaciones-locales_1" class="md-nav__link">
+    Notificaciones locales
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-notificaciones" class="md-nav__link">
+    Creación de notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-la-notificacion" class="md-nav__link">
+    Contenido de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-attachments" class="md-nav__link">
+    Media attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condiciones-de-disparo-de-la-notificacion" class="md-nav__link">
+    Condiciones de disparo de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-la-notificacion-local" class="md-nav__link">
+    Creación de la notificación local
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app-notificaciones" class="md-nav__link">
+    Ejemplo de app: Notificaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acciones" class="md-nav__link">
+    Acciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-de-creacion-de-una-accion" class="md-nav__link">
+    Ejemplo de código de creación de una acción
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-notificaciones" class="md-nav__link">
+    Manejo de notificaciones
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-en-segundo-plano" class="md-nav__link">
+    App en segundo plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-en-primer-plano" class="md-nav__link">
+    App en primer plano
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_1" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificaciones-remotas-push" class="md-nav__link">
+    Notificaciones remotas (push)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-de-las-notificaciones-remotas" class="md-nav__link">
+    Objetivos de las notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-las-notificaciones-remotas" class="md-nav__link">
+    Arquitectura de las notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-seguridad" class="md-nav__link">
+    Arquitectura de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-de-registro-del-dispositivo" class="md-nav__link">
+    Secuencia de registro del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-del-dispositivo" class="md-nav__link">
+    Token del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envio-de-notificacion-remota-usando-el-token" class="md-nav__link">
+    Envío de notificación remota usando el token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-la-notificacion_1" class="md-nav__link">
+    Contenido de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidores-proveedores" class="md-nav__link">
+    Servidores proveedores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-las-notificaciones-remotas-en-la-app" class="md-nav__link">
+    Gestión de las notificaciones remotas en la app
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capacidad-de-notificacion-remota" class="md-nav__link">
+    Capacidad de notificación remota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-las-notificaciones" class="md-nav__link">
+    Registro de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recepcion-de-las-notificaciones-en-la-app" class="md-nav__link">
+    Recepción de las notificaciones en la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app" class="md-nav__link">
+    Ejemplo de app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_2" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasos-necesarios-para-la-demo" class="md-nav__link">
+    Pasos necesarios para la demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevo-app-id-en-el-member-center" class="md-nav__link">
+    Nuevo App ID en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-certificado-ssl-en-el-member-center" class="md-nav__link">
+    Creación del certificado SSL en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-del-fichero-pem" class="md-nav__link">
+    Generación del fichero .pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-perfil-de-aprovisionamiento" class="md-nav__link">
+    Creación del perfil de aprovisionamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-del-token-del-dispositivo" class="md-nav__link">
+    Obtención del token del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probamos-la-app-notificacionespush" class="md-nav__link">
+    Probamos la app NotificacionesPush
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" class="md-nav__link">
+    Probamos a enviar notificaciones remotas al dispositivo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -259,6 +729,18 @@
   <li class="md-nav__item">
     <a href="../../practicas/practica4/practica4-mapas-localizacion.html" title="Práctica 2" class="md-nav__link">
       Práctica 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/practica2/practica2-notificaciones.html" title="Práctica 3" class="md-nav__link">
+      Práctica 3
     </a>
   </li>
 
@@ -1293,15 +1775,21 @@ la cadena apropiada.</p>
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nv">action1</span> <span class="p">=</span> <span class="n">UNNotificationAction</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span><span class="s">&quot;acepto&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="s">&quot;Acepto&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[])</span>
-<span class="kd">let</span> <span class="nv">action2</span> <span class="p">=</span> <span class="n">UNNotificationAction</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span><span class="s">&quot;otro&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="s">&quot;Otro día&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[])</span>
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nv">action1</span> <span class="p">=</span> <span class="n">UNNotificationAction</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span><span class="s">&quot;acepto&quot;</span><span class="p">,</span> 
+                                   <span class="n">title</span><span class="p">:</span> <span class="s">&quot;Acepto&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[])</span>
+<span class="kd">let</span> <span class="nv">action2</span> <span class="p">=</span> <span class="n">UNNotificationAction</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span><span class="s">&quot;otro&quot;</span><span class="p">,</span> 
+                                   <span class="n">title</span><span class="p">:</span> <span class="s">&quot;Otro día&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[])</span>
 <span class="c1">// Acción con entrada de texto</span>
-<span class="kd">let</span> <span class="nv">action3</span> <span class="p">=</span> <span class="n">UNTextInputNotificationAction</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s">&quot;mensaje&quot;</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="s">&quot;Mensaje&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[],</span>
-                                            <span class="n">textInputButtonTitle</span><span class="p">:</span> <span class="s">&quot;Enviar&quot;</span><span class="p">,</span>
-                                            <span class="n">textInputPlaceholder</span><span class="p">:</span> <span class="s">&quot;Comentario&quot;</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">action3</span> <span class="p">=</span> <span class="n">UNTextInputNotificationAction</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s">&quot;mensaje&quot;</span><span class="p">,</span> 
+                                   <span class="n">title</span><span class="p">:</span> <span class="s">&quot;Mensaje&quot;</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[],</span>
+                                   <span class="n">textInputButtonTitle</span><span class="p">:</span> <span class="s">&quot;Enviar&quot;</span><span class="p">,</span>
+                                   <span class="n">textInputPlaceholder</span><span class="p">:</span> <span class="s">&quot;Comentario&quot;</span><span class="p">)</span>
 <span class="kd">let</span> <span class="nv">category</span> <span class="p">=</span> <span class="n">UNNotificationCategory</span><span class="p">(</span><span class="n">identifier</span><span class="p">:</span> <span class="s">&quot;invitacion&quot;</span><span class="p">,</span> 
-                                      <span class="n">actions</span><span class="p">:</span> <span class="p">[</span><span class="n">action1</span><span class="p">,</span> <span class="n">action2</span><span class="p">,</span> <span class="n">action3</span><span class="p">],</span> 
-                                      <span class="n">intentIdentifiers</span><span class="p">:</span> <span class="p">[],</span> <span class="n">options</span><span class="p">:</span> <span class="p">[])</span>
+                                   <span class="n">actions</span><span class="p">:</span> <span class="p">[</span><span class="n">action1</span><span class="p">,</span> <span class="n">action2</span><span class="p">,</span> <span class="n">action3</span><span class="p">],</span> 
+                                   <span class="n">intentIdentifiers</span><span class="p">:</span> <span class="p">[],</span> <span class="n">options</span><span class="p">:</span> <span class="p">[])</span>
 <span class="n">UNUserNotificationCenter</span><span class="p">.</span><span class="n">current</span><span class="p">().</span><span class="n">setNotificationCategories</span><span class="p">([</span><span class="n">category</span><span class="p">])</span>
 </code></pre></div>
 </td></tr></table>
@@ -1674,13 +2162,13 @@ especifican los siguientes tipos de notificación:
     - Mensaje de alerta a mostrar al usuario
     - Numero a añadir en el globo del icono de la app
     - Sonido a tocar</p>
-<p>El diccionario <code>aps</code> también puede tener la clave
-<code>content-available</code> con un valor de 1. Eso significa que la
-notificación será una notificación silenciosa que hará que el
-sistema despierte la app y la ponga en <em>background</em> para que pueda
-conectarse al servidor o hacer alguna tarea de background. El
-usuario no recibirá ninguna notificación, pero verá el nuevo
-contenido la siguiente vez que abra la app.</p>
+<p>El diccionario <code>aps</code> también puede tener la clave <code>content-available</code>
+con un valor de 1. Eso significa que la notificación será una
+notificación silenciosa que hará que el sistema despierte la app y la
+ponga en <em>background</em> para que pueda conectarse al servidor o hacer
+alguna tarea de background. En este caso es conveniente no mostrar al
+usuario ninguna notificación. El contenido nuevo se verá la siguiente
+vez que se abra la app.</p>
 <p>El resto del diccionario contendrá parejas clave-valor con
 información <em>custom</em>.</p>
 <p>La información JSON se convierte en un diccionario que se pasa como
@@ -1702,6 +2190,23 @@ del delegado del app.</p>
         <span class="nt">&quot;alert&quot;</span> <span class="p">:</span> <span class="s2">&quot;You got your emails.&quot;</span><span class="p">,</span>
         <span class="nt">&quot;badge&quot;</span> <span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
         <span class="nt">&quot;sound&quot;</span> <span class="p">:</span> <span class="s2">&quot;bingbong.aiff&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;acme1&quot;</span> <span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;acme2&quot;</span> <span class="p">:</span> <span class="mi">42</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>Notificación silenciosa:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;aps&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;content-available&quot;</span> <span class="p">:</span> <span class="mi">1</span>
     <span class="p">},</span>
     <span class="nt">&quot;acme1&quot;</span> <span class="p">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
     <span class="nt">&quot;acme2&quot;</span> <span class="p">:</span> <span class="mi">42</span>
@@ -1922,7 +2427,7 @@ Remote Notifications</code> en Xcode.</p>
 <p><img src="imagenes/background-modes.png" width="700px"/></p>
 <p>El método se llama tanto si la app está en primer plano como si está
 en segundo plano. De hecho, es recomendable usarlo únicamente para
-gestionar <em>notificaciones silenciosas</em> que no se muestran al usuario
+gestionar <em>notificaciones silenciosas</em> <strong>que no se muestran al usuario</strong>
 sino que se usan para que la app pueda recuperar información del
 servidor que se mostrará la siguiente vez que el usuario lance la app.</p>
 <p>Por ello habría que enviar un <em>payload</em> como el que hemos visto
@@ -2050,7 +2555,7 @@ con el APNs:</p>
 <ul>
 <li>
 <p>Se guarda el certificado como <code>UADevelopmentPushCertificate.p12</code> con
-  una contraseña (mastermoviles19)</p>
+  una contraseña (mastermoviles20)</p>
 </li>
 <li>
 <p>Creamos el fichero <code>.pem</code> con el siguiente comando:</p>
@@ -2147,6 +2652,41 @@ Message successfully delivered
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tema4-mapas-localizacion/mapas-localizacion.html" title="2. Mapas y localización" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2. Mapas y localización
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../practicas/practica1/practica1-firma-aprovisionamiento.html" title="Práctica 1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 1
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
