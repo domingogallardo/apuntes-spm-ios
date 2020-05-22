@@ -36,7 +36,7 @@
     
     
       
-        <title>Práctica 3: iCloud y CloudKit - SPM-iOS</title>
+        <title>Práctica 4 - SPM-iOS</title>
       
     
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Práctica 3: iCloud y CloudKit
+                Práctica 4
               
             </span>
           
@@ -227,6 +227,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../teoria/tema3-icloud/icloud.html" title="4. iCloud y CloudKit" class="md-nav__link">
+      4. iCloud y CloudKit
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -236,10 +248,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Prácticas
@@ -287,6 +301,76 @@
   </li>
 
         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Práctica 4
+      </label>
+    
+    <a href="practica3-icloud.html" title="Práctica 4" class="md-nav__link md-nav__link--active">
+      Práctica 4
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#icloud-clave-valor" class="md-nav__link">
+    iCloud clave-valor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-en-cloudkit" class="md-nav__link">
+    ToDo en CloudKit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pista-para-actualizar-la-tabla" class="md-nav__link">
+    Pista para actualizar la tabla
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -320,8 +404,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#todolist-en-cloudkit" class="md-nav__link">
-    ToDoList en CloudKit
+  <a href="#todo-en-cloudkit" class="md-nav__link">
+    ToDo en CloudKit
   </a>
   
     <nav class="md-nav">
@@ -357,54 +441,38 @@
                 
                 
                 <h1 id="practica-3-icloud-y-cloudkit">Práctica 3: iCloud y CloudKit<a class="headerlink" href="#practica-3-icloud-y-cloudkit" title="Permanent link">&para;</a></h1>
-<h2 id="icloud-clave-valor">iCloud clave-valor<a class="headerlink" href="#icloud-clave-valor" title="Permanent link">&para;</a></h2>
+<p>Seguimos trabajando con el proyecto <code>ToDo</code> y el <em>bundle ID</em>
+<code>es.ua.mastermoviles.ToDo</code> y el perfil de
+aprovisionamiento <code>Master Moviles ToDo</code> (lo hemos
+actualizado para que incluya el permiso de acceso a CloudKit y
+al contenedor <code>iCloud.es.ua.mastermoviles.ToDo</code>).</p>
 <ul>
-<li>
-<p>Descarga la app <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/iCloudKeyValue.zip"><code>iCloudKeyValue</code></a> en la que se muestra un
- <em>controller</em> de tipo <em>Stepper</em> y una etiqueta con un número que va
-  cambiando según se pulsa el controller.</p>
-</li>
-<li>
-<p>Comprueba que si matas la app se pierde el valor introducido.</p>
-</li>
-<li>
-<p>Modifica la app, añadiendo código para que cada vez que se cambie el
-  número se guarde en iCloud clave-valor. Implementa también una
-  notificación para que si se modifica el valor en otro dispositivo se
-  actualice en el dispositivo actual. Puedes probarlo modificando el
-  valor en el simulador y deberá actualizarse en un dispositivo físico
-  en el que estés logeado con el mismo Apple ID (al revés no funciona:
-  si cambias el valor en el dispositivo físico, no se actualiza en el
-  simulador, porque no funciona el <code>NotificationCenter</code>).</p>
-</li>
+<li>Actualiza en Xcode el permiso para utilizar iCloud, con clave-valor
+  y con CloudKit.</li>
 </ul>
-<p><img src="imagenes/icloudapp-clave-valor.png" width="300px"/></p>
-<h2 id="todolist-en-cloudkit">ToDoList en CloudKit<a class="headerlink" href="#todolist-en-cloudkit" title="Permanent link">&para;</a></h2>
+<h2 id="icloud-clave-valor">iCloud clave-valor<a class="headerlink" href="#icloud-clave-valor" title="Permanent link">&para;</a></h2>
+<p><img style="border: 1px solid;" src="imagenes/todo-clave-valor.jpeg" width="300px"/></p>
+<ul>
+<li>Modifica la app ToDo para que el número de ítems terminados se
+  guarde en iCloud del usuario, usando iCloud clave-valor.</li>
+</ul>
+<h2 id="todo-en-cloudkit">ToDo en CloudKit<a class="headerlink" href="#todo-en-cloudkit" title="Permanent link">&para;</a></h2>
 <p><img src="imagenes/todolist-cloudkit.png" width="300px"/></p>
 <ul>
-<li>Configuración de la app:<ul>
-<li>Seguimos trabajando con el proyecto <code>ToDoList</code> y el <em>bundle ID</em>
-  <code>es.ua.mastermoviles.ToDoList</code> y el perfil de
-  aprovisionamiento <code>Master Moviles ToDoList</code> (lo hemos
-  actualizado para que incluya el permiso de acceso a CloudKit).</li>
-<li>Actualiza en Xcode el permiso para utilizar CloudKit y el
-  contenedor <code>iCloud.es.ua.mastermoviles.ToDoList</code>.</li>
-</ul>
-</li>
-<li>Desarrollo de la práctica:<ul>
 <li>Añade el código necesario para que las tareas pendientes
   se guarden y recuperen de la base de datos privada de
-  CloudKit.</li>
-<li>(Opcional): Utiliza la base de datos pública para publicar
- tareas compartidas por todos los usuarios de la app. Al añadir
- una tarea debes permitir la opción de hacerlo en la base de datos
- pública. Muestra el texto de las tareas públicas en un color
- diferente en el listado de tareas.</li>
-<li>(Opcional): Añade una funcionalidad en la que se recargue la
+  CloudKit. </li>
+<li>En el contenedor de CloudKit se ha añadido el tipo de registro
+  <code>Tarea</code> con el campo <code>texto</code> con los índices <code>Queryable</code>,
+  <code>Searchable</code>, <code>Sortable</code>. </li>
+<li>(<strong>Opcional</strong>): Utiliza la base de datos pública para publicar
+  tareas compartidas por todos los usuarios de la app. Al añadir
+  una tarea debes permitir la opción de hacerlo en la base de datos
+  pública. Muestra el texto de las tareas públicas en un color
+  diferente en el listado de tareas.</li>
+<li>(<strong>Opcional</strong>): Añade una funcionalidad en la que se recargue la
   tabla con los datos de iCloud cuando se tire de la tabla hacia
   abajo. </li>
-</ul>
-</li>
 </ul>
 <h3 id="pista-para-actualizar-la-tabla">Pista para actualizar la tabla<a class="headerlink" href="#pista-para-actualizar-la-tabla" title="Permanent link">&para;</a></h3>
 <ul>
@@ -414,7 +482,7 @@
   la interfaz de usuario no se refrescará hasta que el usuario no
   interactúe con la tabla.</li>
 <li>Se puede forzar a ejecutar la actualización de los datos de la tabla en
-  el hijo principal con este código en algún lugar del <code>ToDoListTableViewController</code>:</li>
+  el hijo principal con este código en algún lugar del <code>ToDoTableViewController</code>:</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
@@ -440,6 +508,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../practica2/practica2-notificaciones.html" title="Práctica 3" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Práctica 3
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
