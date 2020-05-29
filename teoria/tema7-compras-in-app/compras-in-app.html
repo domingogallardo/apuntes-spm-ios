@@ -979,7 +979,10 @@ gestionaremos la interacción con <code>StoreKit</code>:</p>
 68
 69
 70
-71</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">InAppDelegate</span> <span class="p">{</span>
+71</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">import</span> <span class="nc">Foundation</span>
+<span class="kd">import</span> <span class="nc">StoreKit</span>
+
+<span class="kd">protocol</span> <span class="nc">InAppDelegate</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">compraRecibida</span><span class="p">()</span>
 <span class="p">}</span>
 
@@ -990,63 +993,60 @@ gestionaremos la interacción con <code>StoreKit</code>:</p>
 
     <span class="kr">override</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
         <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">()</span>
-        <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">defaultQueue</span><span class="p">().</span><span class="n">addTransactionObserver</span><span class="p">(</span><span class="kc">self</span><span class="p">)</span>
+        <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">add</span><span class="p">(</span><span class="kc">self</span><span class="p">)</span>
+
         <span class="c1">// Cargamos la lista de productos</span>
+
         <span class="n">productIdentiferList</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">&quot;ejemplo3&quot;</span><span class="p">)</span>
-        <span class="kd">let</span> <span class="nv">request</span> <span class="p">=</span> <span class="bp">SKProductsRequest</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">productIdentifiers</span><span class="p">:</span> 
-                            <span class="n">Set</span><span class="p">(</span><span class="n">productIdentiferList</span><span class="p">))</span>
+        <span class="kd">let</span> <span class="nv">request</span> <span class="p">=</span> <span class="bp">SKProductsRequest</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">productIdentifiers</span><span class="p">:</span> <span class="n">Set</span><span class="p">(</span><span class="n">productIdentiferList</span><span class="p">))</span>
         <span class="n">request</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
         <span class="n">request</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
     <span class="p">}</span>
 
-
-<span class="c1">// Método del delegado al que se llama cuando se han recibido los productos</span>
-
-<span class="kd">func</span> <span class="nf">productsRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="bp">SKProductsRequest</span><span class="p">,</span> <span class="n">didReceiveResponse</span> <span class="n">response</span><span class="p">:</span> <span class="bp">SKProductsResponse</span><span class="p">)</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hemos recibido </span><span class="si">\(</span><span class="n">response</span><span class="p">.</span><span class="n">products</span><span class="p">.</span><span class="bp">count</span><span class="si">)</span><span class="s"> productos&quot;</span><span class="p">)</span>
-    <span class="n">productDetailsList</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">products</span>
-    <span class="k">for</span> <span class="n">invalidProductId</span> <span class="k">in</span> <span class="n">response</span><span class="p">.</span><span class="n">invalidProductIdentifiers</span> <span class="p">{</span>
-        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Producto invalido id: </span><span class="si">\(</span><span class="n">invalidProductId</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="c1">// Método para lanzar la petición de compra al usuario</span>
+    <span class="kd">func</span> <span class="nf">lanzarPago</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">productDetailsList</span><span class="p">.</span><span class="bp">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span>  <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">canMakePayments</span><span class="p">())</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nv">producto</span> <span class="p">=</span> <span class="n">productDetailsList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="kd">let</span> <span class="nv">pago</span> <span class="p">=</span> <span class="bp">SKPayment</span><span class="p">(</span><span class="n">product</span><span class="p">:</span> <span class="n">producto</span><span class="p">)</span>
+            <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">add</span><span class="p">(</span><span class="n">pago</span><span class="p">)</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Comprando...&quot;</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;No existen productos&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
 
-<span class="c1">// Método para lanzar la petición de compra al usuario</span>
+    <span class="c1">// Método al que se llama cuando el usuario compra el InApp</span>
 
-<span class="kd">func</span> <span class="nf">lanzarPago</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="kc">self</span><span class="p">.</span><span class="n">productDetailsList</span><span class="p">.</span><span class="bp">count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span>
-              <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">canMakePayments</span><span class="p">())</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nv">producto</span> <span class="p">=</span> <span class="n">productDetailsList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="kd">let</span> <span class="nv">pago</span> <span class="p">=</span> <span class="bp">SKPayment</span><span class="p">(</span><span class="n">product</span><span class="p">:</span> <span class="n">producto</span><span class="p">)</span>
-        <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">defaultQueue</span><span class="p">().</span><span class="n">addPayment</span><span class="p">(</span><span class="n">pago</span><span class="p">)</span>
-        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Comprando...&quot;</span><span class="p">)</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;No existen productos&quot;</span><span class="p">)</span>
+    <span class="kd">func</span> <span class="nf">paymentQueue</span><span class="p">(</span><span class="kc">_</span> <span class="n">queue</span><span class="p">:</span> <span class="bp">SKPaymentQueue</span><span class="p">,</span>
+                      <span class="n">updatedTransactions</span> <span class="n">transactions</span><span class="p">:</span> <span class="p">[</span><span class="bp">SKPaymentTransaction</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="n">transaction</span> <span class="k">in</span> <span class="n">transactions</span> <span class="p">{</span>
+            <span class="k">switch</span> <span class="n">transaction</span><span class="p">.</span><span class="n">transactionState</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="p">.</span><span class="n">purchased</span><span class="p">:</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Purchased&quot;</span><span class="p">)</span>
+                <span class="n">delegate</span><span class="p">?.</span><span class="n">compraRecibida</span><span class="p">()</span>
+                <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">finishTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
+            <span class="k">case</span> <span class="p">.</span><span class="n">failed</span><span class="p">:</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Failed&quot;</span><span class="p">)</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Error de transacción: </span><span class="si">\(</span><span class="nb">String</span><span class="si">(</span><span class="n">describing</span><span class="p">:</span> <span class="n">transaction</span><span class="p">.</span><span class="n">error</span><span class="p">?.</span><span class="n">localizedDescription</span><span class="si">))</span><span class="s">&quot;</span><span class="p">)</span>
+                <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">finishTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
+            <span class="k">case</span> <span class="p">.</span><span class="n">restored</span><span class="p">:</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Restored&quot;</span><span class="p">)</span>
+                <span class="n">delegate</span><span class="p">?.</span><span class="n">compraRecibida</span><span class="p">()</span>
+                <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="k">default</span><span class="p">().</span><span class="n">finishTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
+            <span class="k">default</span><span class="p">:</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Otro&quot;</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
 
-<span class="c1">// Método del delegado al que se llama cuando el usuario compra el InApp</span>
-<span class="kd">func</span> <span class="nf">paymentQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">:</span> <span class="bp">SKPaymentQueue</span><span class="p">,</span> 
-                  <span class="n">updatedTransactions</span> <span class="n">transactions</span><span class="p">:</span> 
-                                    <span class="p">[</span><span class="bp">SKPaymentTransaction</span><span class="p">])</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="n">transaction</span> <span class="k">in</span> <span class="n">transactions</span> <span class="p">{</span>
-        <span class="k">switch</span> <span class="n">transaction</span><span class="p">.</span><span class="n">transactionState</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="p">.</span><span class="n">Purchased</span><span class="p">:</span>
-            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Purchased&quot;</span><span class="p">)</span>
-            <span class="n">delegate</span><span class="p">?.</span><span class="n">compraRecibida</span><span class="p">()</span>
-            <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">defaultQueue</span><span class="p">()</span>
-                            <span class="p">.</span><span class="n">finishTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
-        <span class="k">case</span> <span class="p">.</span><span class="n">Failed</span><span class="p">:</span>
-            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Failed&quot;</span><span class="p">)</span>
-            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Error de transacción: </span><span class="si">\(</span><span class="n">transaction</span><span class="p">.</span><span class="n">error</span><span class="p">?.</span><span class="n">localizedDescription</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
-            <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">defaultQueue</span><span class="p">()</span>
-                            <span class="p">.</span><span class="n">finishTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
-        <span class="k">case</span> <span class="p">.</span><span class="n">Restored</span><span class="p">:</span>
-            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Restored&quot;</span><span class="p">)</span>
-            <span class="n">delegate</span><span class="p">?.</span><span class="n">compraRecibida</span><span class="p">()</span>
-            <span class="bp">SKPaymentQueue</span><span class="p">.</span><span class="n">defaultQueue</span><span class="p">()</span>
-                           <span class="p">.</span><span class="n">finishTransaction</span><span class="p">(</span><span class="n">transaction</span><span class="p">)</span>
-        <span class="k">default</span><span class="p">:</span>
-            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Otro&quot;</span><span class="p">)</span>
+    <span class="c1">// Método al que se llama cuando se han recibido los productos</span>
+
+    <span class="kd">func</span> <span class="nf">productsRequest</span><span class="p">(</span><span class="kc">_</span> <span class="n">request</span><span class="p">:</span> <span class="bp">SKProductsRequest</span><span class="p">,</span> 
+                         <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="bp">SKProductsResponse</span><span class="p">)</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Hemos recibido </span><span class="si">\(</span><span class="n">response</span><span class="p">.</span><span class="n">products</span><span class="p">.</span><span class="bp">count</span><span class="si">)</span><span class="s"> productos&quot;</span><span class="p">)</span>
+        <span class="n">productDetailsList</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">products</span>
+        <span class="k">for</span> <span class="n">invalidProductId</span> <span class="k">in</span> <span class="n">response</span><span class="p">.</span><span class="n">invalidProductIdentifiers</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Producto invalido id: </span><span class="si">\(</span><span class="n">invalidProductId</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1076,61 +1076,82 @@ a llamar cuando se haya recibido y validado la compra.</p>
 17
 18
 19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span><span class="p">,</span> <span class="n">InAppDelegate</span> <span class="p">{</span>
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">import</span> <span class="nc">UIKit</span>
+
+<span class="kd">class</span> <span class="nc">ViewController</span><span class="p">:</span> <span class="bp">UIViewController</span><span class="p">,</span> <span class="n">InAppDelegate</span> <span class="p">{</span>
+
     <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">botonSorpresa</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">!</span>
-    <span class="kd">let</span> <span class="nv">inApp</span> <span class="p">=</span> <span class="n">InApp</span><span class="p">()</span> <span class="c1">// Instancia de la clase auxiliar InApp</span>
+    <span class="kd">let</span> <span class="nv">inApp</span> <span class="p">=</span> <span class="n">InApp</span><span class="p">()</span>
 
     <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// Nos hacemos delegados de InApp</span>
+        <span class="c1">// Actualizamos el delgado de inApp con la propia</span>
+        <span class="c1">// instacia, para que se llame al método compraRecibida</span>
         <span class="n">inApp</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
 
-        <span class="c1">// Escondemos el botón que da acceso a la pantalla sorpresa</span>
-        <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">hidden</span> <span class="p">=</span> <span class="kc">true</span>
+        <span class="c1">// Escondemos el botón sorpresa, que sólo estará visible</span>
+        <span class="c1">// para los que hagan la compra</span>
+        <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">true</span>
 
-        <span class="c1">// Comprobamos si el usuario ha comprado antes el inApp</span>
-        <span class="c1">// Funciona si el usuario está identificado </span>
-        <span class="k">if</span> <span class="bp">NSUserDefaults</span><span class="p">.</span><span class="n">standardUserDefaults</span><span class="p">().</span><span class="n">boolForKey</span><span class="p">(</span><span class="s">&quot;inAppComprado&quot;</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">hidden</span> <span class="p">=</span> <span class="kc">false</span>
+        <span class="c1">// Comprobamos si hemos comprado antes el inApp</span>
+        <span class="k">if</span> <span class="n">UserDefaults</span><span class="p">.</span><span class="n">standard</span><span class="p">.</span><span class="n">bool</span><span class="p">(</span><span class="n">forKey</span><span class="p">:</span> <span class="s">&quot;inAppComprado&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">false</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">hidden</span> <span class="p">=</span> <span class="kc">true</span>
+            <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">true</span>
         <span class="p">}</span>
         <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
     <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
 
-<p>La acción asociada al botón de compra llama al método <code>lanzarPago</code> de
-la instancia de nuestra clase <code>InApp</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="c1">// Acción asociada al botón de compra</span>
-    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">hazCompra</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Método del protocolo al que se va a llamar cuando se reciba</span>
+    <span class="c1">// la compra. Hacemos visible el botón sorpresa.</span>
+    <span class="kd">func</span> <span class="nf">compraRecibida</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">isHidden</span> <span class="p">=</span> <span class="kc">false</span>
+    <span class="p">}</span>
+
+    <span class="c1">// La acción asociada al botón de compra llama</span>
+    <span class="c1">// al método lanzarPago de la instancia de nuestra</span>
+    <span class="c1">// clase InApp</span>
+    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">hazCompra</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">)</span> <span class="p">{</span>
         <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Click botón de compra&quot;</span><span class="p">)</span>
         <span class="n">inApp</span><span class="p">.</span><span class="n">lanzarPago</span><span class="p">()</span>
     <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
 
-<p>En el método <code>compraRecibida()</code> (del protocolo) activamos un botón que
-da acceso a la pantalla sorpresa.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="c1">// Implementación del método del protocolo InAppDelegate</span>
-    <span class="kd">func</span> <span class="nf">compraRecibida</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">botonSorpresa</span><span class="p">.</span><span class="n">hidden</span> <span class="p">=</span> <span class="kc">false</span>
+    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kc">super</span><span class="p">.</span><span class="n">didReceiveMemoryWarning</span><span class="p">()</span>
+        <span class="c1">// Dispose of any resources that can be recreated.</span>
     <span class="p">}</span>
-</code></pre></div>
-</td></tr></table>
 
-<p>Acción para mostrar la pantalla sorpresa:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">sorpresa</span><span class="p">(</span><span class="n">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">){</span>
-        <span class="n">performSegueWithIdentifier</span><span class="p">(</span><span class="s">&quot;Sorpresa&quot;</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">view</span><span class="p">)</span>
+    <span class="c1">// Acción para mostrar la pantalla sorpresa</span>
+    <span class="kr">@IBAction</span> <span class="kd">func</span> <span class="nf">sorpresa</span><span class="p">(</span><span class="kc">_</span> <span class="n">sender</span><span class="p">:</span> <span class="bp">UIButton</span><span class="p">){</span>
+        <span class="n">performSegue</span><span class="p">(</span><span class="n">withIdentifier</span><span class="p">:</span> <span class="s">&quot;Sorpresa&quot;</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">view</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
