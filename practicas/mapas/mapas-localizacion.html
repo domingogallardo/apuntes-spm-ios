@@ -416,7 +416,7 @@ Terminan la práctica en unas 1,5 horas + 1 hora de explicación = 2,5 horas
 <h1 id="practica-2-mapas-y-localizacion">Práctica 2: Mapas y localización<a class="headerlink" href="#practica-2-mapas-y-localizacion" title="Permanent link">&para;</a></h1>
 <ol>
 <li>
-<p>Lee los siguientes apartados de los <a href="">apuntes de teoría</a>: desde <em>Aspectos básicos de MapKit</em>
+<p>Lee los siguientes apartados de los <a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/mapas-localizacion/mapas-localizacion.html#aspectos-basicos-de-mapkit">apuntes de teoría</a>: desde <em>Aspectos básicos de MapKit</em>
    hasta <em>Uso del delegado</em> (incluido).</p>
 </li>
 <li>
@@ -440,7 +440,7 @@ pulse en el control.</p>
 
 <ol start="5">
 <li>
-<p>Lee los siguientes apartados <a href="">apuntes de teoría</a>: desde
+<p>Lee los siguientes apartados <a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/mapas-localizacion/mapas-localizacion.html#anotaciones">apuntes de teoría</a>: desde
    <em>Anotaciones</em> hasta <em>Elementos en el callout</em> (incluido).</p>
 </li>
 <li>
@@ -472,46 +472,19 @@ dependiendo de si el número de pin es par o impar.</p>
 <p><strong>Parte opcional 1</strong></p>
 <ol start="10">
 <li>Implementa un <em>segue</em> que haga aparecer otra vista con un detalle
-  de la foto.</li>
+  de la foto. Puedes definir un segue haciendo control click desde un
+ view controller hasta otro. Después debes dar un identificador al
+  segue. Por ejemplo <code>DetalleImagen</code>.</li>
 </ol>
 <p style="text-align:center;">
 <img src="imagenes/storyboard.png" width="500px"/> 
 <img src="imagenes/practica-4.png" width="200px"/>
 </p>
 
-<p>Pista 1 (Segue):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">annotationView</span> <span class="n">view</span><span class="p">:</span> <span class="bp">MKAnnotationView</span><span class="p">,</span> <span class="n">calloutAccessoryControlTapped</span> <span class="n">control</span><span class="p">:</span> <span class="bp">UIControl</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">performSegue</span><span class="p">(</span><span class="n">withIdentifier</span><span class="p">:</span> <span class="s">&quot;DetalleImagen&quot;</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">view</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kr">override</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">for</span> <span class="n">segue</span><span class="p">:</span> <span class="bp">UIStoryboardSegue</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="nb">Any</span><span class="p">?)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="n">segue</span><span class="p">.</span><span class="n">identifier</span> <span class="p">==</span> <span class="s">&quot;DetalleImagen&quot;</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="kd">let</span> <span class="nv">pin</span> <span class="p">=</span> <span class="p">(</span><span class="n">sender</span> <span class="k">as</span><span class="p">?</span> <span class="bp">MKAnnotationView</span><span class="p">)?.</span><span class="n">annotation</span> <span class="k">as</span><span class="p">?</span> <span class="n">Pin</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="kd">let</span> <span class="nv">vc</span> <span class="p">=</span> <span class="n">segue</span><span class="p">.</span><span class="n">destination</span> <span class="k">as</span><span class="p">?</span> <span class="n">MiImageViewController</span> <span class="p">{</span>
-                <span class="n">vc</span><span class="p">.</span><span class="n">imageDetail</span> <span class="p">=</span> <span class="n">pin</span><span class="p">.</span><span class="n">thumbImage</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Pista 2 (<code>ViewController</code> de la vista detalle):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">ImageDetailViewController</span><span class="p">:</span> <span class="bp">UIViewController</span> <span class="p">{</span>
-
-    <span class="kr">@IBOutlet</span> <span class="kr">weak</span> <span class="kd">var</span> <span class="nv">imageView</span><span class="p">:</span> <span class="bp">UIImageView</span><span class="p">!</span>
-    <span class="kd">var</span> <span class="nv">imageDetail</span><span class="p">:</span> <span class="bp">UIImage</span><span class="p">?</span> <span class="p">=</span> <span class="kc">nil</span>
-
-    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">imageDetail</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-            <span class="n">imageView</span><span class="p">.</span><span class="n">image</span> <span class="p">=</span> <span class="n">imageDetail</span><span class="p">!</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
 <p><strong>Parte opcional 2</strong></p>
 <ol start="11">
 <li>
-<p>Lee los siguientes apartados de los <a href="">apuntes de teoría</a>: desde
+<p>Lee los siguientes apartados de los <a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/mapas-localizacion/mapas-localizacion.html#geocoding">apuntes de teoría</a>: desde
     <em>Geocoding</em> hasta <em>Conversión de placemarks en localizaciones</em> (incluido).</p>
 </li>
 <li>
@@ -527,7 +500,7 @@ dependiendo de si el número de pin es par o impar.</p>
 <p><strong>Parte opcional 3</strong></p>
 <ol start="13">
 <li>
-<p>Lee el siguiente apartado de los <a href="">apuntes de teoría</a>: <em>Localización</em>.</p>
+<p>Lee el siguiente apartado de los <a href="https://domingogallardo.github.io/apuntes-spm-ios/teoria/mapas-localizacion/mapas-localizacion.html#localizacion">apuntes de teoría</a>: <em>Localización</em>.</p>
 </li>
 <li>
 <p>Añade el tracking de localización a la aplicación, imprimiendo la

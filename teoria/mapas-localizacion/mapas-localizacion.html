@@ -1225,18 +1225,33 @@ imágenes y guardar en el pin la más cercana a sus coordenadas.</p>
 </code></pre></div>
 <p>La actualización del <em>callout</em> se hace en el mismo método
 <code>mapView(_:viewFor</code>) que devuelve la vista de una anotación: </p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="n">annotation</span><span class="p">:</span> <span class="bp">MKAnnotation</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">MKAnnotationView</span><span class="p">?</span> <span class="p">{</span>
-    <span class="c1">//</span>
-    <span class="c1">// el mismo código que antes</span>
-    <span class="c1">//</span>
-    <span class="kd">let</span> <span class="nv">pin</span> <span class="p">=</span> <span class="n">annotation</span> <span class="k">as</span><span class="p">!</span> <span class="n">Pin</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="n">annotation</span><span class="p">:</span> <span class="bp">MKAnnotation</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">MKAnnotationView</span><span class="p">?</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Devolviendo vista para anotación: </span><span class="si">\(</span><span class="n">annotation</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">pin</span> <span class="p">=</span> <span class="n">annotation</span> <span class="k">as</span><span class="p">?</span> <span class="n">Pin</span>
+    <span class="kd">let</span> <span class="nv">view</span> <span class="p">=</span> <span class="bp">MKPinAnnotationView</span><span class="p">(</span><span class="n">annotation</span><span class="p">:</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">reuseIdentifier</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+
+    <span class="n">view</span><span class="p">.</span><span class="n">pinTintColor</span> <span class="p">=</span> <span class="bp">UIColor</span><span class="p">.</span><span class="n">red</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">animatesDrop</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">canShowCallout</span> <span class="p">=</span> <span class="kc">true</span>
     <span class="kd">let</span> <span class="nv">thumbnailImageView</span> <span class="p">=</span> <span class="bp">UIImageView</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">59</span><span class="p">))</span>
-    <span class="n">thumbnailImageView</span><span class="p">.</span><span class="n">image</span> <span class="p">=</span> <span class="n">pin</span><span class="p">.</span><span class="n">thumbImage</span>
+    <span class="n">thumbnailImageView</span><span class="p">.</span><span class="n">image</span> <span class="p">=</span> <span class="n">pin</span><span class="p">?.</span><span class="n">thumbImage</span>
     <span class="n">view</span><span class="p">.</span><span class="n">leftCalloutAccessoryView</span> <span class="p">=</span> <span class="n">thumbnailImageView</span>
-    <span class="n">view</span><span class="p">.</span><span class="n">rightCalloutAccessoryView</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">(</span><span class="n">type</span><span class="p">:</span><span class="n">UIButtonType</span><span class="p">.</span><span class="n">detailDisclosure</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">view</span>
+    <span class="n">view</span><span class="p">.</span><span class="n">rightCalloutAccessoryView</span> <span class="p">=</span> <span class="bp">UIButton</span><span class="p">(</span><span class="n">type</span><span class="p">:</span><span class="bp">UIButton</span><span class="p">.</span><span class="n">ButtonType</span><span class="p">.</span><span class="n">detailDisclosure</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">view</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Podemos saber que se ha pulsado un botón de un callout usando el
+método del delegado <code>mapView(_:annotationView:calloutAccessoryControlTapped:)</code>. En ese
+caso podríamos, por ejemplo, activar un segue, pasándole como
+parámetro la vista de la anotación que se ha pulsado.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="kc">_</span> <span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">annotationView</span> <span class="n">view</span><span class="p">:</span> <span class="bp">MKAnnotationView</span><span class="p">,</span> <span class="n">calloutAccessoryControlTapped</span> <span class="n">control</span><span class="p">:</span> <span class="bp">UIControl</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">performSegue</span><span class="p">(</span><span class="n">withIdentifier</span><span class="p">:</span> <span class="s">&quot;DetalleImagen&quot;</span><span class="p">,</span> <span class="n">sender</span><span class="p">:</span> <span class="n">view</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>En el método <code>prepare(for segue: UIStoryboardSegue, sender: Any?)</code>
+recibiremos la vista de la anotación en el parámetro <code>sender</code>. Podemos
+acceder a la anotación a partir de la <code>mKAnnotationView</code> usando el
+atributo <code>annotation</code>.</p>
 <h3 id="overlays">Overlays<a class="headerlink" href="#overlays" title="Permanent link">&para;</a></h3>
 <p>Los overlays permiten definir capas de contenido sobre una región
 arbitraria del mapa.</p>
