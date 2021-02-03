@@ -975,13 +975,11 @@ el protocolo
     <span class="kr">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="kc">super</span><span class="p">.</span><span class="n">viewDidLoad</span><span class="p">()</span>
         <span class="kd">let</span> <span class="nv">map</span> <span class="p">=</span> <span class="bp">MKMapView</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span>
-            <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">))</span>
+                                <span class="bp">CGRect</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                                       <span class="n">width</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">width</span><span class="p">,</span>
+                                       <span class="n">height</span><span class="p">:</span> <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">height</span><span class="p">))</span>
         <span class="kc">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">addSubview</span><span class="p">(</span><span class="bp">map</span><span class="p">)</span>
         <span class="bp">map</span><span class="p">.</span><span class="n">delegate</span> <span class="p">=</span> <span class="kc">self</span>
-    <span class="p">}</span>
-
-    <span class="kr">override</span> <span class="kd">func</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kc">super</span><span class="p">.</span><span class="n">didReceiveMemoryWarning</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1008,18 +1006,16 @@ definimos arrastrando desde el <em>storyboard</em>:</p>
             <span class="kd">let</span> <span class="nv">alicanteLocation</span> <span class="p">=</span> 
                 <span class="n">CLLocationCoordinate2D</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="mf">38.3453</span><span class="p">,</span> 
                                        <span class="n">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.4831</span><span class="p">)</span>
-            <span class="kd">let</span> <span class="nv">initialLocation</span> <span class="p">=</span> 
-                <span class="bp">CLLocation</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="n">alicanteLocation</span><span class="p">.</span><span class="n">latitude</span><span class="p">,</span>
-                           <span class="n">longitude</span><span class="p">:</span> <span class="n">alicanteLocation</span><span class="p">.</span><span class="n">longitude</span><span class="p">)</span>
-            <span class="n">centerMapOnLocation</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="n">initialLocation</span><span class="p">)</span>
+            <span class="n">centerMapOnLocation</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="n">mapView</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="n">alicanteLocation</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">centerMapOnLocation</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="bp">CLLocation</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nv">regionRadius</span><span class="p">:</span> <span class="n">CLLocationDistance</span> <span class="p">=</span> <span class="mi">1000</span>
-        <span class="kd">let</span> <span class="nv">coordinateRegion</span> <span class="p">=</span> 
-            <span class="n">MKCoordinateRegionMakeWithDistance</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="n">coordinate</span><span class="p">,</span>
-                           <span class="n">regionRadius</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">,</span> <span class="n">regionRadius</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">)</span>
+    <span class="kd">func</span> <span class="nf">centerMapOnLocation</span><span class="p">(</span><span class="n">mapView</span><span class="p">:</span> <span class="bp">MKMapView</span><span class="p">,</span> <span class="n">loc</span><span class="p">:</span> <span class="n">CLLocationCoordinate2D</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">regionRadius</span><span class="p">:</span> <span class="n">CLLocationDistance</span> <span class="p">=</span> <span class="mi">4000</span>
+        <span class="kd">let</span> <span class="nv">coordinateRegion</span> <span class="p">=</span>
+            <span class="n">MKCoordinateRegion</span><span class="p">(</span><span class="n">center</span><span class="p">:</span> <span class="n">loc</span><span class="p">,</span>
+                               <span class="n">latitudinalMeters</span><span class="p">:</span> <span class="n">regionRadius</span><span class="p">,</span>
+                               <span class="n">longitudinalMeters</span><span class="p">:</span> <span class="n">regionRadius</span><span class="p">)</span>
         <span class="n">mapView</span><span class="p">.</span><span class="n">setRegion</span><span class="p">(</span><span class="n">coordinateRegion</span><span class="p">,</span> <span class="n">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
     <span class="p">}</span>
 
