@@ -1278,28 +1278,18 @@ puede producirse un error.</p>
 <em>geocoder</em> son asíncronas y hay que pasarle al método una clausura
 <em>completion handler</em>. </p>
 <p>Un ejemplo de uso:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">lookUpCurrentLocation</span><span class="p">(</span><span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="bp">CLPlacemark</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Use the last reported location.</span>
-    <span class="k">if</span> <span class="kd">let</span> <span class="nv">lastLocation</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">locationManager</span><span class="p">.</span><span class="n">location</span> <span class="p">{</span>
-        <span class="kd">let</span> <span class="nv">geocoder</span> <span class="p">=</span> <span class="bp">CLGeocoder</span><span class="p">()</span>
-
-        <span class="c1">// Look up the location and pass it to the completion handler</span>
-        <span class="n">geocoder</span><span class="p">.</span><span class="n">reverseGeocodeLocation</span><span class="p">(</span><span class="n">lastLocation</span><span class="p">,</span> 
-                    <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">placemarks</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-            <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
-                <span class="kd">let</span> <span class="nv">firstLocation</span> <span class="p">=</span> <span class="n">placemarks</span><span class="p">?[</span><span class="mi">0</span><span class="p">]</span>
-                <span class="n">completionHandler</span><span class="p">(</span><span class="n">firstLocation</span><span class="p">)</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="p">{</span>
-             <span class="c1">// An error occurred during geocoding.</span>
-                <span class="n">completionHandler</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
-            <span class="p">}</span>
-        <span class="p">})</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-        <span class="c1">// No location was available.</span>
-        <span class="n">completionHandler</span><span class="p">(</span><span class="kc">nil</span><span class="p">)</span>
-    <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">printLocationPlacemark</span><span class="p">(</span><span class="n">location</span><span class="p">:</span> <span class="bp">CLLocation</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">geocoder</span> <span class="p">=</span> <span class="bp">CLGeocoder</span><span class="p">()</span>
+    <span class="n">geocoder</span><span class="p">.</span><span class="n">reverseGeocodeLocation</span><span class="p">(</span><span class="n">location</span><span class="p">,</span> 
+                <span class="n">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">placemarks</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+                    <span class="k">if</span> <span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+                        <span class="kd">let</span> <span class="nv">firstLocation</span><span class="p">:</span> <span class="bp">CLPlacemark</span> <span class="p">=</span> <span class="n">placemarks</span><span class="p">?[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="bp">print</span><span class="p">(</span><span class="n">firstLocation</span> <span class="p">??</span> <span class="s">&quot;No hay localización&quot;</span><span class="p">)</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span> <span class="p">{</span>
+                       <span class="bp">print</span><span class="p">(</span><span class="s">&quot;An error occurred during geocoding&quot;</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">})</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="conversion-de-placemarks-en-localizaciones">Conversión de placemarks en localizaciones<a class="headerlink" href="#conversion-de-placemarks-en-localizaciones" title="Permanent link">&para;</a></h3>
