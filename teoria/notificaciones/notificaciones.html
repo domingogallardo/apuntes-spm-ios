@@ -14,7 +14,7 @@
     
     
       
-        <title>Notificaciones - SPM-iOS</title>
+        <title>3. Notificaciones - SPM-iOS</title>
       
     
     
@@ -95,7 +95,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Notificaciones
+              3. Notificaciones
             
           </span>
         </div>
@@ -173,12 +173,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Teoría
@@ -215,6 +217,475 @@
     <a href="../mapas-localizacion/mapas-localizacion.html" class="md-nav__link">
       2. Mapas y localización
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. Notificaciones
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="notificaciones.html" class="md-nav__link md-nav__link--active">
+      3. Notificaciones
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apariencia-de-las-notificaciones" class="md-nav__link">
+    Apariencia de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#donde-aparecen-las-notificaciones" class="md-nav__link">
+    Dónde aparecen las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccion-en-las-notificaciones" class="md-nav__link">
+    Interacción en las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones-locales" class="md-nav__link">
+    Notificaciones locales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificaciones-remotas" class="md-nav__link">
+    Notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-que-se-usan-las-notificaciones" class="md-nav__link">
+    Para qué se usan las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-service-app-extensions" class="md-nav__link">
+    Notification service app extensions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ciclo-de-vida-de-la-app" class="md-nav__link">
+    Ciclo de vida de la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-de-notificaciones" class="md-nav__link">
+    API de notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unusernotificationcenter" class="md-nav__link">
+    UNUserNotificationCenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications-ui-framework" class="md-nav__link">
+    Notifications UI Framework
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparacion-de-las-notificaciones" class="md-nav__link">
+    Preparación de las notificaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparación de las notificaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-los-tipos-de-notificacion" class="md-nav__link">
+    Registro de los tipos de notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtener-los-ajustes-definidos-por-el-usuario" class="md-nav__link">
+    Obtener los ajustes definidos por el usuario
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificaciones-locales_1" class="md-nav__link">
+    Notificaciones locales
+  </a>
+  
+    <nav class="md-nav" aria-label="Notificaciones locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-notificaciones" class="md-nav__link">
+    Creación de notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-la-notificacion" class="md-nav__link">
+    Contenido de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-attachments" class="md-nav__link">
+    Media attachments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condiciones-de-disparo-de-la-notificacion" class="md-nav__link">
+    Condiciones de disparo de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-la-notificacion-local" class="md-nav__link">
+    Creación de la notificación local
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app-notificaciones" class="md-nav__link">
+    Ejemplo de app: Notificaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acciones" class="md-nav__link">
+    Acciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Acciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-de-creacion-de-una-accion" class="md-nav__link">
+    Ejemplo de código de creación de una acción
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-notificaciones" class="md-nav__link">
+    Manejo de notificaciones
+  </a>
+  
+    <nav class="md-nav" aria-label="Manejo de notificaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-en-segundo-plano" class="md-nav__link">
+    App en segundo plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#app-en-primer-plano" class="md-nav__link">
+    App en primer plano
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_1" class="md-nav__link">
+    Demo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notificaciones-remotas-push" class="md-nav__link">
+    Notificaciones remotas (push)
+  </a>
+  
+    <nav class="md-nav" aria-label="Notificaciones remotas (push)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-de-las-notificaciones-remotas" class="md-nav__link">
+    Objetivos de las notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-las-notificaciones-remotas" class="md-nav__link">
+    Arquitectura de las notificaciones remotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-seguridad" class="md-nav__link">
+    Arquitectura de seguridad
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secuencia-de-registro-del-dispositivo" class="md-nav__link">
+    Secuencia de registro del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-del-dispositivo" class="md-nav__link">
+    Token del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#envio-de-notificacion-remota-usando-el-token" class="md-nav__link">
+    Envío de notificación remota usando el token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenido-de-la-notificacion_1" class="md-nav__link">
+    Contenido de la notificación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidores-proveedores" class="md-nav__link">
+    Servidores proveedores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-las-notificaciones-remotas-en-la-app" class="md-nav__link">
+    Gestión de las notificaciones remotas en la app
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de las notificaciones remotas en la app">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capacidad-de-notificacion-remota" class="md-nav__link">
+    Capacidad de notificación remota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registro-de-las-notificaciones" class="md-nav__link">
+    Registro de las notificaciones
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recepcion-de-las-notificaciones-en-la-app" class="md-nav__link">
+    Recepción de las notificaciones en la app
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-app" class="md-nav__link">
+    Ejemplo de app
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo_2" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pasos-necesarios-para-la-demo" class="md-nav__link">
+    Pasos necesarios para la demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuevo-app-id-en-el-member-center" class="md-nav__link">
+    Nuevo App ID en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-certificado-ssl-en-el-member-center" class="md-nav__link">
+    Creación del certificado SSL en el member center
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generacion-del-fichero-pem" class="md-nav__link">
+    Generación del fichero .pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-del-perfil-de-aprovisionamiento" class="md-nav__link">
+    Creación del perfil de aprovisionamiento
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obtencion-del-token-del-dispositivo" class="md-nav__link">
+    Obtención del token del dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probamos-la-app-notificacionespush" class="md-nav__link">
+    Probamos la app NotificacionesPush
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" class="md-nav__link">
+    Probamos a enviar notificaciones remotas al dispositivo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -269,6 +740,19 @@
   <li class="md-nav__item">
     <a href="../../practicas/mapas/mapas-localizacion.html" class="md-nav__link">
       Práctica 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/notificaciones/notificaciones.html" class="md-nav__link">
+      Práctica 3
     </a>
   </li>
 
@@ -780,8 +1264,6 @@ interacción, las tiras aparecen y desaparecen.</li>
 <ul>
 <li>Un sonido que acompaña la alerta, <em>banner</em> o <em>badge</em>.</li>
 </ul>
-<p>El usuario puede configurar la aceptación de notificaciones y su
-apariencia en los ajustes (<strong>Ajustes &gt; Notificaciones</strong>).</p>
 <h3 id="donde-aparecen-las-notificaciones">Dónde aparecen las notificaciones<a class="headerlink" href="#donde-aparecen-las-notificaciones" title="Permanent link">&para;</a></h3>
 <p>Dependiendo de si el dispositivo está en uso o bloqueado, las
 notificaciones se comportan de distinta forma.</p>
@@ -792,6 +1274,8 @@ notificaciones se comportan de distinta forma.</p>
 <p>En cualquier caso se guardan en el <strong>centro de notificaciones</strong> (se abre deslizando hacia abajo desde
 la parte superior de la pantalla).</p>
 <p><img src="imagenes/notificacion-centro-notificaciones.png" width="300px"/> </p>
+<p>El usuario puede configurar la aceptación de notificaciones y su
+apariencia en los ajustes (<em>Ajustes &gt; Notificaciones</em>).</p>
 <h3 id="interaccion-en-las-notificaciones">Interacción en las notificaciones<a class="headerlink" href="#interaccion-en-las-notificaciones" title="Permanent link">&para;</a></h3>
 <p>Cuando se recibe una notificación, el usuario puede ignorarla, y se
 guarda en el centro de notificaciones.</p>
@@ -879,7 +1363,7 @@ la interfaz de usuario para adecuarla a la notificación que ha pulsado
 el usuario (por ejemplo, si se trata de una app como Twitter, ir al
 tweet correspondiente a la notificación).</p>
 <p><img src="imagenes/high_level_flow.png" width="450px"/></p>
-<p><strong>Nota:</strong></p>
+<p><strong>Estados del ciclo de vida de la app</strong></p>
 <table>
   <tr>
     <td><strong><em>Estado</em></strong></td> 
@@ -962,7 +1446,7 @@ aplicación.</p>
 sonidos. Inicialmente le aparecerá una alerta en el que permite
 aceptar o rechazar todos los tipos.</p>
 <p>Después en cualquier momento puede modificar esta aceptación en los
-ajustes de la aplicación (<strong>Ajustes &gt; Notificaciones</strong>).</p>
+ajustes de la aplicación (<em>Ajustes &gt; Notificaciones</em>).</p>
 <p>Por ejemplo, en el siguiente código se solicita autorización para mostrar avisos, sonidos y
 globos:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> 
@@ -1237,8 +1721,8 @@ los métodos del protocolo
 <ul>
 <li>
 <p><code>userNotificationCenter(_:didReceive:withCompletionHandler:)</code>: se
-llama cuando la app está en segundo plano y el usuario interactúa
-con la notificación.</p>
+llama cuando la app está en segundo plano y el usuario pulsa
+la notificación.</p>
 </li>
 <li>
 <p><code>userNotificationCenter(_:willPresent:withCompletionHandler:)</code>: se
@@ -1261,68 +1745,51 @@ métodos <code>application(_:willFinishLaunchingWithOptions:)</code> o
 <h3 id="app-en-segundo-plano">App en segundo plano<a class="headerlink" href="#app-en-segundo-plano" title="Permanent link">&para;</a></h3>
 <p>Cuando la app está en segundo plano (en background) las
 notificaciones se reciben y muestran en el sistema.</p>
-<p>Si es una <strong>notificación local</strong> el usuario puede interactuar con las
-acciones de la notificación o pulsar la opción de <code>Abrir</code>. En ambos
-casos se llama al método
-<a href="https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter"><code>userNotificationCenter(_:didReceive:withCompletionHandler:)</code></a>
-con la información de la opción seleccionada por el usuario. </p>
+<p>El usuario puede interactuar con las acciones de la notificación o
+pulsar la opción de <code>Abrir</code>. En ambos casos se llama al método
+mencionado anteriormente
+<a href="https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter"><code>userNotificationCenter(_:didReceive response:withCompletionHandler:)</code></a>
+pasando en la variable <code>response</code> la información de la opción
+seleccionada por el usuario. Esta variable es del tipo
+<a href="https://developer.apple.com/documentation/usernotifications/unnotificationresponse"><code>UNNotificationResponse</code></a>
+y en el atributo <code>actionIdentifier</code> lleva una cadena con la acción
+seleccionada por el usuario. Si el usuario ha pulsado directamente la
+notificación para abrir la app, la cadena es
+<code>com.apple.UNNotificationDefaultActionIdentifier</code>.</p>
+<p>Si el usuario ha escrito un mensaje en la acción de la notificación,
+la respuesta que llega es del tipo <code>UNTextInputNotificationResponse</code> y
+podemos acceder al texto del usuario en su atributo <code>userText</code>.</p>
+<p>Podemos recuperar información completa contenida en la notificación
+(un objeto de tipo <code>UNNotificationRequest</code>) accediendo al atributo
+<code>notification.request</code> de la respuesta recibida. Si se ha añadido
+información asociada a la notificación la podemos obtener en el
+atributo <code>userInfo</code> (<code>response.notification.request.content.userInfo</code>).</p>
+<p>Un ejemplo de código:</p>
+<div class="highlight"><pre><span></span><code>func userNotificationCenter(_ center: UNUserNotificationCenter, 
+                            didReceive response: UNNotificationResponse, 
+                            withCompletionHandler completionHandler: @escaping () -&gt; Void) {
+    print(&quot;En userNotificationCenter didReceive response&quot;)
+    if let textInput = response as? UNTextInputNotificationResponse {
+        print(&quot;Repuesta del usuario: \(textInput.userText)&quot;)
+    } else {
+        print(&quot;Acción escogida: \(response.actionIdentifier)&quot;)
+    }
+    let userInfo = response.notification.request.content.userInfo
+    let mensaje = userInfo[&quot;Mensaje&quot;] as! String
+    print(&quot;Mensaje: \(mensaje)&quot;)
+    completionHandler()
+}
+</code></pre></div>
 <p>Si el usuario ha seleccionado una acción la aplicación no pasa a
 primer plano. Sin embargo, si el usuario ha decidido abrir la
 notificación, la aplicación pasa a primer plano, ejecutándose el
 método de ciclo de vida
 <a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623076-applicationwillenterforeground"><code>applicationWillEnterForeground</code></a>
-del <code>UIApplicationDelegate</code> antes del método
+del <code>UIApplicationDelegate</code> después del método
 <code>userNotificationCenter(_:didReceive:withCompletionHandler:)</code>.</p>
-<p>Podemos recuperar información contenida en la notificación
-accediendo al <code>content</code> del <code>request</code> de la notificación recibida.</p>
 <p>Si la notificación es una <strong>notificación remota</strong> se llama al método
 <code>application(_:didReceiveRemoteNotification:fetchCompletionHandler:)</code>
 del <code>UIApplicationDelegate</code> (lo veremos más adelante).</p>
-<p>Un ejemplo del código en el que se gestiona la notificación recibida:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span>
-            <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span>
-            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> 
-               <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
-   <span class="c1">// Get the meeting ID from the original notification.</span>
-   <span class="kd">let</span> <span class="nv">userInfo</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span>
-
-   <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">categoryIdentifier</span> <span class="p">==</span>
-              <span class="s">&quot;MEETING_INVITATION&quot;</span> <span class="p">{</span>
-      <span class="c1">// Retrieve the meeting details.</span>
-      <span class="kd">let</span> <span class="nv">meetingID</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;MEETING_ID&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
-      <span class="kd">let</span> <span class="nv">userID</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;USER_ID&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
-
-      <span class="k">switch</span> <span class="n">response</span><span class="p">.</span><span class="n">actionIdentifier</span> <span class="p">{</span>
-      <span class="k">case</span> <span class="s">&quot;ACCEPT_ACTION&quot;</span><span class="p">:</span>
-         <span class="n">sharedMeetingManager</span><span class="p">.</span><span class="n">acceptMeeting</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> 
-               <span class="n">meetingID</span><span class="p">:</span> <span class="n">meetingID</span><span class="p">)</span>
-         <span class="k">break</span>
-
-      <span class="k">case</span> <span class="s">&quot;DECLINE_ACTION&quot;</span><span class="p">:</span>
-         <span class="n">sharedMeetingManager</span><span class="p">.</span><span class="n">declineMeeting</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span> 
-               <span class="n">meetingID</span><span class="p">:</span> <span class="n">meetingID</span><span class="p">)</span>
-         <span class="k">break</span>
-
-      <span class="k">case</span> <span class="n">UNNotificationDefaultActionIdentifier</span><span class="p">,</span>
-           <span class="n">UNNotificationDismissActionIdentifier</span><span class="p">:</span>
-         <span class="c1">// Queue meeting-related notifications for later</span>
-         <span class="c1">//  if the user does not act.</span>
-         <span class="n">sharedMeetingManager</span><span class="p">.</span><span class="n">queueMeetingForDelivery</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span>
-               <span class="n">meetingID</span><span class="p">:</span> <span class="n">meetingID</span><span class="p">)</span>
-         <span class="k">break</span>
-
-      <span class="k">default</span><span class="p">:</span>
-         <span class="k">break</span>
-      <span class="p">}</span>
-   <span class="p">}</span>
-   <span class="k">else</span> <span class="p">{</span>
-      <span class="c1">// Handle other notification types...</span>
-   <span class="p">}</span>
-
-   <span class="c1">// Always call the completion handler when done.</span>
-   <span class="n">completionHandler</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre></div>
 <p>Si el usuario pulsa en la propia notificación (no en una opción) el
 identificador de la acción seleccionada será
 <code>com.apple.UNNotificationDefaultActionIdentifier</code>, el contenido de
@@ -1860,6 +2327,41 @@ Message successfully delivered
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Pie">
+        
+          <a href="../mapas-localizacion/mapas-localizacion.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                2. Mapas y localización
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../practicas/aprovisionamiento/firma-aprovisionamiento.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 1
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
