@@ -231,6 +231,19 @@
   </li>
 
         
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../teoria/icloud/icloud.html" class="md-nav__link">
+      4. iCloud y CloudKit
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -303,10 +316,59 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Práctica 3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
     <a href="notificaciones.html" class="md-nav__link md-nav__link--active">
       Práctica 3
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-obligatoria-hasta-7-puntos" class="md-nav__link">
+    Parte obligatoria (hasta 7 puntos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-opcional-3-puntos" class="md-nav__link">
+    Parte opcional (3 puntos)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../icloud/icloud.html" class="md-nav__link">
+      Práctica 4
+    </a>
   </li>
 
         
@@ -333,6 +395,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-obligatoria-hasta-7-puntos" class="md-nav__link">
+    Parte obligatoria (hasta 7 puntos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-opcional-3-puntos" class="md-nav__link">
+    Parte opcional (3 puntos)
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -345,6 +429,7 @@
                 
                 
                 <h1 id="practica-3-notificaciones">Práctica 3: Notificaciones<a class="headerlink" href="#practica-3-notificaciones" title="Permanent link">&para;</a></h1>
+<h2 id="parte-obligatoria-hasta-7-puntos">Parte obligatoria (hasta 7 puntos)<a class="headerlink" href="#parte-obligatoria-hasta-7-puntos" title="Permanent link">&para;</a></h2>
 <p>Descarga las apps <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/Notificaciones.zip">Notificaciones</a>
 y <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/NotificacionesPush.zip">NotificacionesPush</a>,
    revisa su código y sus permisos y pruébalas. La primera puedes probarla en el
@@ -352,25 +437,32 @@ y <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/apps/No
    dispositivo real y enviando notificaciones remotas tal y como hemos
    hecho en la demo.</p>
 <ul>
-<li>Ejercicio 1: Modifica la app ToDoList para que genere
-  notificaciones locales. En la app ToDoList puedes hacerlo con un
-  botón en la pantalla con el número de tareas terminadas. Deberás
-  generar una notificación en el intervalo de 10 segundos que contenga
-  alguna imagen y acciones. Y visualizar la acción que el usuario ha
-  realizado sobre la notificación, lanzando una
+<li>Modifica la app ToDoList para que genere notificaciones locales. En
+  la app ToDoList puedes hacerlo con un botón en la pantalla con el
+  número de tareas terminadas. Deberás generar una notificación en el
+  intervalo de 10 segundos que contenga alguna imagen y acciones. Y
+  visualizar la acción que el usuario ha realizado sobre la
+  notificación, lanzando una
   <a href="https://developer.apple.com/reference/uikit/uialertcontroller">alerta</a>
   la siguiente vez que se abra la app que informe de la acción
   escogida.</li>
-<li>Ejercicio 2 (para los que no tienen dispositivo físico iOS): Implementa una notificación basada en el
+</ul>
+<h2 id="parte-opcional-3-puntos">Parte opcional (3 puntos)<a class="headerlink" href="#parte-opcional-3-puntos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Ejercicio <strong>para los que no tienen dispositivo físico iOS</strong>: Implementa una notificación basada en el
   calendario, en la que dejes al usuario seleccionar la
   hora y minuto en la que aparezca una notificación informando del
-  número de tareas terminadas.</li>
-<li>Ejercicio 3 (para los que tienen dispositivo físico iOS): Añade la posiblidad de añadir una nueva
+  número de tareas terminadas.</p>
+</li>
+<li>
+<p>Ejercicio <strong>para los que tienen dispositivo físico iOS</strong>: Añade la posiblidad de añadir una nueva
   tarea en la lista de tareas pendientes mediante una notificación
   silenciosa enviada con una notificación push. Utiliza el script PHP
   y <a href="https://github.com/domingogallardo/apuntes-spm-ios/raw/master/MasterMovilesToDoPushCertificate.pem">este certificado</a> para generar la
   notificación. Deberás utilizar un dispositivo real para realizar las
-  pruebas.</li>
+  pruebas.</p>
+</li>
 </ul>
 <p>Firma la app resultante, exporta el fichero IPA y entrégalo en
 Moodle, junto con el proyecto comprimido y un documento PDF con una
@@ -407,6 +499,20 @@ breve descripción de las funcionalidades añadidas.</p>
             </div>
           </a>
         
+        
+          <a href="../icloud/icloud.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Práctica 4
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

@@ -622,29 +622,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nuevo-app-id-en-el-member-center" class="md-nav__link">
-    Nuevo App ID en el member center
+  <a href="#nuevo-app-id-en-el-member-center-admin" class="md-nav__link">
+    Nuevo App ID en el member center (admin)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-del-certificado-ssl-en-el-member-center" class="md-nav__link">
-    Creación del certificado SSL en el member center
+  <a href="#creacion-del-certificado-ssl-en-el-member-center-admin" class="md-nav__link">
+    Creación del certificado SSL en el member center  (admin)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#generacion-del-fichero-pem" class="md-nav__link">
-    Generación del fichero .pem
+  <a href="#generacion-del-fichero-pem-admin" class="md-nav__link">
+    Generación del fichero .pem (admin)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-del-perfil-de-aprovisionamiento" class="md-nav__link">
-    Creación del perfil de aprovisionamiento
+  <a href="#creacion-del-perfil-de-aprovisionamiento-admin" class="md-nav__link">
+    Creación del perfil de aprovisionamiento (admin)
   </a>
   
 </li>
@@ -670,6 +670,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#notificacion-silenciosa" class="md-nav__link">
+    Notificación silenciosa
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -686,6 +693,19 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../icloud/icloud.html" class="md-nav__link">
+      4. iCloud y CloudKit
+    </a>
   </li>
 
         
@@ -753,6 +773,19 @@
   <li class="md-nav__item">
     <a href="../../practicas/notificaciones/notificaciones.html" class="md-nav__link">
       Práctica 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../practicas/icloud/icloud.html" class="md-nav__link">
+      Práctica 4
     </a>
   </li>
 
@@ -1151,29 +1184,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nuevo-app-id-en-el-member-center" class="md-nav__link">
-    Nuevo App ID en el member center
+  <a href="#nuevo-app-id-en-el-member-center-admin" class="md-nav__link">
+    Nuevo App ID en el member center (admin)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-del-certificado-ssl-en-el-member-center" class="md-nav__link">
-    Creación del certificado SSL en el member center
+  <a href="#creacion-del-certificado-ssl-en-el-member-center-admin" class="md-nav__link">
+    Creación del certificado SSL en el member center  (admin)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#generacion-del-fichero-pem" class="md-nav__link">
-    Generación del fichero .pem
+  <a href="#generacion-del-fichero-pem-admin" class="md-nav__link">
+    Generación del fichero .pem (admin)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creacion-del-perfil-de-aprovisionamiento" class="md-nav__link">
-    Creación del perfil de aprovisionamiento
+  <a href="#creacion-del-perfil-de-aprovisionamiento-admin" class="md-nav__link">
+    Creación del perfil de aprovisionamiento (admin)
   </a>
   
 </li>
@@ -1195,6 +1228,13 @@
           <li class="md-nav__item">
   <a href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" class="md-nav__link">
     Probamos a enviar notificaciones remotas al dispositivo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notificacion-silenciosa" class="md-nav__link">
+    Notificación silenciosa
   </a>
   
 </li>
@@ -1745,10 +1785,10 @@ métodos <code>application(_:willFinishLaunchingWithOptions:)</code> o
 <h3 id="app-en-segundo-plano">App en segundo plano<a class="headerlink" href="#app-en-segundo-plano" title="Permanent link">&para;</a></h3>
 <p>Cuando la app está en segundo plano (en background) las
 notificaciones se reciben y muestran en el sistema.</p>
-<p>El usuario puede interactuar con las acciones de la notificación o
-pulsar la opción de <code>Abrir</code>. En ambos casos se llama al método
-mencionado anteriormente
-<a href="https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter"><code>userNotificationCenter(_:didReceive response:withCompletionHandler:)</code></a>
+<p>El usuario puede pulsar en la notificación o interactuar con las acciones
+de la notificación y pulsar una de ellas. En ambos casos se llama al
+método mencionado anteriormente <a href="https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter"><code>userNotificationCenter(_:didReceive
+response:withCompletionHandler:)</code></a>
 pasando en la variable <code>response</code> la información de la opción
 seleccionada por el usuario. Esta variable es del tipo
 <a href="https://developer.apple.com/documentation/usernotifications/unnotificationresponse"><code>UNNotificationResponse</code></a>
@@ -1764,73 +1804,65 @@ podemos acceder al texto del usuario en su atributo <code>userText</code>.</p>
 <code>notification.request</code> de la respuesta recibida. Si se ha añadido
 información asociada a la notificación la podemos obtener en el
 atributo <code>userInfo</code> (<code>response.notification.request.content.userInfo</code>).</p>
-<p>Un ejemplo de código:</p>
-<div class="highlight"><pre><span></span><code>func userNotificationCenter(_ center: UNUserNotificationCenter, 
-                            didReceive response: UNNotificationResponse, 
-                            withCompletionHandler completionHandler: @escaping () -&gt; Void) {
-    print(&quot;En userNotificationCenter didReceive response&quot;)
-    if let textInput = response as? UNTextInputNotificationResponse {
-        print(&quot;Repuesta del usuario: \(textInput.userText)&quot;)
-    } else {
-        print(&quot;Acción escogida: \(response.actionIdentifier)&quot;)
-    }
-    let userInfo = response.notification.request.content.userInfo
-    let mensaje = userInfo[&quot;Mensaje&quot;] as! String
-    print(&quot;Mensaje: \(mensaje)&quot;)
-    completionHandler()
-}
+<p>Por último, también podemos acceder al view controller raíz de la
+aplicación para modificar algún elemento de la interfaz de usuario
+relacionada con la notificación que ha pulsado el usuario (ver el
+ejemplo al final del código).</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span> 
+                            <span class="n">didReceive</span> <span class="n">response</span><span class="p">:</span> <span class="n">UNNotificationResponse</span><span class="p">,</span> 
+                            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;En userNotificationCenter didReceive response&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">textInput</span> <span class="p">=</span> <span class="n">response</span> <span class="k">as</span><span class="p">?</span> <span class="n">UNTextInputNotificationResponse</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Repuesta del usuario: </span><span class="si">\(</span><span class="n">textInput</span><span class="p">.</span><span class="n">userText</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Acción escogida: </span><span class="si">\(</span><span class="n">response</span><span class="p">.</span><span class="n">actionIdentifier</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="kd">let</span> <span class="nv">userInfo</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span>
+    <span class="kd">let</span> <span class="nv">mensaje</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;Mensaje&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Mensaje: </span><span class="si">\(</span><span class="n">mensaje</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+
+    <span class="c1">// Actualizamos la variables de estado relacionada con la notificación</span>
+    <span class="c1">// y modificamos la interfaz de usuario accediendo al rootViewController</span>
+
+    <span class="n">vecesPulsadaNotificacion</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="kd">let</span> <span class="nv">viewController</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">window</span><span class="p">?.</span><span class="n">rootViewController</span> <span class="k">as</span><span class="p">!</span> <span class="n">ViewController</span>
+    <span class="n">viewController</span><span class="p">.</span><span class="n">actualiza</span><span class="p">(</span><span class="n">numVecesPulsadaNotificacion</span><span class="p">:</span> <span class="n">vecesPulsadaNotificacion</span><span class="p">)</span>
+    <span class="n">completionHandler</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div>
 <p>Si el usuario ha seleccionado una acción la aplicación no pasa a
 primer plano. Sin embargo, si el usuario ha decidido abrir la
 notificación, la aplicación pasa a primer plano, ejecutándose el
 método de ciclo de vida
 <a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623076-applicationwillenterforeground"><code>applicationWillEnterForeground</code></a>
-del <code>UIApplicationDelegate</code> después del método
-<code>userNotificationCenter(_:didReceive:withCompletionHandler:)</code>.</p>
-<p>Si la notificación es una <strong>notificación remota</strong> se llama al método
-<code>application(_:didReceiveRemoteNotification:fetchCompletionHandler:)</code>
+del <code>UIApplicationDelegate</code>.</p>
+<p>Si la notificación recibida es una <strong>notificación remota</strong> se llama al
+método <code>application(_:didReceiveRemoteNotification:fetchCompletionHandler:)</code>
 del <code>UIApplicationDelegate</code> (lo veremos más adelante).</p>
-<p>Si el usuario pulsa en la propia notificación (no en una opción) el
-identificador de la acción seleccionada será
-<code>com.apple.UNNotificationDefaultActionIdentifier</code>, el contenido de
-la constante <code>UNNotificationDefaultActionIdentifier</code>.</p>
 <h3 id="app-en-primer-plano">App en primer plano<a class="headerlink" href="#app-en-primer-plano" title="Permanent link">&para;</a></h3>
-<p>En el protocolo se define la función
-<code>userNotificationCenter(_:willPresent:withCompletionHandler:)</code> a la
-que el sistema llama cuando se recibe una notificación y la app está
-en primer plano.</p>
-<p>Si queremos que la notificación aparezca debemos llamar al
-<em>completionHandler</em> pasando como parámetro un array con las opciones
-de visualización que deseamos.</p>
+<p>Para trabajar con la notificación cuando la app está en primer plano
+se define en el protocolo la función
+<code>userNotificationCenter(_:willPresent:withCompletionHandler:)</code>.</p>
+<p>El sistema llama a esta función cuando se recibe una notificación y la
+app está en primer plano.</p>
+<p>Por defecto, la notificación no se muestra al usuario. Si queremos que
+la notificación aparezca debemos llamar al <em>completionHandler</em> pasando
+como parámetro un array con las opciones de visualización que
+deseamos.</p>
 <p>Un ejemplo de código:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">userNotificationCenter</span><span class="p">(</span><span class="kc">_</span> <span class="n">center</span><span class="p">:</span> <span class="n">UNUserNotificationCenter</span><span class="p">,</span>
-         <span class="n">willPresent</span> <span class="n">notification</span><span class="p">:</span> <span class="n">UNNotification</span><span class="p">,</span>
-         <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> 
-            <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
-   <span class="k">if</span> <span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">categoryIdentifier</span> <span class="p">==</span> 
-            <span class="s">&quot;MEETING_INVITATION&quot;</span> <span class="p">{</span>
-      <span class="c1">// Retrieve the meeting details.</span>
-      <span class="kd">let</span> <span class="nv">meetingID</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span>
-                       <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;MEETING_ID&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
-      <span class="kd">let</span> <span class="nv">userID</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span>
-                       <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;USER_ID&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
-
-      <span class="c1">// Add the meeting to the queue.</span>
-      <span class="n">sharedMeetingManager</span><span class="p">.</span><span class="n">queueMeetingForDelivery</span><span class="p">(</span><span class="n">user</span><span class="p">:</span> <span class="n">userID</span><span class="p">,</span>
-            <span class="n">meetingID</span><span class="p">:</span> <span class="n">meetingID</span><span class="p">)</span>
-
-      <span class="c1">// Play a sound to let the user know about the invitation.</span>
-      <span class="n">completionHandler</span><span class="p">(.</span><span class="n">sound</span><span class="p">)</span>
-      <span class="k">return</span>
-   <span class="p">}</span>
-   <span class="k">else</span> <span class="p">{</span>
-      <span class="c1">// Handle other notification types...</span>
-   <span class="p">}</span>
-
-   <span class="c1">// Don&#39;t alert the user for other types.</span>
-   <span class="n">completionHandler</span><span class="p">(</span><span class="n">UNNotificationPresentationOptions</span><span class="p">(</span><span class="n">rawValue</span><span class="p">:</span> <span class="mi">0</span><span class="p">))</span>
+                            <span class="n">willPresent</span> <span class="n">notification</span><span class="p">:</span> <span class="n">UNNotification</span><span class="p">,</span>
+                            <span class="n">withCompletionHandler</span> <span class="n">completionHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">UNNotificationPresentationOptions</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;En userNotificationCenter willPresent notification&quot;</span><span class="p">)</span>
+    <span class="kd">let</span> <span class="nv">userInfo</span> <span class="p">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="n">userInfo</span>
+    <span class="kd">let</span> <span class="nv">mensaje</span> <span class="p">=</span> <span class="n">userInfo</span><span class="p">[</span><span class="s">&quot;Mensaje&quot;</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
+    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Mensaje: </span><span class="si">\(</span><span class="n">mensaje</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="n">completionHandler</span><span class="p">([.</span><span class="n">alert</span><span class="p">,</span> <span class="p">.</span><span class="n">sound</span><span class="p">])</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>En el ejemplo anterior, al pasar al <em>completionHandler</em> un array que
+contiene <code>.alert</code>la notificación se mostrará al usuario. El usuario
+podrá interactuar con ella de la forma que hemos visto anteriormente.</p>
 <hr />
 <h2 id="demo_1">Demo<a class="headerlink" href="#demo_1" title="Permanent link">&para;</a></h2>
 <p>Probamos y examinamos el código de la aplicación de prueba que incluye
@@ -1843,16 +1875,18 @@ aparece por la salida estándar:</p>
 <hr />
 <h2 id="notificaciones-remotas-push">Notificaciones remotas (<em>push</em>)<a class="headerlink" href="#notificaciones-remotas-push" title="Permanent link">&para;</a></h2>
 <h3 id="objetivos-de-las-notificaciones-remotas">Objetivos de las notificaciones remotas<a class="headerlink" href="#objetivos-de-las-notificaciones-remotas" title="Permanent link">&para;</a></h3>
-<p>La app tiene un componente <em>server-side</em> en el que se detecta que
-ha sucedido algo interesante para el usuario.</p>
-<p>La notificación remota permite enviar la información desde el
-servicio directamente al usuario.</p>
+<p>Una notificación remota permite enviar información interesante
+relacionada con la app directamente al usuario. Para ello la app debe
+contar con un servicio que será el responsable de enviar esa
+información.</p>
+<p>Por ejemplo, una app que sea un periódico puede tener un servicio que
+envíe una notificación al usuario cuando sucede una noticia relevante.</p>
 <p>También es posible enviar una notificación invisible que llega a la
 app para que descargue nueva información en <em>background</em> y la
 muestre instantáneamente la siguiente vez que el usuario acceda a la
 app. </p>
-<p>El envío de notificaciones se hace a través del APNs (<em>Apple Push
-Notification service</em>).</p>
+<p>El envío de notificaciones se hace a través del servicio de Apple APNs
+(<em>Apple Push Notification service</em>).</p>
 <p><img src="imagenes/server-side-notification.png" width="230px"/>
 <img src="imagenes/server-side-silent-notification.png" width="215px"/></p>
 <h3 id="arquitectura-de-las-notificaciones-remotas">Arquitectura de las notificaciones remotas<a class="headerlink" href="#arquitectura-de-las-notificaciones-remotas" title="Permanent link">&para;</a></h3>
@@ -1972,7 +2006,7 @@ vez que se abra la app.</p>
 <p>El resto del diccionario contendrá parejas clave-valor con
 información <em>custom</em>.</p>
 <p>La información JSON se convierte en un diccionario que se pasa como
-parámetro <code>userInfor</code> en el método
+parámetro <code>userInfo</code> en el método
 <a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application"><code>didReceiveRemoteNotification</code></a>
 del delegado del app.</p>
 <p>Otros ejemplos de <em>payload</em>.</p>
@@ -2211,51 +2245,57 @@ configurar: </p>
   notificaciones frente al APNs.</li>
 <li><strong>Perfil de aprovisionamiento</strong> con la capacidad de notificación push.</li>
 </ul>
-<h3 id="nuevo-app-id-en-el-member-center">Nuevo App ID en el <em>member center</em><a class="headerlink" href="#nuevo-app-id-en-el-member-center" title="Permanent link">&para;</a></h3>
+<h3 id="nuevo-app-id-en-el-member-center-admin">Nuevo App ID en el <em>member center</em> (admin)<a class="headerlink" href="#nuevo-app-id-en-el-member-center-admin" title="Permanent link">&para;</a></h3>
 <p>Un administrador del equipo UA debe crear una App ID con el nombre
 explícito de la app que se va a poner en producción.</p>
 <p><img src="imagenes/app-id-notificaciones-1.png" width="600px"/></p>
 <p>Se debe añadir en el App ID la autorización de notificaciones push.</p>
 <p><img src="imagenes/app-id-notificaciones-2.png" width="600px"/></p>
-<h3 id="creacion-del-certificado-ssl-en-el-member-center">Creación del certificado SSL en el <em>member center</em><a class="headerlink" href="#creacion-del-certificado-ssl-en-el-member-center" title="Permanent link">&para;</a></h3>
-<p>Debemos obtener un certificado de una autoridad de certificación que
+<h3 id="creacion-del-certificado-ssl-en-el-member-center-admin">Creación del certificado SSL en el <em>member center</em>  (admin)<a class="headerlink" href="#creacion-del-certificado-ssl-en-el-member-center-admin" title="Permanent link">&para;</a></h3>
+<p>Para poder enviar notificaciones al servicio de Apple nuestro servidor
+necesita autenticarse con un certificado SSL. Vamos a ver cómo el
+administrador de la UA puede crear este certificado que después
+usaremos desde una aplicación PHP para enviar la notificación al
+servicio de Apple.</p>
+<p>Se debe obtener un certificado de una autoridad de certificación que
 después subiremos al <em>member center</em>.</p>
-<p>Abrimos Acceso a Llaveros y seleccionamos <em>Acceso a Llaveros &gt;
+<p>Se abre Acceso a Llaveros y seleccionamos <em>Acceso a Llaveros &gt;
 Asistente de Certificados &gt; Solicitar un certificado de una
 autoridad de certificación</em>.</p>
-<p>Salvamos el fichero <code>CertificateSigningRequest.certSigningRequest</code>.</p>
+<p>Se salva el fichero <code>CertificateSigningRequest.certSigningRequest</code>.</p>
 <p><img src="imagenes/certificado-autoridad-certificadora.png"/ width="600px"/></p>
-<p><img src="imagenes/app-id-notificaciones-servicios.png" width="600px"/></p>
 <p>Para crear el certificado es necesario subir el fichero generado
-previamente <code>CertificateSigningRequest.certSigningRequest</code></p>
+previamente <code>CertificateSigningRequest.certSigningRequest</code> al APP ID
+<code>es.ua.mastermoviles.NotificacionesPush</code> del perfil de aprovisionamiento.</p>
+<p><img src="imagenes/app-id-notificaciones-servicios.png" width="600px"/></p>
 <p><img src="imagenes/crear-certificado-ssl.png" width="600px"/> </p>
 <p><img src="imagenes/generar-certificado-ssl.png" width="600px"/></p>
-<h3 id="generacion-del-fichero-pem">Generación del fichero <code>.pem</code><a class="headerlink" href="#generacion-del-fichero-pem" title="Permanent link">&para;</a></h3>
-<p>Una vez creado el certificado en el <em>Member Center</em> lo descargamos y
-lo instalamos en Acceso a llaveros.</p>
+<h3 id="generacion-del-fichero-pem-admin">Generación del fichero <code>.pem</code> (admin)<a class="headerlink" href="#generacion-del-fichero-pem-admin" title="Permanent link">&para;</a></h3>
+<p>Una vez creado el certificado en el <em>Member Center</em> se descarga y
+se instala en Acceso a llaveros.</p>
 <p><img src="imagenes/exportar-fichero-p12.png" width="600px"/></p>
-<p>Lo exportamos como fichero <code>.p12</code> y después lo convertiremos en un
-fichero <code>.pem</code> con el que nuestro servidor establecerá la conexión SSL
-con el APNs:</p>
+<p>Se exporta como fichero <code>.p12</code> y después se convierte en un fichero
+<code>.pem</code> que será el que utilicemos posteriormente para establecer la
+conexión SSL con el APNs:</p>
 <ul>
 <li>
 <p>Se guarda el certificado como <code>UADevelopmentPushCertificate.p12</code> con
   una contraseña (mastermoviles20)</p>
 </li>
 <li>
-<p>Creamos el fichero <code>.pem</code> con el siguiente comando:</p>
+<p>Se crea el fichero <code>.pem</code> con el siguiente comando:</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code>$ openssl pkcs12 -in UADevelopmentPushCertificate.p12 \
    -out UADevelopmentPushCertificate.pem -nodes -clcerts
 </code></pre></div>
 <ul>
-<li>Nos pedirá la contraseña que hemos introducido antes y se generará
+<li>Se introduce la contraseña de antes y se generará
   el certificado <code>UADevelopmentPushCertificate.pem</code>.</li>
 </ul>
 <p>Una vez hecho esto, ya tendremos listo el certificado para enviar la
 notificación push al APNs, usando el script PHP.</p>
-<h3 id="creacion-del-perfil-de-aprovisionamiento">Creación del perfil de aprovisionamiento<a class="headerlink" href="#creacion-del-perfil-de-aprovisionamiento" title="Permanent link">&para;</a></h3>
+<h3 id="creacion-del-perfil-de-aprovisionamiento-admin">Creación del perfil de aprovisionamiento (admin)<a class="headerlink" href="#creacion-del-perfil-de-aprovisionamiento-admin" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Creamos un nuevo perfil de aprovisionamiento que podrán usar todos
   los miembros del equipo.</li>
@@ -2281,24 +2321,45 @@ ejecutar la app por primera vez.</p>
 <p><img src="imagenes/token.png" width="800px"/></p>
 <h3 id="probamos-a-enviar-notificaciones-remotas-al-dispositivo">Probamos a enviar notificaciones remotas al dispositivo<a class="headerlink" href="#probamos-a-enviar-notificaciones-remotas-al-dispositivo" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Descargamos
-  <a href="https://github.com/domingogallardo/apuntes-spm-ios/blob/master/UADevelopmentPushCertificate.pem">desde este enlace</a>
-  el certificado SSL <code>UADevelopmentPushCertificatepem</code> que hemos generado
-  y lo guardamos en el mismo directorio <code>Scripts</code> en el que se encuentra
-  el script <code>apnspush.php</code>.</li>
+<li>Descargamos <a href="https://github.com/domingogallardo/apuntes-spm-ios/blob/master/UADevelopmentPushCertificate.pem">desde este
+  enlace</a>
+  el certificado SSL <code>UADevelopmentPushCertificatepem</code> que ha generado
+  el administrador de la UA y lo guardamos en el mismo directorio
+  <code>Scripts</code> en el que se encuentra el script <code>apnspush.php</code>.</li>
 <li>Editamos el script <code>apnspush.php</code> (en el directorio <code>Scripts</code>) y
 <strong>modificamos en la línea 4 el <code>$deviceToken</code></strong>. Escribimos el token que ha
 aparecido en la consola y que puedes copiar de
 <a href="https://gist.github.com/domingogallardo/6afdc3a6d34aa3a45bed61685ce710f7">este enlace</a>. Este
 token identifica el dispositivo al que el APNs enviará la
 notificación.</li>
-<li>Llama al script para crear una notificación remota en el dispositivo:</li>
+<li>
+<p>En el script PHP se muestra la forma de construir el payload de la notificación
+   remota:</p>
+<div class="highlight"><pre><span></span><code><span class="x">$body[&#39;aps&#39;] = array(</span>
+<span class="x">    &#39;alert&#39; =&gt; $message,</span>
+<span class="x">    &#39;sound&#39; =&gt; &#39;default&#39;,</span>
+<span class="x">);</span>
+</code></pre></div>
+</li>
+<li>
+<p>Llama al script para crear una notificación remota en el dispositivo:</p>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code>$ php apnspush.php <span class="s1">&#39;Hola mundo desde la UA&#39;</span>
 Connected to APNS
 Message successfully delivered
 </code></pre></div>
 <p><img style="margin-left:20px" src="imagenes/notificacion-device.png" width="250px"/></p>
+<h3 id="notificacion-silenciosa">Notificación silenciosa<a class="headerlink" href="#notificacion-silenciosa" title="Permanent link">&para;</a></h3>
+<p>Para enviar una notificación silenciosa (no se muestra al usuario,
+pero llega a la app) hay que modificar el script PHP, para construir
+un payload que tenga el atributo <code>content-available</code> a 1:</p>
+<div class="highlight"><pre><span></span><code><span class="x">$body[&#39;aps&#39;] = array(</span>
+<span class="x">  &#39;content-available&#39; =&gt; 1,</span>
+<span class="x">  &#39;sound&#39; =&gt; &#39;default&#39;,</span>
+<span class="x">  );</span>
+<span class="x">$body[&#39;mensaje&#39;] = $message;</span>
+</code></pre></div>
 <h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://developer.apple.com/documentation/usernotifications">Framework UserNotifications</a></li>
@@ -2346,13 +2407,13 @@ Message successfully delivered
           </a>
         
         
-          <a href="../../practicas/aprovisionamiento/firma-aprovisionamiento.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../icloud/icloud.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Siguiente
                 </span>
-                Práctica 1
+                4. iCloud y CloudKit
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
