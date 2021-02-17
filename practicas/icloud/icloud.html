@@ -352,18 +352,18 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#icloud-clave-valor" class="md-nav__link">
-    iCloud clave-valor
+  <a href="#parte-obligatoria-hasta-7-puntos" class="md-nav__link">
+    Parte obligatoria (hasta 7 puntos)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo-en-cloudkit" class="md-nav__link">
-    ToDo en CloudKit
+  <a href="#parte-opcional-3-puntos" class="md-nav__link">
+    Parte opcional (3 puntos)
   </a>
   
-    <nav class="md-nav" aria-label="ToDo en CloudKit">
+    <nav class="md-nav" aria-label="Parte opcional (3 puntos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -415,18 +415,18 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#icloud-clave-valor" class="md-nav__link">
-    iCloud clave-valor
+  <a href="#parte-obligatoria-hasta-7-puntos" class="md-nav__link">
+    Parte obligatoria (hasta 7 puntos)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo-en-cloudkit" class="md-nav__link">
-    ToDo en CloudKit
+  <a href="#parte-opcional-3-puntos" class="md-nav__link">
+    Parte opcional (3 puntos)
   </a>
   
-    <nav class="md-nav" aria-label="ToDo en CloudKit">
+    <nav class="md-nav" aria-label="Parte opcional (3 puntos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -456,21 +456,19 @@
                 
                 <h1 id="practica-4-icloud-y-cloudkit">Práctica 4: iCloud y CloudKit<a class="headerlink" href="#practica-4-icloud-y-cloudkit" title="Permanent link">&para;</a></h1>
 <p>Seguimos trabajando con el proyecto <code>ToDo</code> y el <em>bundle ID</em>
-<code>es.ua.mastermoviles.ToDo</code> y el perfil de
-aprovisionamiento <code>Master Moviles ToDo</code> (lo hemos
-actualizado para que incluya el permiso de acceso a CloudKit y
-al contenedor <code>iCloud.es.ua.mastermoviles.ToDo</code>).</p>
+<code>es.ua.mastermoviles.ToDo</code> y el perfil de aprovisionamiento <code>Master
+Moviles ToDo</code> (está actualizado e incluye el permiso de acceso
+a CloudKit y al contenedor <code>iCloud.es.ua.mastermoviles.ToDo</code>).</p>
+<h2 id="parte-obligatoria-hasta-7-puntos">Parte obligatoria (hasta 7 puntos)<a class="headerlink" href="#parte-obligatoria-hasta-7-puntos" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Actualiza en Xcode el permiso para utilizar iCloud, con clave-valor
   y con CloudKit.</li>
 </ul>
-<h2 id="icloud-clave-valor">iCloud clave-valor<a class="headerlink" href="#icloud-clave-valor" title="Permanent link">&para;</a></h2>
 <p><img style="border: 1px solid;" src="imagenes/todo-clave-valor.jpeg" width="300px"/></p>
 <ul>
 <li>Modifica la app ToDo para que el número de ítems terminados se
   guarde en iCloud del usuario, usando iCloud clave-valor.</li>
 </ul>
-<h2 id="todo-en-cloudkit">ToDo en CloudKit<a class="headerlink" href="#todo-en-cloudkit" title="Permanent link">&para;</a></h2>
 <p><img src="imagenes/todolist-cloudkit.png" width="300px"/></p>
 <ul>
 <li>Añade el código necesario para que las tareas pendientes
@@ -479,11 +477,14 @@ al contenedor <code>iCloud.es.ua.mastermoviles.ToDo</code>).</p>
 <li>En el contenedor de CloudKit se ha añadido el tipo de registro
   <code>Tarea</code> con el campo <code>texto</code> con los índices <code>Queryable</code>,
   <code>Searchable</code>, <code>Sortable</code>. </li>
-<li>(<strong>Opcional</strong>): Utiliza la base de datos pública para publicar
-  tareas compartidas por todos los usuarios de la app. Al añadir
-  una tarea debes permitir la opción de hacerlo en la base de datos
-  pública. Muestra el texto de las tareas públicas en un color
-  diferente en el listado de tareas.</li>
+</ul>
+<h2 id="parte-opcional-3-puntos">Parte opcional (3 puntos)<a class="headerlink" href="#parte-opcional-3-puntos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Utiliza la base de datos pública para publicar tareas compartidas
+  por todos los usuarios de la app. Al añadir una tarea debes permitir
+  la opción de hacerlo en la base de datos pública. Muestra el texto
+  de las tareas públicas en un color diferente en el listado de
+  tareas.</li>
 </ul>
 <!--
 
@@ -497,7 +498,7 @@ una tarea porque no es tuya.
 -->
 
 <ul>
-<li>(<strong>Opcional</strong>): Añade una funcionalidad en la que se recargue la
+<li>Añade una funcionalidad en la que se recargue la
   tabla con los datos de iCloud cuando se tire de la tabla hacia
   abajo. </li>
 </ul>
