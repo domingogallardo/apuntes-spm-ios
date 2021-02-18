@@ -463,38 +463,33 @@ a CloudKit y al contenedor <code>iCloud.es.ua.mastermoviles.ToDo</code>).</p>
 <ul>
 <li>Actualiza en Xcode el permiso para utilizar iCloud, con clave-valor
   y con CloudKit.</li>
-</ul>
-<p><img style="border: 1px solid;" src="imagenes/todo-clave-valor.jpeg" width="300px"/></p>
-<ul>
 <li>Modifica la app ToDo para que el número de ítems terminados se
   guarde en iCloud del usuario, usando iCloud clave-valor.</li>
 </ul>
-<p><img src="imagenes/todolist-cloudkit.png" width="300px"/></p>
+<p><img style="border: 1px solid;" src="imagenes/todo-clave-valor.jpeg" width="300px"/></p>
 <ul>
-<li>Añade el código necesario para que las tareas pendientes
+<li>
+<p>Añade el código necesario para que las tareas pendientes
   se guarden y recuperen de la base de datos privada de
-  CloudKit. </li>
-<li>En el contenedor de CloudKit se ha añadido el tipo de registro
-  <code>Tarea</code> con el campo <code>texto</code> con los índices <code>Queryable</code>,
-  <code>Searchable</code>, <code>Sortable</code>. </li>
+  CloudKit. </p>
+<p>En el contenedor de CloudKit se ha añadido el tipo de registro
+<code>Tarea</code> con el campo <code>nombre</code> con los índices <code>Queryable</code>,
+<code>Searchable</code>, <code>Sortable</code>. </p>
+</li>
 </ul>
 <h2 id="parte-opcional-3-puntos">Parte opcional (3 puntos)<a class="headerlink" href="#parte-opcional-3-puntos" title="Permanent link">&para;</a></h2>
+<p><img src="imagenes/todolist-cloudkit.png" width="300px"/></p>
 <ul>
-<li>Utiliza la base de datos pública para publicar tareas compartidas
+<li>Utiliza la base de datos pública de CloudKit para publicar tareas compartidas
   por todos los usuarios de la app. Al añadir una tarea debes permitir
   la opción de hacerlo en la base de datos pública. Muestra el texto
   de las tareas públicas en un color diferente en el listado de
   tareas.</li>
 </ul>
 <!--
-
-La configuración de los roles de seguridad en el Dashboard hace que 
-solo los usuarios que han creado la tarea puedan borrarla. Los demás 
-pueden leerla, pero no borrarla.
-
-Hay que definir una alerta que de un aviso de que no has podido borrar
-una tarea porque no es tuya.
-
+Es necesario configurar los roles de seguridad en el Dashboard para
+permitir que cualquier usuario pueda escribir en la base de datos
+pública y, de esta forma, borrar registros en ella.
 -->
 
 <ul>
