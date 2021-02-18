@@ -356,14 +356,7 @@
     Parte obligatoria (hasta 7 puntos)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-opcional-3-puntos" class="md-nav__link">
-    Parte opcional (3 puntos)
-  </a>
-  
-    <nav class="md-nav" aria-label="Parte opcional (3 puntos)">
+    <nav class="md-nav" aria-label="Parte obligatoria (hasta 7 puntos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -375,6 +368,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-opcional-3-puntos" class="md-nav__link">
+    Parte opcional (3 puntos)
+  </a>
   
 </li>
       
@@ -419,14 +419,7 @@
     Parte obligatoria (hasta 7 puntos)
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parte-opcional-3-puntos" class="md-nav__link">
-    Parte opcional (3 puntos)
-  </a>
-  
-    <nav class="md-nav" aria-label="Parte opcional (3 puntos)">
+    <nav class="md-nav" aria-label="Parte obligatoria (hasta 7 puntos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -438,6 +431,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-opcional-3-puntos" class="md-nav__link">
+    Parte opcional (3 puntos)
+  </a>
   
 </li>
       
@@ -477,6 +477,20 @@ a CloudKit y al contenedor <code>iCloud.es.ua.mastermoviles.ToDo</code>).</p>
 <code>Searchable</code>, <code>Sortable</code>. </p>
 </li>
 </ul>
+<h3 id="pista-para-actualizar-la-tabla">Pista para actualizar la tabla<a class="headerlink" href="#pista-para-actualizar-la-tabla" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Los <em>callbacks</em> en los que se reciben los resultados de las
+  <em>queries</em> son asíncronos y se procesan en hilos secundarios.</li>
+<li>Si actualizamos los datos de la tabla en un <em>callback</em> de este tipo,
+  la interfaz de usuario no se refrescará hasta que el usuario no
+  interactúe con la tabla.</li>
+<li>Se puede forzar a ejecutar la actualización de los datos de la tabla en
+  el hijo principal con este código en algún lugar del <code>ToDoTableViewController</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span><span class="p">(</span> <span class="n">execute</span><span class="p">:</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">reloadData</span><span class="p">()</span>
+<span class="p">})</span>
+</code></pre></div>
 <h2 id="parte-opcional-3-puntos">Parte opcional (3 puntos)<a class="headerlink" href="#parte-opcional-3-puntos" title="Permanent link">&para;</a></h2>
 <p><img src="imagenes/todolist-cloudkit.png" width="300px"/></p>
 <ul>
@@ -497,20 +511,6 @@ pública y, de esta forma, borrar registros en ella.
   tabla con los datos de iCloud cuando se tire de la tabla hacia
   abajo. </li>
 </ul>
-<h3 id="pista-para-actualizar-la-tabla">Pista para actualizar la tabla<a class="headerlink" href="#pista-para-actualizar-la-tabla" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Los <em>callbacks</em> en los que se reciben los resultados de las
-  <em>queries</em> son asíncronos y se procesan en hilos secundarios.</li>
-<li>Si actualizamos los datos de la tabla en un <em>callback</em> de este tipo,
-  la interfaz de usuario no se refrescará hasta que el usuario no
-  interactúe con la tabla.</li>
-<li>Se puede forzar a ejecutar la actualización de los datos de la tabla en
-  el hijo principal con este código en algún lugar del <code>ToDoTableViewController</code>:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">async</span><span class="p">(</span> <span class="n">execute</span><span class="p">:</span> <span class="p">{</span>
-    <span class="kc">self</span><span class="p">.</span><span class="n">tableView</span><span class="p">.</span><span class="n">reloadData</span><span class="p">()</span>
-<span class="p">})</span>
-</code></pre></div>
                 
               
               
