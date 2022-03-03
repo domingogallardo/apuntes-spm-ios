@@ -708,33 +708,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distribucion-e-instalacion-de-betas-online" class="md-nav__link">
-    Distribución e instalación de betas online
-  </a>
-  
-    <nav class="md-nav" aria-label="Distribución e instalación de betas online">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testflight" class="md-nav__link">
-    TestFlight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firebase-para-distribuir-apps" class="md-nav__link">
-    Firebase para distribuir apps
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bibliografia" class="md-nav__link">
     Bibliografía
   </a>
@@ -1366,33 +1339,6 @@
           <li class="md-nav__item">
   <a href="#fin-demo-y-ejercicio" class="md-nav__link">
     Fin demo y ejercicio
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distribucion-e-instalacion-de-betas-online" class="md-nav__link">
-    Distribución e instalación de betas online
-  </a>
-  
-    <nav class="md-nav" aria-label="Distribución e instalación de betas online">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#testflight" class="md-nav__link">
-    TestFlight
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#firebase-para-distribuir-apps" class="md-nav__link">
-    Firebase para distribuir apps
   </a>
   
 </li>
@@ -2315,59 +2261,81 @@ Configurator 2.</p>
 <p><img src="imagenes/install-configurator.png" width="700px"/></p>
 <h3 id="fin-demo-y-ejercicio">Fin demo y ejercicio<a class="headerlink" href="#fin-demo-y-ejercicio" title="Permanent link">&para;</a></h3>
 <hr />
-<h2 id="distribucion-e-instalacion-de-betas-online">Distribución e instalación de betas online<a class="headerlink" href="#distribucion-e-instalacion-de-betas-online" title="Permanent link">&para;</a></h2>
-<p>Hemos visto que es posible ejecutar apps de prueba en dispositivos que
-estén dados de alta en el perfil de aprovisionamiento. </p>
-<p>Pero la instalación de la app es un proceso algo tedioso: hay que
+<!--
+
+## Distribución e instalación de betas online ##
+
+Hemos visto que es posible ejecutar apps de prueba en dispositivos que
+estén dados de alta en el perfil de aprovisionamiento. 
+
+Pero la instalación de la app es un proceso algo tedioso: hay que
 conectar físicamente el dispositivo a un ordenador Mac y realizar la
 instalación mediante una aplicación auxiliar como Xcode o Apple
-Configurator 2.</p>
-<p>Sería mucho más fácil si permitiéramos instalar la app desde el propio
+Configurator 2.
+
+Sería mucho más fácil si permitiéramos instalar la app desde el propio
 dispositivo (iPhone o iPad), descargándola de una web o de alguna app
-de configuración.</p>
-<p>Esto es lo que se consigue con la aplicación TestFlight de Apple.</p>
-<p>Puedes encontrar más información sobre TestFlight en <a href="https://developer.apple.com/testflight/">este
-enlace</a>. Lo utilizarás cuando
-desarrolles y publiques apps de iOS usando el perfil de pago.</p>
-<p>Existe una solución intermedia: seguir usando la distribución al
+de configuración.
+
+Esto es lo que se consigue con la aplicación TestFlight de Apple.
+
+Puedes encontrar más información sobre TestFlight en [este
+enlace](https://developer.apple.com/testflight/). Lo utilizarás cuando
+desarrolles y publiques apps de iOS usando el perfil de pago.
+
+Existe una solución intermedia: seguir usando la distribución al
 equipo de desarrollo mediante el alta de los dispositivos en el pefil
 de aprovisionamiento, pero usar un servicio que facilite la
 instalación de la app en esos dispositivos. Esta es una funcionalidad
-que proporciona Firebase de Google.</p>
-<h3 id="testflight">TestFlight<a class="headerlink" href="#testflight" title="Permanent link">&para;</a></h3>
-<p><img src="imagenes/testflight-app.png"/ width="200px"/></p>
-<p>TestFlight es una plataforma integrada en App Store Connect que permite
-distribuir versiones beta de apps a probadores.</p>
-<p>Es posible distribuir la app hasta 25 probadores internos
+que proporciona Firebase de Google.
+
+### TestFlight ###
+
+<img src="imagenes/testflight-app.png"/ width="200px"/>
+
+TestFlight es una plataforma integrada en App Store Connect que permite
+distribuir versiones beta de apps a probadores.
+
+Es posible distribuir la app hasta 25 probadores internos
 (seleccionados de entre los usuarios de la cuenta de App Store Connect) y
-hasta 10.000 probadores externos.</p>
-<p>Los usuarios de prueba deben descargarse la <strong>app TestFlight</strong> con la
-que gestionarán la descarga de las pruebas en sus dispositivos.</p>
-<h3 id="firebase-para-distribuir-apps">Firebase para distribuir apps<a class="headerlink" href="#firebase-para-distribuir-apps" title="Permanent link">&para;</a></h3>
-<p><a href="https://firebase.google.com">Firebase</a> permite distribuir apps compiladas (ficheros .ipa) y
+hasta 10.000 probadores externos.
+
+Los usuarios de prueba deben descargarse la **app TestFlight** con la
+que gestionarán la descarga de las pruebas en sus dispositivos.
+
+### Firebase para distribuir apps ###
+
+[Firebase](https://firebase.google.com) permite distribuir apps compiladas (ficheros .ipa) y
 ejecutarlas en aquellos dispositivos que están registrados en el
-perfil de aprovisionamiento. La funcionalidad se denomina <code>App
-Distribution</code> y permite distribuir distintas versiones de una misma
-app a usuarios de prueba.</p>
-<p><img src="imagenes/firebase-app-distribution.png" width="700px"/></p>
-<p>Podemos añadir usuarios de prueba o crear un enlace al que puede
+perfil de aprovisionamiento. La funcionalidad se denomina `App
+Distribution` y permite distribuir distintas versiones de una misma
+app a usuarios de prueba.
+
+<img src="imagenes/firebase-app-distribution.png" width="700px"/>
+
+Podemos añadir usuarios de prueba o crear un enlace al que puede
 acceder cualquiera para introducir su correo electrónico. El usuario
 de prueba recibe un correo electrónico con instrucciones de cómo
-descargar la app.</p>
-<p>Al aceptar las instrucciones, el sistema comparte el UUID del
+descargar la app.
+
+Al aceptar las instrucciones, el sistema comparte el UUID del
 dispositivo con nosotros y podemos añadir el dispositivo al perfil de
 aprovisionamiento. El usuario de prueba debe añadir el perfil de
-Firebase a su dispositivo.</p>
-<p><img src="imagenes/firebase-profile-dispositivo.png" width="300px"/></p>
-<p>Una vez hemos añadido el UUID al perfil de aprovisionamiento, lo
+Firebase a su dispositivo.
+
+<img src="imagenes/firebase-profile-dispositivo.png" width="300px"/>
+
+Una vez hemos añadido el UUID al perfil de aprovisionamiento, lo
 añadimos a la app y volvemos a distribuirla. El sistema enviará un
-correo al usuario, y éste podrá descargar y probar la app.</p>
-<p><img src="imagenes/firebase-download-app.png" width="300px"/></p>
-<p>Por último, Firebase permite también incluir en la app el servicio de
+correo al usuario, y éste podrá descargar y probar la app.
+
+<img src="imagenes/firebase-download-app.png" width="300px"/>
+
+Por último, Firebase permite también incluir en la app el servicio de
 de Google Analytics con el que podemos comprobar una gran cantidad de
-opciones relacionadas con el uso del app.</p>
-<p><img src="imagenes/google-analytics-firebase.png" width="700px"/></p>
-<!--
+opciones relacionadas con el uso del app.
+
+<img src="imagenes/google-analytics-firebase.png" width="700px"/>
 
 ## Test Flight ##
 
