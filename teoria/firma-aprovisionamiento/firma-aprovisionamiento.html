@@ -1548,7 +1548,7 @@ peor aún, si alguien se hace con tu clave privada puede hacerse pasar
 por ti e intentar distribuir una app con código malicioso. Esto podría
 hacer que Apple revocara tus credenciales de desarrollador.</p>
 <h3 id="tipos-de-certificados">Tipos de certificados<a class="headerlink" href="#tipos-de-certificados" title="Permanent link">&para;</a></h3>
-<p>Existen varios <a href="https://help.apple.com/developer-account/#/dev52fdd1ce5">tipos de certificados</a>:
+<p>Existen varios <a href="https://developer.apple.com/help/account/reference/certificate-types">tipos de certificados</a>
 de desarrollo, de distribución, para el servidor de notificaciones
 push, etc. El <strong>certificado de desarrollador</strong> permite ejecutar
 aplicaciones en un dispositivo. El de distribución permite enviarla al
@@ -1600,7 +1600,7 @@ descargándola del App Store. Pero también existen formas alternativas,
 para el caso de dispositivos de prueba o apps distribuidas
 internamente en una empresa (<em>in-house</em>). En estos casos es posible
 instalar las apps desde <em>Test Flight</em>, desde una web o con el programa
-de MacOS <em>Apple Configurator 2</em>.</p>
+de MacOS <em>Apple Configurator</em>.</p>
 <p>Resumiendo las distintas condiciones posibles, un dispositivo iOS
 puede ejecutar una app si:</p>
 <ol>
@@ -1739,7 +1739,7 @@ seleccionar <code>Product &gt; Archive</code> y la opción <code>Development</co
 instalarse en cualquier dispositivo incluido en el perfil de
 aprovisionamiento (aunque no sea un dispositivo de desarrollo).</p>
 <p>Podemos instalar la app en un dispositivo conectando el dispositivo al
-Mac y usando el programa de Apple <code>Apple Configurator 2</code>.</p>
+Mac y usando el programa de Apple <code>Apple Configurator</code>.</p>
 <h3 id="fin-de-la-demo_1">Fin de la demo<a class="headerlink" href="#fin-de-la-demo_1" title="Permanent link">&para;</a></h3>
 <hr />
 <h2 id="capacidades-de-las-apps">Capacidades de las apps<a class="headerlink" href="#capacidades-de-las-apps" title="Permanent link">&para;</a></h2>
@@ -1755,9 +1755,9 @@ necesitamos el programa de la universidad para poder utilizar
 servicios iCloud o notificaciones push. Y existen <em>capabilities</em> avanzadas
 que sólo pueden ser usadas con el programa de pago.</p>
 <p>Para una lista completa de las capacidades disponibles según el tipo
-de desarrollador se puede consultar la documentación en <a href="https://developer.apple.com/support/app-capabilities/"><em>Apple
+de desarrollador se puede consultar la documentación en <a href="https://developer.apple.com/help/account/reference/supported-capabilities-ios"><em>Apple
 Developer &gt; Support &gt; Advanced App
-Capabilities</em></a>.</p>
+Capabilities</em></a></p>
 <p><img src="imagenes/app-capabilities.png" width="550px"/> </p>
 <p>Podemos explorar en Xcode el listado de <em>capabilities</em> que podemos
 añadir a nuestra app, accediendo desde la pantalla de <em>Signing &amp;
@@ -1987,8 +1987,8 @@ los permisos (<em>entitlements</em>) se usan para asegurar que:</p>
 </ul>
 <h3 id="instalacion-de-la-app-en-un-dispositivo-de-prueba">Instalación de la app en un dispositivo de prueba<a class="headerlink" href="#instalacion-de-la-app-en-un-dispositivo-de-prueba" title="Permanent link">&para;</a></h3>
 <p>Es posible instalar la app en el iPhone de prueba usando Xcode o
-<em>Apple Configurator 2</em>.</p>
-<p>La aplicación <em>Apple Configurator 2</em> permite configurar dispositivos,
+<em>Apple Configurator</em>.</p>
+<p>La aplicación <em>Apple Configurator</em> permite configurar dispositivos,
 hacer copias de seguridad, añadir apps, etc.</p>
 <p><img src="imagenes/install-configurator.png" width="600px"/></p>
 <p>La app se copia en el dispositivo junto con el perfil de
@@ -2250,9 +2250,11 @@ puede ejecutarse en cualquier dispositivo.</p>
 se puede instalar sólo en dispositivos autorizados en el perfil de
 aprovisionamiento.</p>
 <h3 id="instalacion-y-ejecucion-de-la-app">Instalación y ejecución de la app<a class="headerlink" href="#instalacion-y-ejecucion-de-la-app" title="Permanent link">&para;</a></h3>
-<p>Probamos a instalar la app en un dispositivo autorizado usando Apple
-Configurator 2.</p>
+<p>Probamos a instalar la app en un dispositivo autorizado (su UUID está
+incluido en el perfil de aprovisionamiento) usando Apple Configurator.</p>
 <p><img src="imagenes/install-configurator.png" width="700px"/></p>
+<p>Para poder ejecutar la app en el dispositivo debemos <a href="https://developer.apple.com/documentation/xcode/enabling-developer-mode-on-a-device">activar el modo
+de desarrollador</a>.</p>
 <h3 id="fin-demo-y-ejercicio">Fin demo y ejercicio<a class="headerlink" href="#fin-demo-y-ejercicio" title="Permanent link">&para;</a></h3>
 <hr />
 <!--
@@ -2566,14 +2568,13 @@ usuarios para que descarguen la nueva versión.
 
 <h2 id="bibliografia">Bibliografía<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://help.apple.com/developer-account/">Developer Account Help</a></li>
+<li><a href="https://developer.apple.com/support/">Developer Support</a></li>
+<li><a href="https://developer.apple.com/help/account/">Developer Account Help</a></li>
 <li><a href="https://developer.apple.com/support/code-signing/">Code Signing Help</a></li>
-<li><a href="https://help.apple.com/xcode/">Xcode Help</a></li>
-<li><a href="https://help.apple.com/xcode/mac/current/#/dev7ccaf4d3c">Distribute your app to registered devices</a></li>
-<li><a href="https://help.apple.com/xcode/mac/current/#/dev8b4250b57">Distribute your  app</a></li>
-<li><a href="https://help.apple.com/app-store-connect/">App Store Connect Help</a></li>
-<li><a href="https://firebase.google.com/docs/app-distribution/ios/distribute-console?authuser=0">Distribución de apps con Firebase</a></li>
-<li><a href="https://firebase.google.com/docs/analytics?authuser=0">Google Analytics</a></li>
+<li><a href="https://developer.apple.com/documentation/xcode">Xcode Documentation</a></li>
+<li><a href="https://developer.apple.com/documentation/xcode/preparing-your-app-for-distribution">Preparing your app for distribution</a></li>
+<li><a href="https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices">Distribute your app to registered devices</a></li>
+<li><a href="https://developer.apple.com/help/app-store-connect/">App Store Connect Help</a></li>
 <li><a href="https://developer.apple.com/testflight/">Test Flight</a></li>
 </ul>
                 
