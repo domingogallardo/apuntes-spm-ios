@@ -2084,10 +2084,10 @@ en el portal del desarrollador o en la aplicación de Acceso a llaveros:</p>
 estar incluido en un perfil de aprovisionamiento compatible con la app
 que estamos desarrollando.</p>
 <p>Vamos a incorporar los nuevos certificados al perfil de
-aprovisionamiento genérico, con App ID comodín (<code>*</code>) con el que se
-puede compilar cualquier app.</p>
+aprovisionamiento genérico, con App ID comodín (<code>es.ua.*</code>) con el que se
+puede distribuir cualquier app que tenga un <em>bundle id</em> que comience
+por <code>es.ua</code>.</p>
 <p><img src="imagenes/actualizar-perfil-aprovisionamiento-cert.png" width="700px" /></p>
-<p><img src="imagenes/actualizar-perfil-aprovisionamiento-cert2.png" width="700px" /></p>
 <h3 id="firma-de-la-app-con-el-nuevo-certificado">Firma de la app con el nuevo certificado<a class="headerlink" href="#firma-de-la-app-con-el-nuevo-certificado" title="Permanent link">&para;</a></h3>
 <p>Para firmar la app con el nuevo certificado <strong>desmarcamos la opción
 para que Xcode gestione automáticamente la firma</strong>. De esta forma
@@ -2104,7 +2104,9 @@ examinarlos y seleccionar el más apropiado. Seleccionamos el
 denominado <em>Genérico</em>.</p>
 <p><img src="imagenes/xcode-select-provisioning-profile-manual.png" width="600px"/></p>
 <p>Vemos que se firma la aplicación correctamente y que se añade el
-perfil de aprovisionamiento que hemos seleccionado.</p>
+perfil de aprovisionamiento que hemos seleccionado. Asegúrate que
+marcas la opción <code>All</code> para firmar con el perfil tanto la opción de
+<code>Debug</code> como la de <code>Release</code>.</p>
 <p><img src="imagenes/perfil-generico-team.png" width="700px"/></p>
 <p>La ventaja principal de firmar las apps de esta forma es que podremos
 distribuirlas a cualquier dispositivo incluido en el perfil.</p>
